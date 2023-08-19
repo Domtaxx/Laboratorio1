@@ -1,0 +1,115 @@
+Info: Starting: Create block symbol file (.bsf)
+Info: qsys-generate D:\Quartus\Cronometro\Laboratorio1\test_count.qsys --block-symbol-file --output-directory=D:\Quartus\Cronometro\Laboratorio1\test_count --family="Cyclone V" --part=5CSEMA6F31C6
+Progress: Loading Laboratorio1/test_count.qsys
+Progress: Reading input file
+Progress: Adding RAM [altera_avalon_onchip_memory2 20.1]
+Progress: Parameterizing module RAM
+Progress: Adding ROM [altera_avalon_onchip_memory2 20.1]
+Progress: Parameterizing module ROM
+Progress: Adding button_pio [altera_avalon_pio 20.1]
+Progress: Parameterizing module button_pio
+Progress: Adding clk_0 [clock_source 20.1]
+Progress: Parameterizing module clk_0
+Progress: Adding led_pio [altera_avalon_pio 20.1]
+Progress: Parameterizing module led_pio
+Progress: Adding nios2_gen2_0 [altera_nios2_gen2 20.1]
+Progress: Parameterizing module nios2_gen2_0
+Progress: Adding seven_seg_pio [altera_avalon_pio 20.1]
+Progress: Parameterizing module seven_seg_pio
+Progress: Building connections
+Progress: Parameterizing connections
+Progress: Validating
+Progress: Done reading input file
+Info: test_count.button_pio: PIO inputs are not hardwired in test bench. Undefined values will be read from PIO inputs during simulation.
+Info: qsys-generate succeeded.
+Info: Finished: Create block symbol file (.bsf)
+Info: 
+Info: Starting: Create HDL design files for synthesis
+Info: qsys-generate D:\Quartus\Cronometro\Laboratorio1\test_count.qsys --synthesis=VERILOG --output-directory=D:\Quartus\Cronometro\Laboratorio1\test_count\synthesis --family="Cyclone V" --part=5CSEMA6F31C6
+Progress: Loading Laboratorio1/test_count.qsys
+Progress: Reading input file
+Progress: Adding RAM [altera_avalon_onchip_memory2 20.1]
+Progress: Parameterizing module RAM
+Progress: Adding ROM [altera_avalon_onchip_memory2 20.1]
+Progress: Parameterizing module ROM
+Progress: Adding button_pio [altera_avalon_pio 20.1]
+Progress: Parameterizing module button_pio
+Progress: Adding clk_0 [clock_source 20.1]
+Progress: Parameterizing module clk_0
+Progress: Adding led_pio [altera_avalon_pio 20.1]
+Progress: Parameterizing module led_pio
+Progress: Adding nios2_gen2_0 [altera_nios2_gen2 20.1]
+Progress: Parameterizing module nios2_gen2_0
+Progress: Adding seven_seg_pio [altera_avalon_pio 20.1]
+Progress: Parameterizing module seven_seg_pio
+Progress: Building connections
+Progress: Parameterizing connections
+Progress: Validating
+Progress: Done reading input file
+Info: test_count.button_pio: PIO inputs are not hardwired in test bench. Undefined values will be read from PIO inputs during simulation.
+Info: test_count: Generating test_count "test_count" for QUARTUS_SYNTH
+Info: RAM: Starting RTL generation for module 'test_count_RAM'
+Info: RAM:   Generation command is [exec D:/quartus/exec/quartus/bin64/perl/bin/perl.exe -I D:/quartus/exec/quartus/bin64/perl/lib -I D:/quartus/exec/quartus/sopc_builder/bin/europa -I D:/quartus/exec/quartus/sopc_builder/bin -I D:/quartus/exec/quartus/../ip/altera/sopc_builder_ip/common -I D:/quartus/exec/quartus/../ip/altera/sopc_builder_ip/altera_avalon_onchip_memory2 -- D:/quartus/exec/quartus/../ip/altera/sopc_builder_ip/altera_avalon_onchip_memory2/generate_rtl.pl --name=test_count_RAM --dir=C:/Users/briwa/AppData/Local/Temp/alt9588_7967769083350937516.dir/0054_RAM_gen/ --quartus_dir=D:/quartus/exec/quartus --verilog --config=C:/Users/briwa/AppData/Local/Temp/alt9588_7967769083350937516.dir/0054_RAM_gen//test_count_RAM_component_configuration.pl  --do_build_sim=0  ]
+Info: RAM: Done RTL generation for module 'test_count_RAM'
+Info: RAM: "test_count" instantiated altera_avalon_onchip_memory2 "RAM"
+Info: ROM: Starting RTL generation for module 'test_count_ROM'
+Info: ROM:   Generation command is [exec D:/quartus/exec/quartus/bin64/perl/bin/perl.exe -I D:/quartus/exec/quartus/bin64/perl/lib -I D:/quartus/exec/quartus/sopc_builder/bin/europa -I D:/quartus/exec/quartus/sopc_builder/bin -I D:/quartus/exec/quartus/../ip/altera/sopc_builder_ip/common -I D:/quartus/exec/quartus/../ip/altera/sopc_builder_ip/altera_avalon_onchip_memory2 -- D:/quartus/exec/quartus/../ip/altera/sopc_builder_ip/altera_avalon_onchip_memory2/generate_rtl.pl --name=test_count_ROM --dir=C:/Users/briwa/AppData/Local/Temp/alt9588_7967769083350937516.dir/0055_ROM_gen/ --quartus_dir=D:/quartus/exec/quartus --verilog --config=C:/Users/briwa/AppData/Local/Temp/alt9588_7967769083350937516.dir/0055_ROM_gen//test_count_ROM_component_configuration.pl  --do_build_sim=0  ]
+Info: ROM: Done RTL generation for module 'test_count_ROM'
+Info: ROM: "test_count" instantiated altera_avalon_onchip_memory2 "ROM"
+Info: button_pio: Starting RTL generation for module 'test_count_button_pio'
+Info: button_pio:   Generation command is [exec D:/quartus/exec/quartus/bin64/perl/bin/perl.exe -I D:/quartus/exec/quartus/bin64/perl/lib -I D:/quartus/exec/quartus/sopc_builder/bin/europa -I D:/quartus/exec/quartus/sopc_builder/bin -I D:/quartus/exec/quartus/../ip/altera/sopc_builder_ip/common -I D:/quartus/exec/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio -- D:/quartus/exec/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio/generate_rtl.pl --name=test_count_button_pio --dir=C:/Users/briwa/AppData/Local/Temp/alt9588_7967769083350937516.dir/0056_button_pio_gen/ --quartus_dir=D:/quartus/exec/quartus --verilog --config=C:/Users/briwa/AppData/Local/Temp/alt9588_7967769083350937516.dir/0056_button_pio_gen//test_count_button_pio_component_configuration.pl  --do_build_sim=0  ]
+Info: button_pio: Done RTL generation for module 'test_count_button_pio'
+Info: button_pio: "test_count" instantiated altera_avalon_pio "button_pio"
+Info: led_pio: Starting RTL generation for module 'test_count_led_pio'
+Info: led_pio:   Generation command is [exec D:/quartus/exec/quartus/bin64/perl/bin/perl.exe -I D:/quartus/exec/quartus/bin64/perl/lib -I D:/quartus/exec/quartus/sopc_builder/bin/europa -I D:/quartus/exec/quartus/sopc_builder/bin -I D:/quartus/exec/quartus/../ip/altera/sopc_builder_ip/common -I D:/quartus/exec/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio -- D:/quartus/exec/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio/generate_rtl.pl --name=test_count_led_pio --dir=C:/Users/briwa/AppData/Local/Temp/alt9588_7967769083350937516.dir/0057_led_pio_gen/ --quartus_dir=D:/quartus/exec/quartus --verilog --config=C:/Users/briwa/AppData/Local/Temp/alt9588_7967769083350937516.dir/0057_led_pio_gen//test_count_led_pio_component_configuration.pl  --do_build_sim=0  ]
+Info: led_pio: Done RTL generation for module 'test_count_led_pio'
+Info: led_pio: "test_count" instantiated altera_avalon_pio "led_pio"
+Info: nios2_gen2_0: "test_count" instantiated altera_nios2_gen2 "nios2_gen2_0"
+Info: seven_seg_pio: Starting RTL generation for module 'test_count_seven_seg_pio'
+Info: seven_seg_pio:   Generation command is [exec D:/quartus/exec/quartus/bin64/perl/bin/perl.exe -I D:/quartus/exec/quartus/bin64/perl/lib -I D:/quartus/exec/quartus/sopc_builder/bin/europa -I D:/quartus/exec/quartus/sopc_builder/bin -I D:/quartus/exec/quartus/../ip/altera/sopc_builder_ip/common -I D:/quartus/exec/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio -- D:/quartus/exec/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio/generate_rtl.pl --name=test_count_seven_seg_pio --dir=C:/Users/briwa/AppData/Local/Temp/alt9588_7967769083350937516.dir/0058_seven_seg_pio_gen/ --quartus_dir=D:/quartus/exec/quartus --verilog --config=C:/Users/briwa/AppData/Local/Temp/alt9588_7967769083350937516.dir/0058_seven_seg_pio_gen//test_count_seven_seg_pio_component_configuration.pl  --do_build_sim=0  ]
+Info: seven_seg_pio: Done RTL generation for module 'test_count_seven_seg_pio'
+Info: seven_seg_pio: "test_count" instantiated altera_avalon_pio "seven_seg_pio"
+Info: avalon_st_adapter: Inserting error_adapter: error_adapter_0
+Info: avalon_st_adapter_001: Inserting error_adapter: error_adapter_0
+Info: avalon_st_adapter_002: Inserting error_adapter: error_adapter_0
+Info: avalon_st_adapter_003: Inserting error_adapter: error_adapter_0
+Info: avalon_st_adapter_004: Inserting error_adapter: error_adapter_0
+Info: avalon_st_adapter_005: Inserting error_adapter: error_adapter_0
+Info: mm_interconnect_0: "test_count" instantiated altera_mm_interconnect "mm_interconnect_0"
+Info: irq_mapper: "test_count" instantiated altera_irq_mapper "irq_mapper"
+Info: rst_controller: "test_count" instantiated altera_reset_controller "rst_controller"
+Info: cpu: Starting RTL generation for module 'test_count_nios2_gen2_0_cpu'
+Info: cpu:   Generation command is [exec D:/Quartus/Exec/quartus/bin64//perl/bin/perl.exe -I D:/Quartus/Exec/quartus/bin64//perl/lib -I D:/quartus/exec/quartus/sopc_builder/bin/europa -I D:/quartus/exec/quartus/sopc_builder/bin -I D:/quartus/exec/quartus/../ip/altera/nios2_ip/altera_nios2_gen2/cpu_lib -I D:/quartus/exec/quartus/../ip/altera/nios2_ip/altera_nios2_gen2/nios_lib -I D:/quartus/exec/quartus/../ip/altera/nios2_ip/altera_nios2_gen2 -I D:/quartus/exec/quartus/../ip/altera/nios2_ip/altera_nios2_gen2 -- D:/quartus/exec/quartus/../ip/altera/nios2_ip/altera_nios2_gen2/generate_rtl.pl --name=test_count_nios2_gen2_0_cpu --dir=C:/Users/briwa/AppData/Local/Temp/alt9588_7967769083350937516.dir/0061_cpu_gen/ --quartus_bindir=D:/Quartus/Exec/quartus/bin64/ --verilog --config=C:/Users/briwa/AppData/Local/Temp/alt9588_7967769083350937516.dir/0061_cpu_gen//test_count_nios2_gen2_0_cpu_processor_configuration.pl  --do_build_sim=0  ]
+Info: cpu: # 2023.08.18 19:57:36 (*) Starting Nios II generation
+Info: cpu: # 2023.08.18 19:57:36 (*)   Elaborating CPU configuration settings
+Info: cpu: # 2023.08.18 19:57:36 (*)   Creating all objects for CPU
+Info: cpu: # 2023.08.18 19:57:37 (*)   Generating RTL from CPU objects
+Info: cpu: # 2023.08.18 19:57:37 (*)   Creating plain-text RTL
+Info: cpu: # 2023.08.18 19:57:37 (*) Done Nios II generation
+Info: cpu: Done RTL generation for module 'test_count_nios2_gen2_0_cpu'
+Info: cpu: "nios2_gen2_0" instantiated altera_nios2_gen2_unit "cpu"
+Info: nios2_gen2_0_data_master_translator: "mm_interconnect_0" instantiated altera_merlin_master_translator "nios2_gen2_0_data_master_translator"
+Info: nios2_gen2_0_debug_mem_slave_translator: "mm_interconnect_0" instantiated altera_merlin_slave_translator "nios2_gen2_0_debug_mem_slave_translator"
+Info: nios2_gen2_0_data_master_agent: "mm_interconnect_0" instantiated altera_merlin_master_agent "nios2_gen2_0_data_master_agent"
+Info: nios2_gen2_0_debug_mem_slave_agent: "mm_interconnect_0" instantiated altera_merlin_slave_agent "nios2_gen2_0_debug_mem_slave_agent"
+Info: nios2_gen2_0_debug_mem_slave_agent_rsp_fifo: "mm_interconnect_0" instantiated altera_avalon_sc_fifo "nios2_gen2_0_debug_mem_slave_agent_rsp_fifo"
+Info: router: "mm_interconnect_0" instantiated altera_merlin_router "router"
+Info: router_001: "mm_interconnect_0" instantiated altera_merlin_router "router_001"
+Info: router_002: "mm_interconnect_0" instantiated altera_merlin_router "router_002"
+Info: router_003: "mm_interconnect_0" instantiated altera_merlin_router "router_003"
+Info: router_007: "mm_interconnect_0" instantiated altera_merlin_router "router_007"
+Info: cmd_demux: "mm_interconnect_0" instantiated altera_merlin_demultiplexer "cmd_demux"
+Info: cmd_demux_001: "mm_interconnect_0" instantiated altera_merlin_demultiplexer "cmd_demux_001"
+Info: cmd_mux: "mm_interconnect_0" instantiated altera_merlin_multiplexer "cmd_mux"
+Info: cmd_mux_001: "mm_interconnect_0" instantiated altera_merlin_multiplexer "cmd_mux_001"
+Info: Reusing file D:/Quartus/Cronometro/Laboratorio1/test_count/synthesis/submodules/altera_merlin_arbitrator.sv
+Info: rsp_demux_001: "mm_interconnect_0" instantiated altera_merlin_demultiplexer "rsp_demux_001"
+Info: rsp_mux: "mm_interconnect_0" instantiated altera_merlin_multiplexer "rsp_mux"
+Info: Reusing file D:/Quartus/Cronometro/Laboratorio1/test_count/synthesis/submodules/altera_merlin_arbitrator.sv
+Info: rsp_mux_001: "mm_interconnect_0" instantiated altera_merlin_multiplexer "rsp_mux_001"
+Info: Reusing file D:/Quartus/Cronometro/Laboratorio1/test_count/synthesis/submodules/altera_merlin_arbitrator.sv
+Info: avalon_st_adapter: "mm_interconnect_0" instantiated altera_avalon_st_adapter "avalon_st_adapter"
+Info: error_adapter_0: "avalon_st_adapter" instantiated error_adapter "error_adapter_0"
+Info: test_count: Done "test_count" with 30 modules, 44 files
+Info: qsys-generate succeeded.
+Info: Finished: Create HDL design files for synthesis

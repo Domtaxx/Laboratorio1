@@ -1,0 +1,24 @@
+# # File gsaved with Nlview version 6.3.8  2013-12-19 bk=1.2992 VDI=34 GEI=35
+# 
+preplace inst platform.ROM_0 -pg 1 -lvl 3 -y 210
+preplace inst platform.nios2_gen2_0.clock_bridge -pg 1
+preplace inst platform.nios2_gen2_0 -pg 1 -lvl 2 -y 200
+preplace inst platform.nios2_gen2_0.reset_bridge -pg 1
+preplace inst platform.RAM_0 -pg 1 -lvl 3 -y 130
+preplace inst platform -pg 1 -lvl 1 -y 40 -regy -20
+preplace inst platform.timer_0 -pg 1 -lvl 3 -y 30
+preplace inst platform.pio_switch_0 -pg 1 -lvl 3 -y 410
+preplace inst platform.pio_leds_0 -pg 1 -lvl 3 -y 310
+preplace inst platform.nios2_gen2_0.cpu -pg 1
+preplace inst platform.clk_0 -pg 1 -lvl 1 -y 330
+preplace netloc POINT_TO_POINT<net_container>platform</net_container>(MASTER)nios2_gen2_0.instruction_master,(SLAVE)ROM_0.s1) 1 2 1 790
+preplace netloc FAN_OUT<net_container>platform</net_container>(SLAVE)pio_leds_0.reset,(MASTER)clk_0.clk_reset,(SLAVE)pio_switch_0.reset,(SLAVE)RAM_0.reset1,(SLAVE)timer_0.reset,(SLAVE)ROM_0.reset1,(SLAVE)nios2_gen2_0.reset) 1 1 2 450 320 830
+preplace netloc EXPORT<net_container>platform</net_container>(SLAVE)platform.reset,(SLAVE)clk_0.clk_in_reset) 1 0 1 NJ
+preplace netloc EXPORT<net_container>platform</net_container>(SLAVE)platform.clk,(SLAVE)clk_0.clk_in) 1 0 1 NJ
+preplace netloc POINT_TO_POINT<net_container>platform</net_container>(SLAVE)timer_0.irq,(MASTER)nios2_gen2_0.irq) 1 2 1 750
+preplace netloc FAN_OUT<net_container>platform</net_container>(SLAVE)RAM_0.s1,(SLAVE)pio_leds_0.s1,(SLAVE)pio_switch_0.s1,(SLAVE)timer_0.s1,(MASTER)nios2_gen2_0.data_master) 1 2 1 770
+preplace netloc EXPORT<net_container>platform</net_container>(SLAVE)platform.pio_leds_0_external_connection,(SLAVE)pio_leds_0.external_connection) 1 0 3 NJ 320 NJ 340 NJ
+preplace netloc EXPORT<net_container>platform</net_container>(SLAVE)pio_switch_0.external_connection,(SLAVE)platform.pio_switch_0_external_connection) 1 0 3 NJ 440 NJ 440 NJ
+preplace netloc FAN_OUT<net_container>platform</net_container>(MASTER)clk_0.clk,(SLAVE)pio_switch_0.clk,(SLAVE)ROM_0.clk1,(SLAVE)nios2_gen2_0.clk,(SLAVE)pio_leds_0.clk,(SLAVE)timer_0.clk,(SLAVE)RAM_0.clk1) 1 1 2 410 160 810
+levelinfo -pg 1 0 200 1020
+levelinfo -hier platform 210 240 510 860 1010

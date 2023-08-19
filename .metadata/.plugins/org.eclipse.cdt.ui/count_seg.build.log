@@ -1,0 +1,26 @@
+19:49:53 **** Build of configuration Nios II for project count_seg ****
+wsl make mem_init_generate 
+Info: Building /mnt/d/Quartus/Cronometro/Laboratorio1/software/count_seg_bsp/
+make --no-print-directory -C /mnt/d/Quartus/Cronometro/Laboratorio1/software/count_seg_bsp/
+[BSP build complete]
+Post-processing to create mem_init/test_count_RAM.hex...
+elf2hex.exe count_seg.elf 0x00020000 0x000217cf --width=32 --little-endian-mem --create-lanes=0 mem_init/test_count_RAM.hex
+Post-processing to create mem_init/test_count_ROM.hex...
+elf2hex.exe count_seg.elf 0x00000000 0x000101cf --width=32 --little-endian-mem --create-lanes=0 mem_init/test_count_ROM.hex
+Post-processing to create mem_init/hdl_sim/test_count_RAM.dat...
+elf2dat --infile=count_seg.elf --outfile=mem_init/hdl_sim/test_count_RAM.dat \
+	--base=0x00020000 --end=0x000217cf --width=32 \
+	--little-endian-mem --create-lanes=0 
+Post-processing to create mem_init/hdl_sim/test_count_ROM.dat...
+elf2dat --infile=count_seg.elf --outfile=mem_init/hdl_sim/test_count_ROM.dat \
+	--base=0x00000000 --end=0x000101cf --width=32 \
+	--little-endian-mem --create-lanes=0 
+Post-processing to create mem_init/hdl_sim/test_count_RAM.sym...
+nios2-elf-nm.exe -n count_seg.elf > mem_init/hdl_sim/test_count_RAM.sym
+Post-processing to create mem_init/hdl_sim/test_count_ROM.sym...
+nios2-elf-nm.exe -n count_seg.elf > mem_init/hdl_sim/test_count_ROM.sym
+Post-processing to create mem_init/meminit.spd...
+Post-processing to create mem_init/meminit.qip...
+
+19:49:55 Build Finished (took 1s.855ms)
+
