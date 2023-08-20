@@ -1,14 +1,22 @@
 |tallernios
 clk => clk.IN1
 rst_n => rst_n.IN1
-switch => switch.IN1
-leds[0] << seven_segment_display:comb_3.segment
-leds[1] << seven_segment_display:comb_3.segment
-leds[2] << seven_segment_display:comb_3.segment
-leds[3] << seven_segment_display:comb_3.segment
-leds[4] << seven_segment_display:comb_3.segment
-leds[5] << seven_segment_display:comb_3.segment
-leds[6] << seven_segment_display:comb_3.segment
+switch[0] => switch[0].IN1
+switch[1] => switch[1].IN1
+display1[0] << two_seven_segment_displays:comb_3.segment_anode1
+display1[1] << two_seven_segment_displays:comb_3.segment_anode1
+display1[2] << two_seven_segment_displays:comb_3.segment_anode1
+display1[3] << two_seven_segment_displays:comb_3.segment_anode1
+display1[4] << two_seven_segment_displays:comb_3.segment_anode1
+display1[5] << two_seven_segment_displays:comb_3.segment_anode1
+display1[6] << two_seven_segment_displays:comb_3.segment_anode1
+display2[0] << two_seven_segment_displays:comb_3.segment_anode2
+display2[1] << two_seven_segment_displays:comb_3.segment_anode2
+display2[2] << two_seven_segment_displays:comb_3.segment_anode2
+display2[3] << two_seven_segment_displays:comb_3.segment_anode2
+display2[4] << two_seven_segment_displays:comb_3.segment_anode2
+display2[5] << two_seven_segment_displays:comb_3.segment_anode2
+display2[6] << two_seven_segment_displays:comb_3.segment_anode2
 
 
 |tallernios|platform:plat
@@ -20,7 +28,9 @@ pio_leds_0_external_connection_export[3] <= platform_pio_leds_0:pio_leds_0.out_p
 pio_leds_0_external_connection_export[4] <= platform_pio_leds_0:pio_leds_0.out_port
 pio_leds_0_external_connection_export[5] <= platform_pio_leds_0:pio_leds_0.out_port
 pio_leds_0_external_connection_export[6] <= platform_pio_leds_0:pio_leds_0.out_port
-pio_switch_0_external_connection_export => pio_switch_0_external_connection_export.IN1
+pio_leds_0_external_connection_export[7] <= platform_pio_leds_0:pio_leds_0.out_port
+pio_switch_0_external_connection_export[0] => pio_switch_0_external_connection_export[0].IN1
+pio_switch_0_external_connection_export[1] => pio_switch_0_external_connection_export[1].IN1
 reset_reset_n => _.IN1
 
 
@@ -2191,6 +2201,7 @@ clk => data_out[3].CLK
 clk => data_out[4].CLK
 clk => data_out[5].CLK
 clk => data_out[6].CLK
+clk => data_out[7].CLK
 reset_n => data_out[0].ACLR
 reset_n => data_out[1].ACLR
 reset_n => data_out[2].ACLR
@@ -2198,6 +2209,7 @@ reset_n => data_out[3].ACLR
 reset_n => data_out[4].ACLR
 reset_n => data_out[5].ACLR
 reset_n => data_out[6].ACLR
+reset_n => data_out[7].ACLR
 write_n => always0.IN1
 writedata[0] => data_out[0].DATAIN
 writedata[1] => data_out[1].DATAIN
@@ -2206,7 +2218,7 @@ writedata[3] => data_out[3].DATAIN
 writedata[4] => data_out[4].DATAIN
 writedata[5] => data_out[5].DATAIN
 writedata[6] => data_out[6].DATAIN
-writedata[7] => ~NO_FANOUT~
+writedata[7] => data_out[7].DATAIN
 writedata[8] => ~NO_FANOUT~
 writedata[9] => ~NO_FANOUT~
 writedata[10] => ~NO_FANOUT~
@@ -2238,6 +2250,7 @@ out_port[3] <= data_out[3].DB_MAX_OUTPUT_PORT_TYPE
 out_port[4] <= data_out[4].DB_MAX_OUTPUT_PORT_TYPE
 out_port[5] <= data_out[5].DB_MAX_OUTPUT_PORT_TYPE
 out_port[6] <= data_out[6].DB_MAX_OUTPUT_PORT_TYPE
+out_port[7] <= data_out[7].DB_MAX_OUTPUT_PORT_TYPE
 readdata[0] <= read_mux_out.DB_MAX_OUTPUT_PORT_TYPE
 readdata[1] <= read_mux_out.DB_MAX_OUTPUT_PORT_TYPE
 readdata[2] <= read_mux_out.DB_MAX_OUTPUT_PORT_TYPE
@@ -2245,7 +2258,7 @@ readdata[3] <= read_mux_out.DB_MAX_OUTPUT_PORT_TYPE
 readdata[4] <= read_mux_out.DB_MAX_OUTPUT_PORT_TYPE
 readdata[5] <= read_mux_out.DB_MAX_OUTPUT_PORT_TYPE
 readdata[6] <= read_mux_out.DB_MAX_OUTPUT_PORT_TYPE
-readdata[7] <= <GND>
+readdata[7] <= read_mux_out.DB_MAX_OUTPUT_PORT_TYPE
 readdata[8] <= <GND>
 readdata[9] <= <GND>
 readdata[10] <= <GND>
@@ -2307,7 +2320,8 @@ clk => readdata[28]~reg0.CLK
 clk => readdata[29]~reg0.CLK
 clk => readdata[30]~reg0.CLK
 clk => readdata[31]~reg0.CLK
-in_port => read_mux_out.IN1
+in_port[0] => read_mux_out[0].IN1
+in_port[1] => read_mux_out[1].IN1
 reset_n => readdata[0]~reg0.ACLR
 reset_n => readdata[1]~reg0.ACLR
 reset_n => readdata[2]~reg0.ACLR
@@ -3838,42 +3852,6 @@ clk => internal_counter[12].CLK
 clk => internal_counter[13].CLK
 clk => internal_counter[14].CLK
 clk => internal_counter[15].CLK
-clk => internal_counter[16].CLK
-clk => internal_counter[17].CLK
-clk => internal_counter[18].CLK
-clk => internal_counter[19].CLK
-clk => internal_counter[20].CLK
-clk => internal_counter[21].CLK
-clk => internal_counter[22].CLK
-clk => internal_counter[23].CLK
-clk => internal_counter[24].CLK
-clk => internal_counter[25].CLK
-reset_n => internal_counter[0].PRESET
-reset_n => internal_counter[1].PRESET
-reset_n => internal_counter[2].PRESET
-reset_n => internal_counter[3].PRESET
-reset_n => internal_counter[4].PRESET
-reset_n => internal_counter[5].PRESET
-reset_n => internal_counter[6].PRESET
-reset_n => internal_counter[7].ACLR
-reset_n => internal_counter[8].ACLR
-reset_n => internal_counter[9].ACLR
-reset_n => internal_counter[10].ACLR
-reset_n => internal_counter[11].ACLR
-reset_n => internal_counter[12].PRESET
-reset_n => internal_counter[13].PRESET
-reset_n => internal_counter[14].PRESET
-reset_n => internal_counter[15].PRESET
-reset_n => internal_counter[16].ACLR
-reset_n => internal_counter[17].PRESET
-reset_n => internal_counter[18].ACLR
-reset_n => internal_counter[19].PRESET
-reset_n => internal_counter[20].PRESET
-reset_n => internal_counter[21].PRESET
-reset_n => internal_counter[22].PRESET
-reset_n => internal_counter[23].PRESET
-reset_n => internal_counter[24].ACLR
-reset_n => internal_counter[25].PRESET
 reset_n => readdata[0]~reg0.ACLR
 reset_n => readdata[1]~reg0.ACLR
 reset_n => readdata[2]~reg0.ACLR
@@ -3890,6 +3868,22 @@ reset_n => readdata[12]~reg0.ACLR
 reset_n => readdata[13]~reg0.ACLR
 reset_n => readdata[14]~reg0.ACLR
 reset_n => readdata[15]~reg0.ACLR
+reset_n => internal_counter[0].PRESET
+reset_n => internal_counter[1].PRESET
+reset_n => internal_counter[2].PRESET
+reset_n => internal_counter[3].PRESET
+reset_n => internal_counter[4].ACLR
+reset_n => internal_counter[5].ACLR
+reset_n => internal_counter[6].PRESET
+reset_n => internal_counter[7].ACLR
+reset_n => internal_counter[8].PRESET
+reset_n => internal_counter[9].PRESET
+reset_n => internal_counter[10].ACLR
+reset_n => internal_counter[11].ACLR
+reset_n => internal_counter[12].ACLR
+reset_n => internal_counter[13].ACLR
+reset_n => internal_counter[14].PRESET
+reset_n => internal_counter[15].PRESET
 reset_n => force_reload.ACLR
 reset_n => counter_is_running.ACLR
 reset_n => delayed_unxcounter_is_zeroxx0.ACLR
@@ -19853,11 +19847,50 @@ clk => altera_reset_synchronizer_int_chain[1].CLK
 reset_out <= altera_reset_synchronizer_int_chain_out.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|tallernios|seven_segment_display:comb_3
-number[0] => Decoder0.IN3
-number[1] => Decoder0.IN2
-number[2] => Decoder0.IN1
-number[3] => Decoder0.IN0
+|tallernios|two_seven_segment_displays:comb_3
+decimal_number[0] => bcd_digit1[0].IN1
+decimal_number[1] => bcd_digit1[1].IN1
+decimal_number[2] => bcd_digit1[2].IN1
+decimal_number[3] => bcd_digit1[3].IN1
+decimal_number[4] => bcd_digit2[0].IN1
+decimal_number[5] => bcd_digit2[1].IN1
+decimal_number[6] => bcd_digit2[2].IN1
+decimal_number[7] => bcd_digit2[3].IN1
+segment_anode1[0] <= BCD_to_seven_segment:bcd_to_7seg1.segment
+segment_anode1[1] <= BCD_to_seven_segment:bcd_to_7seg1.segment
+segment_anode1[2] <= BCD_to_seven_segment:bcd_to_7seg1.segment
+segment_anode1[3] <= BCD_to_seven_segment:bcd_to_7seg1.segment
+segment_anode1[4] <= BCD_to_seven_segment:bcd_to_7seg1.segment
+segment_anode1[5] <= BCD_to_seven_segment:bcd_to_7seg1.segment
+segment_anode1[6] <= BCD_to_seven_segment:bcd_to_7seg1.segment
+segment_anode2[0] <= BCD_to_seven_segment:bcd_to_7seg2.segment
+segment_anode2[1] <= BCD_to_seven_segment:bcd_to_7seg2.segment
+segment_anode2[2] <= BCD_to_seven_segment:bcd_to_7seg2.segment
+segment_anode2[3] <= BCD_to_seven_segment:bcd_to_7seg2.segment
+segment_anode2[4] <= BCD_to_seven_segment:bcd_to_7seg2.segment
+segment_anode2[5] <= BCD_to_seven_segment:bcd_to_7seg2.segment
+segment_anode2[6] <= BCD_to_seven_segment:bcd_to_7seg2.segment
+
+
+|tallernios|two_seven_segment_displays:comb_3|BCD_to_seven_segment:bcd_to_7seg1
+bcd_input[0] => Decoder0.IN3
+bcd_input[1] => Decoder0.IN2
+bcd_input[2] => Decoder0.IN1
+bcd_input[3] => Decoder0.IN0
+segment[0] <= WideOr6.DB_MAX_OUTPUT_PORT_TYPE
+segment[1] <= WideOr5.DB_MAX_OUTPUT_PORT_TYPE
+segment[2] <= WideOr4.DB_MAX_OUTPUT_PORT_TYPE
+segment[3] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+segment[4] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+segment[5] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+segment[6] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tallernios|two_seven_segment_displays:comb_3|BCD_to_seven_segment:bcd_to_7seg2
+bcd_input[0] => Decoder0.IN3
+bcd_input[1] => Decoder0.IN2
+bcd_input[2] => Decoder0.IN1
+bcd_input[3] => Decoder0.IN0
 segment[0] <= WideOr6.DB_MAX_OUTPUT_PORT_TYPE
 segment[1] <= WideOr5.DB_MAX_OUTPUT_PORT_TYPE
 segment[2] <= WideOr4.DB_MAX_OUTPUT_PORT_TYPE

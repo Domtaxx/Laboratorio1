@@ -2,11 +2,12 @@ module tallernios
 (
 	input logic clk,
 					rst_n,
-	input logic switch,
-	output logic[6:0] leds
+	input logic[1:0] switch,
+	output logic[6:0] display1,
+	output logic[6:0] display2
 );
 
-	logic[3:0] number;
+	logic[7:0] number;
 	
 
 	platform plat
@@ -17,6 +18,11 @@ module tallernios
 		.reset_reset_n(rst_n)
 	);
 	
-	seven_segment_display(.number(number), .segment(leds));
+
+	two_seven_segment_displays(
+    .decimal_number(number),
+    .segment_anode1(display1),
+	 .segment_anode2(display2)
+	);
 
 endmodule

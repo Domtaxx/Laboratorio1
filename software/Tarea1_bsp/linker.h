@@ -4,7 +4,7 @@
  * Machine generated for CPU 'nios2_gen2_0' in SOPC Builder design 'platform'
  * SOPC Builder design path: c:/Users/yraul/OneDrive/Documentos/GitHub/Laboratorio1/platform.sopcinfo
  *
- * Generated: Sun Aug 20 12:59:28 CST 2023
+ * Generated: Sun Aug 20 15:24:32 CST 2023
  */
 
 /*

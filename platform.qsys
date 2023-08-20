@@ -44,7 +44,7 @@
       }
       datum sopceditor_expanded
       {
-         value = "0";
+         value = "1";
          type = "boolean";
       }
    }
@@ -65,7 +65,7 @@
       }
       datum sopceditor_expanded
       {
-         value = "0";
+         value = "1";
          type = "boolean";
       }
    }
@@ -128,7 +128,7 @@
       }
       datum sopceditor_expanded
       {
-         value = "0";
+         value = "1";
          type = "boolean";
       }
    }
@@ -373,7 +373,7 @@
   <parameter name="resetValue" value="0" />
   <parameter name="simDoTestBenchWiring" value="false" />
   <parameter name="simDrivenValue" value="0" />
-  <parameter name="width" value="7" />
+  <parameter name="width" value="8" />
  </module>
  <module
    name="pio_switch_0"
@@ -391,7 +391,7 @@
   <parameter name="resetValue" value="0" />
   <parameter name="simDoTestBenchWiring" value="false" />
   <parameter name="simDrivenValue" value="0" />
-  <parameter name="width" value="1" />
+  <parameter name="width" value="2" />
  </module>
  <module
    name="ram_0"
@@ -462,7 +462,7 @@
   <parameter name="counterSize" value="32" />
   <parameter name="fixedPeriod" value="true" />
   <parameter name="period" value="1" />
-  <parameter name="periodUnits" value="SEC" />
+  <parameter name="periodUnits" value="MSEC" />
   <parameter name="resetOutput" value="false" />
   <parameter name="snapshot" value="false" />
   <parameter name="systemFrequency" value="50000000" />

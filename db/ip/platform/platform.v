@@ -5,8 +5,8 @@
 `timescale 1 ps / 1 ps
 module platform (
 		input  wire       clk_clk,                                 //                              clk.clk
-		output wire [6:0] pio_leds_0_external_connection_export,   //   pio_leds_0_external_connection.export
-		input  wire       pio_switch_0_external_connection_export, // pio_switch_0_external_connection.export
+		output wire [7:0] pio_leds_0_external_connection_export,   //   pio_leds_0_external_connection.export
+		input  wire [1:0] pio_switch_0_external_connection_export, // pio_switch_0_external_connection.export
 		input  wire       reset_reset_n                            //                            reset.reset_n
 	);
 

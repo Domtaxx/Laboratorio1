@@ -1,0 +1,52 @@
+module TwoSevenSegmentDisplays(
+    input logic [7:0] decimal_number,
+    output logic [6:0] segment_anode1,
+    output logic [6:0] segment_anode2,
+    output logic display_enable
+);
+
+    // Define the BCD-to-seven-segment decoder truth table
+    // Decimal => 7-Segment Segment Pattern
+    //   0 => 0b1000000
+    //   1 => 0b1111001
+    //   2 => 0b0100100
+    //   ... (Define patterns for all digits)
+
+    logic [3:0] bcd_digit1; // 1st digit
+    logic [3:0] bcd_digit2; // 2nd digit
+
+    assign bcd_digit1 = decimal_number[3:0];
+    assign bcd_digit2 = decimal_number[7:4];
+
+    // BCD to Seven-Segment Decoder Instances
+    seven_segment_display bcd_to_7seg1(
+        .bcd_input(bcd_digit1),
+        .segment(segment_anode1)
+    );
+
+    seven_segment_display bcd_to_7seg2(
+        .bcd_input(bcd_digit2),
+        .segment(segment_anode2)
+    );
+
+    // Display Multiplexing
+    reg mux_state;
+
+    always @(posedge clk) begin
+        if (reset) begin
+            mux_state <= 1'b0;
+            display_enable <= 1'b1;
+        end else begin
+            mux_state <= ~mux_state;
+            display_enable <= 1'b0;
+        end
+    end
+
+    always_comb begin
+        if (mux_state)
+            display_enable <= 1'b1;
+        else
+            display_enable <= 1'b0;
+    end
+
+endmodule

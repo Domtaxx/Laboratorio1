@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <EnsembleReport name="platform" kind="system" version="22.1" fabric="QSYS">
  <!-- Format version 22.1 922 (Future versions may contain additional information.) -->
- <!-- 2023.08.20.12:50:20 -->
+ <!-- 2023.08.20.15:25:31 -->
  <!-- A collection of modules and connections -->
  <parameter name="clockCrossingAdapter">
   <type>com.altera.sopcmodel.ensemble.EClockAdapter</type>
@@ -53,7 +53,7 @@
  </parameter>
  <parameter name="generationId">
   <type>int</type>
-  <value>1692557410</value>
+  <value>1692566720</value>
   <derived>false</derived>
   <enabled>true</enabled>
   <visible>true</visible>
@@ -3266,7 +3266,7 @@ the requested settings for a module instance. -->
   </assignment>
   <assignment>
    <name>embeddedsw.CMacro.DATA_WIDTH</name>
-   <value>7</value>
+   <value>8</value>
   </assignment>
   <assignment>
    <name>embeddedsw.CMacro.DO_TEST_BENCH_WIRING</name>
@@ -3318,7 +3318,7 @@ the requested settings for a module instance. -->
   </assignment>
   <assignment>
    <name>embeddedsw.dts.params.altr,gpio-bank-width</name>
-   <value>7</value>
+   <value>8</value>
   </assignment>
   <assignment>
    <name>embeddedsw.dts.params.resetvalue</name>
@@ -3410,7 +3410,7 @@ the requested settings for a module instance. -->
   </parameter>
   <parameter name="width">
    <type>int</type>
-   <value>7</value>
+   <value>8</value>
    <derived>false</derived>
    <enabled>true</enabled>
    <visible>true</visible>
@@ -4018,7 +4018,7 @@ parameters are a RESULT of the module parameters. -->
    <port>
     <name>out_port</name>
     <direction>Output</direction>
-    <width>7</width>
+    <width>8</width>
     <role>export</role>
    </port>
   </interface>
@@ -4044,7 +4044,7 @@ the requested settings for a module instance. -->
   </assignment>
   <assignment>
    <name>embeddedsw.CMacro.DATA_WIDTH</name>
-   <value>1</value>
+   <value>2</value>
   </assignment>
   <assignment>
    <name>embeddedsw.CMacro.DO_TEST_BENCH_WIRING</name>
@@ -4096,7 +4096,7 @@ the requested settings for a module instance. -->
   </assignment>
   <assignment>
    <name>embeddedsw.dts.params.altr,gpio-bank-width</name>
-   <value>1</value>
+   <value>2</value>
   </assignment>
   <assignment>
    <name>embeddedsw.dts.params.resetvalue</name>
@@ -4188,7 +4188,7 @@ the requested settings for a module instance. -->
   </parameter>
   <parameter name="width">
    <type>int</type>
-   <value>1</value>
+   <value>2</value>
    <derived>false</derived>
    <enabled>true</enabled>
    <visible>true</visible>
@@ -4778,7 +4778,7 @@ parameters are a RESULT of the module parameters. -->
    <port>
     <name>in_port</name>
     <direction>Input</direction>
-    <width>1</width>
+    <width>2</width>
     <role>export</role>
    </port>
   </interface>
@@ -6550,11 +6550,11 @@ the requested settings for a module instance. -->
   </assignment>
   <assignment>
    <name>embeddedsw.CMacro.LOAD_VALUE</name>
-   <value>49999999</value>
+   <value>49999</value>
   </assignment>
   <assignment>
    <name>embeddedsw.CMacro.MULT</name>
-   <value>1.0</value>
+   <value>0.001</value>
   </assignment>
   <assignment>
    <name>embeddedsw.CMacro.PERIOD</name>
@@ -6562,7 +6562,7 @@ the requested settings for a module instance. -->
   </assignment>
   <assignment>
    <name>embeddedsw.CMacro.PERIOD_UNITS</name>
-   <value>s</value>
+   <value>ms</value>
   </assignment>
   <assignment>
    <name>embeddedsw.CMacro.RESET_OUTPUT</name>
@@ -6574,7 +6574,7 @@ the requested settings for a module instance. -->
   </assignment>
   <assignment>
    <name>embeddedsw.CMacro.TICKS_PER_SEC</name>
-   <value>1</value>
+   <value>1000</value>
   </assignment>
   <assignment>
    <name>embeddedsw.CMacro.TIMEOUT_PULSE_OUTPUT</name>
@@ -6622,7 +6622,7 @@ the requested settings for a module instance. -->
   </parameter>
   <parameter name="periodUnits">
    <type>java.lang.String</type>
-   <value>SEC</value>
+   <value>MSEC</value>
    <derived>false</derived>
    <enabled>true</enabled>
    <visible>true</visible>
@@ -6680,7 +6680,7 @@ the requested settings for a module instance. -->
   </parameter>
   <parameter name="periodUnitsString">
    <type>java.lang.String</type>
-   <value>s</value>
+   <value>ms</value>
    <derived>true</derived>
    <enabled>true</enabled>
    <visible>false</visible>
@@ -6688,7 +6688,7 @@ the requested settings for a module instance. -->
   </parameter>
   <parameter name="valueInSecond">
    <type>double</type>
-   <value>1.0</value>
+   <value>0.001</value>
    <derived>true</derived>
    <enabled>true</enabled>
    <visible>false</visible>
@@ -6696,7 +6696,7 @@ the requested settings for a module instance. -->
   </parameter>
   <parameter name="loadValue">
    <type>java.lang.String</type>
-   <value>49999999</value>
+   <value>49999</value>
    <derived>true</derived>
    <enabled>true</enabled>
    <visible>false</visible>
@@ -6704,7 +6704,7 @@ the requested settings for a module instance. -->
   </parameter>
   <parameter name="mult">
    <type>double</type>
-   <value>1.0</value>
+   <value>0.001</value>
    <derived>true</derived>
    <enabled>true</enabled>
    <visible>false</visible>
@@ -6712,7 +6712,7 @@ the requested settings for a module instance. -->
   </parameter>
   <parameter name="ticksPerSec">
    <type>double</type>
-   <value>1.0</value>
+   <value>1000.0</value>
    <derived>true</derived>
    <enabled>true</enabled>
    <visible>false</visible>
@@ -12221,5 +12221,5 @@ parameters are a RESULT of the module parameters. -->
   <version>22.1</version>
  </plugin>
  <reportVersion>22.1 922</reportVersion>
- <uniqueIdentifier>222B20BAE24F0000018A14488861</uniqueIdentifier>
+ <uniqueIdentifier>222B20BAE24F0000018A14D698E8</uniqueIdentifier>
 </EnsembleReport>
