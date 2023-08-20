@@ -2,16 +2,13 @@
 clk => clk.IN1
 rst_n => rst_n.IN1
 switch => switch.IN1
-leds[0] << platform:plat.pio_leds_0_external_connection_export
-leds[1] << platform:plat.pio_leds_0_external_connection_export
-leds[2] << platform:plat.pio_leds_0_external_connection_export
-leds[3] << platform:plat.pio_leds_0_external_connection_export
-leds[4] << platform:plat.pio_leds_0_external_connection_export
-leds[5] << platform:plat.pio_leds_0_external_connection_export
-leds[6] << platform:plat.pio_leds_0_external_connection_export
-leds[7] << platform:plat.pio_leds_0_external_connection_export
-leds[8] << platform:plat.pio_leds_0_external_connection_export
-leds[9] << platform:plat.pio_leds_0_external_connection_export
+leds[0] << seven_segment_display:comb_3.segment
+leds[1] << seven_segment_display:comb_3.segment
+leds[2] << seven_segment_display:comb_3.segment
+leds[3] << seven_segment_display:comb_3.segment
+leds[4] << seven_segment_display:comb_3.segment
+leds[5] << seven_segment_display:comb_3.segment
+leds[6] << seven_segment_display:comb_3.segment
 
 
 |tallernios|platform:plat
@@ -23,9 +20,6 @@ pio_leds_0_external_connection_export[3] <= platform_pio_leds_0:pio_leds_0.out_p
 pio_leds_0_external_connection_export[4] <= platform_pio_leds_0:pio_leds_0.out_port
 pio_leds_0_external_connection_export[5] <= platform_pio_leds_0:pio_leds_0.out_port
 pio_leds_0_external_connection_export[6] <= platform_pio_leds_0:pio_leds_0.out_port
-pio_leds_0_external_connection_export[7] <= platform_pio_leds_0:pio_leds_0.out_port
-pio_leds_0_external_connection_export[8] <= platform_pio_leds_0:pio_leds_0.out_port
-pio_leds_0_external_connection_export[9] <= platform_pio_leds_0:pio_leds_0.out_port
 pio_switch_0_external_connection_export => pio_switch_0_external_connection_export.IN1
 reset_reset_n => _.IN1
 
@@ -2197,9 +2191,6 @@ clk => data_out[3].CLK
 clk => data_out[4].CLK
 clk => data_out[5].CLK
 clk => data_out[6].CLK
-clk => data_out[7].CLK
-clk => data_out[8].CLK
-clk => data_out[9].CLK
 reset_n => data_out[0].ACLR
 reset_n => data_out[1].ACLR
 reset_n => data_out[2].ACLR
@@ -2207,9 +2198,6 @@ reset_n => data_out[3].ACLR
 reset_n => data_out[4].ACLR
 reset_n => data_out[5].ACLR
 reset_n => data_out[6].ACLR
-reset_n => data_out[7].ACLR
-reset_n => data_out[8].ACLR
-reset_n => data_out[9].ACLR
 write_n => always0.IN1
 writedata[0] => data_out[0].DATAIN
 writedata[1] => data_out[1].DATAIN
@@ -2218,9 +2206,9 @@ writedata[3] => data_out[3].DATAIN
 writedata[4] => data_out[4].DATAIN
 writedata[5] => data_out[5].DATAIN
 writedata[6] => data_out[6].DATAIN
-writedata[7] => data_out[7].DATAIN
-writedata[8] => data_out[8].DATAIN
-writedata[9] => data_out[9].DATAIN
+writedata[7] => ~NO_FANOUT~
+writedata[8] => ~NO_FANOUT~
+writedata[9] => ~NO_FANOUT~
 writedata[10] => ~NO_FANOUT~
 writedata[11] => ~NO_FANOUT~
 writedata[12] => ~NO_FANOUT~
@@ -2250,9 +2238,6 @@ out_port[3] <= data_out[3].DB_MAX_OUTPUT_PORT_TYPE
 out_port[4] <= data_out[4].DB_MAX_OUTPUT_PORT_TYPE
 out_port[5] <= data_out[5].DB_MAX_OUTPUT_PORT_TYPE
 out_port[6] <= data_out[6].DB_MAX_OUTPUT_PORT_TYPE
-out_port[7] <= data_out[7].DB_MAX_OUTPUT_PORT_TYPE
-out_port[8] <= data_out[8].DB_MAX_OUTPUT_PORT_TYPE
-out_port[9] <= data_out[9].DB_MAX_OUTPUT_PORT_TYPE
 readdata[0] <= read_mux_out.DB_MAX_OUTPUT_PORT_TYPE
 readdata[1] <= read_mux_out.DB_MAX_OUTPUT_PORT_TYPE
 readdata[2] <= read_mux_out.DB_MAX_OUTPUT_PORT_TYPE
@@ -2260,9 +2245,9 @@ readdata[3] <= read_mux_out.DB_MAX_OUTPUT_PORT_TYPE
 readdata[4] <= read_mux_out.DB_MAX_OUTPUT_PORT_TYPE
 readdata[5] <= read_mux_out.DB_MAX_OUTPUT_PORT_TYPE
 readdata[6] <= read_mux_out.DB_MAX_OUTPUT_PORT_TYPE
-readdata[7] <= read_mux_out.DB_MAX_OUTPUT_PORT_TYPE
-readdata[8] <= read_mux_out.DB_MAX_OUTPUT_PORT_TYPE
-readdata[9] <= read_mux_out.DB_MAX_OUTPUT_PORT_TYPE
+readdata[7] <= <GND>
+readdata[8] <= <GND>
+readdata[9] <= <GND>
 readdata[10] <= <GND>
 readdata[11] <= <GND>
 readdata[12] <= <GND>
@@ -19866,5 +19851,19 @@ clk => altera_reset_synchronizer_int_chain_out.CLK
 clk => altera_reset_synchronizer_int_chain[0].CLK
 clk => altera_reset_synchronizer_int_chain[1].CLK
 reset_out <= altera_reset_synchronizer_int_chain_out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tallernios|seven_segment_display:comb_3
+number[0] => Decoder0.IN3
+number[1] => Decoder0.IN2
+number[2] => Decoder0.IN1
+number[3] => Decoder0.IN0
+segment[0] <= WideOr6.DB_MAX_OUTPUT_PORT_TYPE
+segment[1] <= WideOr5.DB_MAX_OUTPUT_PORT_TYPE
+segment[2] <= WideOr4.DB_MAX_OUTPUT_PORT_TYPE
+segment[3] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+segment[4] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+segment[5] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+segment[6] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
 
 

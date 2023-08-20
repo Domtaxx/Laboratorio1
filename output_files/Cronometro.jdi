@@ -1,6 +1,6 @@
 <sld_project_info>
   <project>
-    <hash md5_digest_80b="f646c7bdaca38258fa91"/>
+    <hash md5_digest_80b="4f1df7a6f45b974f0b41"/>
   </project>
   <file_info>
     <file device="5CSEMA5F31C6" path="Cronometro.sof" usercode="0xFFFFFFFF"/>
@@ -8,7 +8,7 @@
   <sld_infos>
     <sld_info hpath="platform:plat" name="plat">
       <assignment_values>
-        <assignment_value text="QSYS_NAME platform HAS_SOPCINFO 1 GENERATION_ID 1692418655"/>
+        <assignment_value text="QSYS_NAME platform HAS_SOPCINFO 1 GENERATION_ID 1692557410"/>
       </assignment_values>
       <parameters/>
     </sld_info>

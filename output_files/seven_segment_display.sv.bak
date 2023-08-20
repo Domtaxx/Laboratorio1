@@ -1,0 +1,21 @@
+module seven_segment_display (
+    input wire [3:0] number,  // 4-bit input representing the number
+    output wire a,           // Segment a
+    output wire b,           // Segment b
+    output wire c,           // Segment c
+    output wire d,           // Segment d
+    output wire e,           // Segment e
+    output wire f,           // Segment f
+    output wire g            // Segment g
+);
+
+    // Truth table for common anode seven-segment display
+    assign a = ~number[0];
+    assign b = ~number[1];
+    assign c = ~number[2];
+    assign d = ~number[3];
+    assign e = 1'b1;  // You might need to adjust this for decimal points, etc.
+    assign f = 1'b1;
+    assign g = 1'b1;
+
+endmodule

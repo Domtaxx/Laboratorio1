@@ -32,18 +32,6 @@
 					"strict" : false
 				},
 				{
-					"name" : "leds[7]",
-					"strict" : false
-				},
-				{
-					"name" : "leds[8]",
-					"strict" : false
-				},
-				{
-					"name" : "leds[9]",
-					"strict" : false
-				},
-				{
 					"name" : "clk",
 					"strict" : false
 				},
