@@ -1,5 +1,5 @@
 Analysis & Synthesis report for Cronometro
-Mon Aug 21 13:02:26 2023
+Mon Aug 21 13:31:30 2023
 Quartus Prime Version 22.1std.2 Build 922 07/20/2023 SC Lite Edition
 
 
@@ -185,7 +185,7 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +---------------------------------+------------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Mon Aug 21 13:02:26 2023          ;
+; Analysis & Synthesis Status     ; Successful - Mon Aug 21 13:31:30 2023          ;
 ; Quartus Prime Version           ; 22.1std.2 Build 922 07/20/2023 SC Lite Edition ;
 ; Revision Name                   ; Cronometro                                     ;
 ; Top-level Entity Name           ; tallernios                                     ;
@@ -371,7 +371,6 @@ https://fpgasoftware.intel.com/eula.
 ; altdpram.inc                                                                                                                                     ; yes             ; Megafunction                           ; c:/intelfpga_lite/22.1std/quartus/libraries/megafunctions/altdpram.inc                                                                           ;          ;
 ; db/altsyncram_msi1.tdf                                                                                                                           ; yes             ; Auto-Generated Megafunction            ; C:/Users/yraul/OneDrive/Documentos/GitHub/Laboratorio1/db/altsyncram_msi1.tdf                                                                    ;          ;
 ; db/altsyncram_gbm1.tdf                                                                                                                           ; yes             ; Auto-Generated Megafunction            ; C:/Users/yraul/OneDrive/Documentos/GitHub/Laboratorio1/db/altsyncram_gbm1.tdf                                                                    ;          ;
-; platform_ram_0.hex                                                                                                                               ; yes             ; Auto-Found Memory Initialization File  ; platform_ram_0.hex                                                                                                                               ;          ;
 ; db/altsyncram_ubm1.tdf                                                                                                                           ; yes             ; Auto-Generated Megafunction            ; C:/Users/yraul/OneDrive/Documentos/GitHub/Laboratorio1/db/altsyncram_ubm1.tdf                                                                    ;          ;
 ; platform_rom_0.hex                                                                                                                               ; yes             ; Auto-Found Memory Initialization File  ; platform_rom_0.hex                                                                                                                               ;          ;
 +--------------------------------------------------------------------------------------------------------------------------------------------------+-----------------+----------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------+----------+
@@ -4313,39 +4312,39 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 22.1std.2 Build 922 07/20/2023 SC Lite Edition
-    Info: Processing started: Mon Aug 21 13:01:58 2023
+    Info: Processing started: Mon Aug 21 13:31:02 2023
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Cronometro -c Cronometro
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 12 of the 12 processors detected
 Info (12248): Elaborating Platform Designer system entity "platform.qsys"
-Info (12250): 2023.08.21.13:02:03 Progress: Loading Laboratorio1/platform.qsys
-Info (12250): 2023.08.21.13:02:03 Progress: Reading input file
-Info (12250): 2023.08.21.13:02:03 Progress: Adding clk_0 [clock_source 22.1]
-Info (12250): 2023.08.21.13:02:03 Progress: Parameterizing module clk_0
-Info (12250): 2023.08.21.13:02:03 Progress: Adding nios2_gen2_0 [altera_nios2_gen2 22.1]
-Info (12250): 2023.08.21.13:02:04 Progress: Parameterizing module nios2_gen2_0
-Info (12250): 2023.08.21.13:02:04 Progress: Adding pio_button_start [altera_avalon_pio 22.1]
-Info (12250): 2023.08.21.13:02:04 Progress: Parameterizing module pio_button_start
-Info (12250): 2023.08.21.13:02:04 Progress: Adding pio_button_stop [altera_avalon_pio 22.1]
-Info (12250): 2023.08.21.13:02:04 Progress: Parameterizing module pio_button_stop
-Info (12250): 2023.08.21.13:02:04 Progress: Adding pio_leds_0 [altera_avalon_pio 22.1]
-Info (12250): 2023.08.21.13:02:04 Progress: Parameterizing module pio_leds_0
-Info (12250): 2023.08.21.13:02:04 Progress: Adding pio_min_num_0 [altera_avalon_pio 22.1]
-Info (12250): 2023.08.21.13:02:04 Progress: Parameterizing module pio_min_num_0
-Info (12250): 2023.08.21.13:02:04 Progress: Adding pio_ms_num_0 [altera_avalon_pio 22.1]
-Info (12250): 2023.08.21.13:02:04 Progress: Parameterizing module pio_ms_num_0
-Info (12250): 2023.08.21.13:02:04 Progress: Adding pio_switch_0 [altera_avalon_pio 22.1]
-Info (12250): 2023.08.21.13:02:04 Progress: Parameterizing module pio_switch_0
-Info (12250): 2023.08.21.13:02:04 Progress: Adding ram_0 [altera_avalon_onchip_memory2 22.1]
-Info (12250): 2023.08.21.13:02:04 Progress: Parameterizing module ram_0
-Info (12250): 2023.08.21.13:02:04 Progress: Adding rom_0 [altera_avalon_onchip_memory2 22.1]
-Info (12250): 2023.08.21.13:02:04 Progress: Parameterizing module rom_0
-Info (12250): 2023.08.21.13:02:04 Progress: Adding timer_0 [altera_avalon_timer 22.1]
-Info (12250): 2023.08.21.13:02:04 Progress: Parameterizing module timer_0
-Info (12250): 2023.08.21.13:02:04 Progress: Building connections
-Info (12250): 2023.08.21.13:02:04 Progress: Parameterizing connections
-Info (12250): 2023.08.21.13:02:04 Progress: Validating
-Info (12250): 2023.08.21.13:02:04 Progress: Done reading input file
+Info (12250): 2023.08.21.13:31:07 Progress: Loading Laboratorio1/platform.qsys
+Info (12250): 2023.08.21.13:31:08 Progress: Reading input file
+Info (12250): 2023.08.21.13:31:08 Progress: Adding clk_0 [clock_source 22.1]
+Info (12250): 2023.08.21.13:31:08 Progress: Parameterizing module clk_0
+Info (12250): 2023.08.21.13:31:08 Progress: Adding nios2_gen2_0 [altera_nios2_gen2 22.1]
+Info (12250): 2023.08.21.13:31:08 Progress: Parameterizing module nios2_gen2_0
+Info (12250): 2023.08.21.13:31:08 Progress: Adding pio_button_start [altera_avalon_pio 22.1]
+Info (12250): 2023.08.21.13:31:08 Progress: Parameterizing module pio_button_start
+Info (12250): 2023.08.21.13:31:08 Progress: Adding pio_button_stop [altera_avalon_pio 22.1]
+Info (12250): 2023.08.21.13:31:08 Progress: Parameterizing module pio_button_stop
+Info (12250): 2023.08.21.13:31:08 Progress: Adding pio_leds_0 [altera_avalon_pio 22.1]
+Info (12250): 2023.08.21.13:31:08 Progress: Parameterizing module pio_leds_0
+Info (12250): 2023.08.21.13:31:08 Progress: Adding pio_min_num_0 [altera_avalon_pio 22.1]
+Info (12250): 2023.08.21.13:31:08 Progress: Parameterizing module pio_min_num_0
+Info (12250): 2023.08.21.13:31:08 Progress: Adding pio_ms_num_0 [altera_avalon_pio 22.1]
+Info (12250): 2023.08.21.13:31:08 Progress: Parameterizing module pio_ms_num_0
+Info (12250): 2023.08.21.13:31:08 Progress: Adding pio_switch_0 [altera_avalon_pio 22.1]
+Info (12250): 2023.08.21.13:31:08 Progress: Parameterizing module pio_switch_0
+Info (12250): 2023.08.21.13:31:08 Progress: Adding ram_0 [altera_avalon_onchip_memory2 22.1]
+Info (12250): 2023.08.21.13:31:08 Progress: Parameterizing module ram_0
+Info (12250): 2023.08.21.13:31:08 Progress: Adding rom_0 [altera_avalon_onchip_memory2 22.1]
+Info (12250): 2023.08.21.13:31:08 Progress: Parameterizing module rom_0
+Info (12250): 2023.08.21.13:31:08 Progress: Adding timer_0 [altera_avalon_timer 22.1]
+Info (12250): 2023.08.21.13:31:08 Progress: Parameterizing module timer_0
+Info (12250): 2023.08.21.13:31:08 Progress: Building connections
+Info (12250): 2023.08.21.13:31:08 Progress: Parameterizing connections
+Info (12250): 2023.08.21.13:31:08 Progress: Validating
+Info (12250): 2023.08.21.13:31:09 Progress: Done reading input file
 Warning (12251): Platform.nios2_gen2_0: No Debugger.  You will not be able to download or debug programs
 Info (12250): Platform.pio_button_start: PIO inputs are not hardwired in test bench. Undefined values will be read from PIO inputs during simulation.
 Info (12250): Platform.pio_button_stop: PIO inputs are not hardwired in test bench. Undefined values will be read from PIO inputs during simulation.
@@ -4356,27 +4355,27 @@ Info (12250): Interconnect is inserted between master nios2_gen2_0.instruction_m
 Info (12250): Interconnect is inserted between master nios2_gen2_0.instruction_master and slave rom_0.s1 because the master has waitrequest signal 1 bit wide, but the slave is 0 bit wide.
 Info (12250): Nios2_gen2_0: "platform" instantiated altera_nios2_gen2 "nios2_gen2_0"
 Info (12250): Pio_button_start: Starting RTL generation for module 'platform_pio_button_start'
-Info (12250): Pio_button_start:   Generation command is [exec C:/intelfpga_lite/22.1std/quartus/bin64/perl/bin/perl.exe -I C:/intelfpga_lite/22.1std/quartus/bin64/perl/lib -I C:/intelfpga_lite/22.1std/quartus/sopc_builder/bin/europa -I C:/intelfpga_lite/22.1std/quartus/sopc_builder/bin -I C:/intelfpga_lite/22.1std/quartus/../ip/altera/sopc_builder_ip/common -I C:/intelfpga_lite/22.1std/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio -- C:/intelfpga_lite/22.1std/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio/generate_rtl.pl --name=platform_pio_button_start --dir=C:/Users/yraul/AppData/Local/Temp/alt9590_7399786550493892083.dir/0002_pio_button_start_gen/ --quartus_dir=C:/intelfpga_lite/22.1std/quartus --verilog --config=C:/Users/yraul/AppData/Local/Temp/alt9590_7399786550493892083.dir/0002_pio_button_start_gen//platform_pio_button_start_component_configuration.pl  --do_build_sim=0  ]
+Info (12250): Pio_button_start:   Generation command is [exec C:/intelfpga_lite/22.1std/quartus/bin64/perl/bin/perl.exe -I C:/intelfpga_lite/22.1std/quartus/bin64/perl/lib -I C:/intelfpga_lite/22.1std/quartus/sopc_builder/bin/europa -I C:/intelfpga_lite/22.1std/quartus/sopc_builder/bin -I C:/intelfpga_lite/22.1std/quartus/../ip/altera/sopc_builder_ip/common -I C:/intelfpga_lite/22.1std/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio -- C:/intelfpga_lite/22.1std/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio/generate_rtl.pl --name=platform_pio_button_start --dir=C:/Users/yraul/AppData/Local/Temp/alt9590_6855719046537140757.dir/0002_pio_button_start_gen/ --quartus_dir=C:/intelfpga_lite/22.1std/quartus --verilog --config=C:/Users/yraul/AppData/Local/Temp/alt9590_6855719046537140757.dir/0002_pio_button_start_gen//platform_pio_button_start_component_configuration.pl  --do_build_sim=0  ]
 Info (12250): Pio_button_start: Done RTL generation for module 'platform_pio_button_start'
 Info (12250): Pio_button_start: "platform" instantiated altera_avalon_pio "pio_button_start"
 Info (12250): Pio_leds_0: Starting RTL generation for module 'platform_pio_leds_0'
-Info (12250): Pio_leds_0:   Generation command is [exec C:/intelfpga_lite/22.1std/quartus/bin64/perl/bin/perl.exe -I C:/intelfpga_lite/22.1std/quartus/bin64/perl/lib -I C:/intelfpga_lite/22.1std/quartus/sopc_builder/bin/europa -I C:/intelfpga_lite/22.1std/quartus/sopc_builder/bin -I C:/intelfpga_lite/22.1std/quartus/../ip/altera/sopc_builder_ip/common -I C:/intelfpga_lite/22.1std/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio -- C:/intelfpga_lite/22.1std/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio/generate_rtl.pl --name=platform_pio_leds_0 --dir=C:/Users/yraul/AppData/Local/Temp/alt9590_7399786550493892083.dir/0003_pio_leds_0_gen/ --quartus_dir=C:/intelfpga_lite/22.1std/quartus --verilog --config=C:/Users/yraul/AppData/Local/Temp/alt9590_7399786550493892083.dir/0003_pio_leds_0_gen//platform_pio_leds_0_component_configuration.pl  --do_build_sim=0  ]
+Info (12250): Pio_leds_0:   Generation command is [exec C:/intelfpga_lite/22.1std/quartus/bin64/perl/bin/perl.exe -I C:/intelfpga_lite/22.1std/quartus/bin64/perl/lib -I C:/intelfpga_lite/22.1std/quartus/sopc_builder/bin/europa -I C:/intelfpga_lite/22.1std/quartus/sopc_builder/bin -I C:/intelfpga_lite/22.1std/quartus/../ip/altera/sopc_builder_ip/common -I C:/intelfpga_lite/22.1std/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio -- C:/intelfpga_lite/22.1std/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio/generate_rtl.pl --name=platform_pio_leds_0 --dir=C:/Users/yraul/AppData/Local/Temp/alt9590_6855719046537140757.dir/0003_pio_leds_0_gen/ --quartus_dir=C:/intelfpga_lite/22.1std/quartus --verilog --config=C:/Users/yraul/AppData/Local/Temp/alt9590_6855719046537140757.dir/0003_pio_leds_0_gen//platform_pio_leds_0_component_configuration.pl  --do_build_sim=0  ]
 Info (12250): Pio_leds_0: Done RTL generation for module 'platform_pio_leds_0'
 Info (12250): Pio_leds_0: "platform" instantiated altera_avalon_pio "pio_leds_0"
 Info (12250): Pio_switch_0: Starting RTL generation for module 'platform_pio_switch_0'
-Info (12250): Pio_switch_0:   Generation command is [exec C:/intelfpga_lite/22.1std/quartus/bin64/perl/bin/perl.exe -I C:/intelfpga_lite/22.1std/quartus/bin64/perl/lib -I C:/intelfpga_lite/22.1std/quartus/sopc_builder/bin/europa -I C:/intelfpga_lite/22.1std/quartus/sopc_builder/bin -I C:/intelfpga_lite/22.1std/quartus/../ip/altera/sopc_builder_ip/common -I C:/intelfpga_lite/22.1std/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio -- C:/intelfpga_lite/22.1std/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio/generate_rtl.pl --name=platform_pio_switch_0 --dir=C:/Users/yraul/AppData/Local/Temp/alt9590_7399786550493892083.dir/0004_pio_switch_0_gen/ --quartus_dir=C:/intelfpga_lite/22.1std/quartus --verilog --config=C:/Users/yraul/AppData/Local/Temp/alt9590_7399786550493892083.dir/0004_pio_switch_0_gen//platform_pio_switch_0_component_configuration.pl  --do_build_sim=0  ]
+Info (12250): Pio_switch_0:   Generation command is [exec C:/intelfpga_lite/22.1std/quartus/bin64/perl/bin/perl.exe -I C:/intelfpga_lite/22.1std/quartus/bin64/perl/lib -I C:/intelfpga_lite/22.1std/quartus/sopc_builder/bin/europa -I C:/intelfpga_lite/22.1std/quartus/sopc_builder/bin -I C:/intelfpga_lite/22.1std/quartus/../ip/altera/sopc_builder_ip/common -I C:/intelfpga_lite/22.1std/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio -- C:/intelfpga_lite/22.1std/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio/generate_rtl.pl --name=platform_pio_switch_0 --dir=C:/Users/yraul/AppData/Local/Temp/alt9590_6855719046537140757.dir/0004_pio_switch_0_gen/ --quartus_dir=C:/intelfpga_lite/22.1std/quartus --verilog --config=C:/Users/yraul/AppData/Local/Temp/alt9590_6855719046537140757.dir/0004_pio_switch_0_gen//platform_pio_switch_0_component_configuration.pl  --do_build_sim=0  ]
 Info (12250): Pio_switch_0: Done RTL generation for module 'platform_pio_switch_0'
 Info (12250): Pio_switch_0: "platform" instantiated altera_avalon_pio "pio_switch_0"
 Info (12250): Ram_0: Starting RTL generation for module 'platform_ram_0'
-Info (12250): Ram_0:   Generation command is [exec C:/intelfpga_lite/22.1std/quartus/bin64/perl/bin/perl.exe -I C:/intelfpga_lite/22.1std/quartus/bin64/perl/lib -I C:/intelfpga_lite/22.1std/quartus/sopc_builder/bin/europa -I C:/intelfpga_lite/22.1std/quartus/sopc_builder/bin -I C:/intelfpga_lite/22.1std/quartus/../ip/altera/sopc_builder_ip/common -I C:/intelfpga_lite/22.1std/quartus/../ip/altera/sopc_builder_ip/altera_avalon_onchip_memory2 -- C:/intelfpga_lite/22.1std/quartus/../ip/altera/sopc_builder_ip/altera_avalon_onchip_memory2/generate_rtl.pl --name=platform_ram_0 --dir=C:/Users/yraul/AppData/Local/Temp/alt9590_7399786550493892083.dir/0005_ram_0_gen/ --quartus_dir=C:/intelfpga_lite/22.1std/quartus --verilog --config=C:/Users/yraul/AppData/Local/Temp/alt9590_7399786550493892083.dir/0005_ram_0_gen//platform_ram_0_component_configuration.pl  --do_build_sim=0  ]
+Info (12250): Ram_0:   Generation command is [exec C:/intelfpga_lite/22.1std/quartus/bin64/perl/bin/perl.exe -I C:/intelfpga_lite/22.1std/quartus/bin64/perl/lib -I C:/intelfpga_lite/22.1std/quartus/sopc_builder/bin/europa -I C:/intelfpga_lite/22.1std/quartus/sopc_builder/bin -I C:/intelfpga_lite/22.1std/quartus/../ip/altera/sopc_builder_ip/common -I C:/intelfpga_lite/22.1std/quartus/../ip/altera/sopc_builder_ip/altera_avalon_onchip_memory2 -- C:/intelfpga_lite/22.1std/quartus/../ip/altera/sopc_builder_ip/altera_avalon_onchip_memory2/generate_rtl.pl --name=platform_ram_0 --dir=C:/Users/yraul/AppData/Local/Temp/alt9590_6855719046537140757.dir/0005_ram_0_gen/ --quartus_dir=C:/intelfpga_lite/22.1std/quartus --verilog --config=C:/Users/yraul/AppData/Local/Temp/alt9590_6855719046537140757.dir/0005_ram_0_gen//platform_ram_0_component_configuration.pl  --do_build_sim=0  ]
 Info (12250): Ram_0: Done RTL generation for module 'platform_ram_0'
 Info (12250): Ram_0: "platform" instantiated altera_avalon_onchip_memory2 "ram_0"
 Info (12250): Rom_0: Starting RTL generation for module 'platform_rom_0'
-Info (12250): Rom_0:   Generation command is [exec C:/intelfpga_lite/22.1std/quartus/bin64/perl/bin/perl.exe -I C:/intelfpga_lite/22.1std/quartus/bin64/perl/lib -I C:/intelfpga_lite/22.1std/quartus/sopc_builder/bin/europa -I C:/intelfpga_lite/22.1std/quartus/sopc_builder/bin -I C:/intelfpga_lite/22.1std/quartus/../ip/altera/sopc_builder_ip/common -I C:/intelfpga_lite/22.1std/quartus/../ip/altera/sopc_builder_ip/altera_avalon_onchip_memory2 -- C:/intelfpga_lite/22.1std/quartus/../ip/altera/sopc_builder_ip/altera_avalon_onchip_memory2/generate_rtl.pl --name=platform_rom_0 --dir=C:/Users/yraul/AppData/Local/Temp/alt9590_7399786550493892083.dir/0006_rom_0_gen/ --quartus_dir=C:/intelfpga_lite/22.1std/quartus --verilog --config=C:/Users/yraul/AppData/Local/Temp/alt9590_7399786550493892083.dir/0006_rom_0_gen//platform_rom_0_component_configuration.pl  --do_build_sim=0  ]
+Info (12250): Rom_0:   Generation command is [exec C:/intelfpga_lite/22.1std/quartus/bin64/perl/bin/perl.exe -I C:/intelfpga_lite/22.1std/quartus/bin64/perl/lib -I C:/intelfpga_lite/22.1std/quartus/sopc_builder/bin/europa -I C:/intelfpga_lite/22.1std/quartus/sopc_builder/bin -I C:/intelfpga_lite/22.1std/quartus/../ip/altera/sopc_builder_ip/common -I C:/intelfpga_lite/22.1std/quartus/../ip/altera/sopc_builder_ip/altera_avalon_onchip_memory2 -- C:/intelfpga_lite/22.1std/quartus/../ip/altera/sopc_builder_ip/altera_avalon_onchip_memory2/generate_rtl.pl --name=platform_rom_0 --dir=C:/Users/yraul/AppData/Local/Temp/alt9590_6855719046537140757.dir/0006_rom_0_gen/ --quartus_dir=C:/intelfpga_lite/22.1std/quartus --verilog --config=C:/Users/yraul/AppData/Local/Temp/alt9590_6855719046537140757.dir/0006_rom_0_gen//platform_rom_0_component_configuration.pl  --do_build_sim=0  ]
 Info (12250): Rom_0: Done RTL generation for module 'platform_rom_0'
 Info (12250): Rom_0: "platform" instantiated altera_avalon_onchip_memory2 "rom_0"
 Info (12250): Timer_0: Starting RTL generation for module 'platform_timer_0'
-Info (12250): Timer_0:   Generation command is [exec C:/intelFPGA_lite/22.1std/quartus/bin64//perl/bin/perl.exe -I C:/intelFPGA_lite/22.1std/quartus/bin64//perl/lib -I C:/intelfpga_lite/22.1std/quartus/sopc_builder/bin/europa -I C:/intelfpga_lite/22.1std/quartus/sopc_builder/bin -I C:/intelfpga_lite/22.1std/quartus/../ip/altera/sopc_builder_ip/common -I C:/intelfpga_lite/22.1std/quartus/../ip/altera/sopc_builder_ip/altera_avalon_timer -- C:/intelfpga_lite/22.1std/quartus/../ip/altera/sopc_builder_ip/altera_avalon_timer/generate_rtl.pl --name=platform_timer_0 --dir=C:/Users/yraul/AppData/Local/Temp/alt9590_7399786550493892083.dir/0007_timer_0_gen/ --quartus_dir=C:/intelfpga_lite/22.1std/quartus --verilog --config=C:/Users/yraul/AppData/Local/Temp/alt9590_7399786550493892083.dir/0007_timer_0_gen//platform_timer_0_component_configuration.pl  --do_build_sim=0  ]
+Info (12250): Timer_0:   Generation command is [exec C:/intelFPGA_lite/22.1std/quartus/bin64//perl/bin/perl.exe -I C:/intelFPGA_lite/22.1std/quartus/bin64//perl/lib -I C:/intelfpga_lite/22.1std/quartus/sopc_builder/bin/europa -I C:/intelfpga_lite/22.1std/quartus/sopc_builder/bin -I C:/intelfpga_lite/22.1std/quartus/../ip/altera/sopc_builder_ip/common -I C:/intelfpga_lite/22.1std/quartus/../ip/altera/sopc_builder_ip/altera_avalon_timer -- C:/intelfpga_lite/22.1std/quartus/../ip/altera/sopc_builder_ip/altera_avalon_timer/generate_rtl.pl --name=platform_timer_0 --dir=C:/Users/yraul/AppData/Local/Temp/alt9590_6855719046537140757.dir/0007_timer_0_gen/ --quartus_dir=C:/intelfpga_lite/22.1std/quartus --verilog --config=C:/Users/yraul/AppData/Local/Temp/alt9590_6855719046537140757.dir/0007_timer_0_gen//platform_timer_0_component_configuration.pl  --do_build_sim=0  ]
 Info (12250): Timer_0: Done RTL generation for module 'platform_timer_0'
 Info (12250): Timer_0: "platform" instantiated altera_avalon_timer "timer_0"
 Info (12250): Avalon_st_adapter: Inserting error_adapter: error_adapter_0
@@ -4393,13 +4392,13 @@ Info (12250): Mm_interconnect_1: "platform" instantiated altera_mm_interconnect 
 Info (12250): Irq_mapper: "platform" instantiated altera_irq_mapper "irq_mapper"
 Info (12250): Rst_controller: "platform" instantiated altera_reset_controller "rst_controller"
 Info (12250): Cpu: Starting RTL generation for module 'platform_nios2_gen2_0_cpu'
-Info (12250): Cpu:   Generation command is [exec C:/intelFPGA_lite/22.1std/quartus/bin64//perl/bin/perl.exe -I C:/intelFPGA_lite/22.1std/quartus/bin64//perl/lib -I C:/intelfpga_lite/22.1std/quartus/sopc_builder/bin/europa -I C:/intelfpga_lite/22.1std/quartus/sopc_builder/bin -I C:/intelfpga_lite/22.1std/quartus/../ip/altera/nios2_ip/altera_nios2_gen2/cpu_lib -I C:/intelfpga_lite/22.1std/quartus/../ip/altera/nios2_ip/altera_nios2_gen2/nios_lib -I C:/intelfpga_lite/22.1std/quartus/../ip/altera/nios2_ip/altera_nios2_gen2 -I C:/intelfpga_lite/22.1std/quartus/../ip/altera/nios2_ip/altera_nios2_gen2 -- C:/intelfpga_lite/22.1std/quartus/../ip/altera/nios2_ip/altera_nios2_gen2/generate_rtl.pl --name=platform_nios2_gen2_0_cpu --dir=C:/Users/yraul/AppData/Local/Temp/alt9590_7399786550493892083.dir/0010_cpu_gen/ --quartus_bindir=C:/intelFPGA_lite/22.1std/quartus/bin64/ --verilog --config=C:/Users/yraul/AppData/Local/Temp/alt9590_7399786550493892083.dir/0010_cpu_gen//platform_nios2_gen2_0_cpu_processor_configuration.pl  --do_build_sim=0  ]
-Info (12250): Cpu: # 2023.08.21 13:02:21 (*) Starting Nios II generation
-Info (12250): Cpu: # 2023.08.21 13:02:21 (*)   Elaborating CPU configuration settings
-Info (12250): Cpu: # 2023.08.21 13:02:21 (*)   Creating all objects for CPU
-Info (12250): Cpu: # 2023.08.21 13:02:21 (*)   Generating RTL from CPU objects
-Info (12250): Cpu: # 2023.08.21 13:02:21 (*)   Creating plain-text RTL
-Info (12250): Cpu: # 2023.08.21 13:02:21 (*) Done Nios II generation
+Info (12250): Cpu:   Generation command is [exec C:/intelFPGA_lite/22.1std/quartus/bin64//perl/bin/perl.exe -I C:/intelFPGA_lite/22.1std/quartus/bin64//perl/lib -I C:/intelfpga_lite/22.1std/quartus/sopc_builder/bin/europa -I C:/intelfpga_lite/22.1std/quartus/sopc_builder/bin -I C:/intelfpga_lite/22.1std/quartus/../ip/altera/nios2_ip/altera_nios2_gen2/cpu_lib -I C:/intelfpga_lite/22.1std/quartus/../ip/altera/nios2_ip/altera_nios2_gen2/nios_lib -I C:/intelfpga_lite/22.1std/quartus/../ip/altera/nios2_ip/altera_nios2_gen2 -I C:/intelfpga_lite/22.1std/quartus/../ip/altera/nios2_ip/altera_nios2_gen2 -- C:/intelfpga_lite/22.1std/quartus/../ip/altera/nios2_ip/altera_nios2_gen2/generate_rtl.pl --name=platform_nios2_gen2_0_cpu --dir=C:/Users/yraul/AppData/Local/Temp/alt9590_6855719046537140757.dir/0010_cpu_gen/ --quartus_bindir=C:/intelFPGA_lite/22.1std/quartus/bin64/ --verilog --config=C:/Users/yraul/AppData/Local/Temp/alt9590_6855719046537140757.dir/0010_cpu_gen//platform_nios2_gen2_0_cpu_processor_configuration.pl  --do_build_sim=0  ]
+Info (12250): Cpu: # 2023.08.21 13:31:26 (*) Starting Nios II generation
+Info (12250): Cpu: # 2023.08.21 13:31:26 (*)   Elaborating CPU configuration settings
+Info (12250): Cpu: # 2023.08.21 13:31:26 (*)   Creating all objects for CPU
+Info (12250): Cpu: # 2023.08.21 13:31:26 (*)   Generating RTL from CPU objects
+Info (12250): Cpu: # 2023.08.21 13:31:26 (*)   Creating plain-text RTL
+Info (12250): Cpu: # 2023.08.21 13:31:26 (*) Done Nios II generation
 Info (12250): Cpu: Done RTL generation for module 'platform_nios2_gen2_0_cpu'
 Info (12250): Cpu: "nios2_gen2_0" instantiated altera_nios2_gen2_unit "cpu"
 Info (12250): Nios2_gen2_0_data_master_translator: "mm_interconnect_0" instantiated altera_merlin_master_translator "nios2_gen2_0_data_master_translator"
@@ -4563,17 +4562,6 @@ Info (12133): Instantiated megafunction "platform:plat|platform_ram_0:ram_0|alts
 Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_gbm1.tdf
     Info (12023): Found entity 1: altsyncram_gbm1 File: C:/Users/yraul/OneDrive/Documentos/GitHub/Laboratorio1/db/altsyncram_gbm1.tdf Line: 28
 Info (12128): Elaborating entity "altsyncram_gbm1" for hierarchy "platform:plat|platform_ram_0:ram_0|altsyncram:the_altsyncram|altsyncram_gbm1:auto_generated" File: c:/intelfpga_lite/22.1std/quartus/libraries/megafunctions/altsyncram.tdf Line: 792
-Warning (113015): Width of data items in "platform_ram_0.hex" is greater than the memory width. Wrapping data items to subsequent addresses. Found 128 warnings, reporting 10 File: C:/Users/yraul/OneDrive/Documentos/GitHub/Laboratorio1/software/Tarea1/mem_init/platform_ram_0.hex Line: 1
-    Warning (113009): Data at line (2) of memory initialization file "platform_ram_0.hex" is too wide to fit in one memory word. Wrapping data to subsequent addresses. File: C:/Users/yraul/OneDrive/Documentos/GitHub/Laboratorio1/software/Tarea1/mem_init/platform_ram_0.hex Line: 2
-    Warning (113009): Data at line (3) of memory initialization file "platform_ram_0.hex" is too wide to fit in one memory word. Wrapping data to subsequent addresses. File: C:/Users/yraul/OneDrive/Documentos/GitHub/Laboratorio1/software/Tarea1/mem_init/platform_ram_0.hex Line: 3
-    Warning (113009): Data at line (4) of memory initialization file "platform_ram_0.hex" is too wide to fit in one memory word. Wrapping data to subsequent addresses. File: C:/Users/yraul/OneDrive/Documentos/GitHub/Laboratorio1/software/Tarea1/mem_init/platform_ram_0.hex Line: 4
-    Warning (113009): Data at line (5) of memory initialization file "platform_ram_0.hex" is too wide to fit in one memory word. Wrapping data to subsequent addresses. File: C:/Users/yraul/OneDrive/Documentos/GitHub/Laboratorio1/software/Tarea1/mem_init/platform_ram_0.hex Line: 5
-    Warning (113009): Data at line (6) of memory initialization file "platform_ram_0.hex" is too wide to fit in one memory word. Wrapping data to subsequent addresses. File: C:/Users/yraul/OneDrive/Documentos/GitHub/Laboratorio1/software/Tarea1/mem_init/platform_ram_0.hex Line: 6
-    Warning (113009): Data at line (7) of memory initialization file "platform_ram_0.hex" is too wide to fit in one memory word. Wrapping data to subsequent addresses. File: C:/Users/yraul/OneDrive/Documentos/GitHub/Laboratorio1/software/Tarea1/mem_init/platform_ram_0.hex Line: 7
-    Warning (113009): Data at line (8) of memory initialization file "platform_ram_0.hex" is too wide to fit in one memory word. Wrapping data to subsequent addresses. File: C:/Users/yraul/OneDrive/Documentos/GitHub/Laboratorio1/software/Tarea1/mem_init/platform_ram_0.hex Line: 8
-    Warning (113009): Data at line (9) of memory initialization file "platform_ram_0.hex" is too wide to fit in one memory word. Wrapping data to subsequent addresses. File: C:/Users/yraul/OneDrive/Documentos/GitHub/Laboratorio1/software/Tarea1/mem_init/platform_ram_0.hex Line: 9
-    Warning (113009): Data at line (10) of memory initialization file "platform_ram_0.hex" is too wide to fit in one memory word. Wrapping data to subsequent addresses. File: C:/Users/yraul/OneDrive/Documentos/GitHub/Laboratorio1/software/Tarea1/mem_init/platform_ram_0.hex Line: 10
-    Warning (113009): Data at line (11) of memory initialization file "platform_ram_0.hex" is too wide to fit in one memory word. Wrapping data to subsequent addresses. File: C:/Users/yraul/OneDrive/Documentos/GitHub/Laboratorio1/software/Tarea1/mem_init/platform_ram_0.hex Line: 11
 Info (12128): Elaborating entity "platform_rom_0" for hierarchy "platform:plat|platform_rom_0:rom_0" File: C:/Users/yraul/OneDrive/Documentos/GitHub/Laboratorio1/db/ip/platform/platform.v Line: 192
 Info (12128): Elaborating entity "altsyncram" for hierarchy "platform:plat|platform_rom_0:rom_0|altsyncram:the_altsyncram" File: C:/Users/yraul/OneDrive/Documentos/GitHub/Laboratorio1/db/ip/platform/submodules/platform_rom_0.v Line: 71
 Info (12130): Elaborated megafunction instantiation "platform:plat|platform_rom_0:rom_0|altsyncram:the_altsyncram" File: C:/Users/yraul/OneDrive/Documentos/GitHub/Laboratorio1/db/ip/platform/submodules/platform_rom_0.v Line: 71
@@ -4657,11 +4645,11 @@ Info (21057): Implemented 1018 device resources after synthesis - the final reso
     Info (21059): Implemented 42 output pins
     Info (21061): Implemented 842 logic cells
     Info (21064): Implemented 128 RAM segments
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 27 warnings
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 16 warnings
     Info: Peak virtual memory: 4952 megabytes
-    Info: Processing ended: Mon Aug 21 13:02:26 2023
+    Info: Processing ended: Mon Aug 21 13:31:30 2023
     Info: Elapsed time: 00:00:28
-    Info: Total CPU time (on all processors): 00:00:19
+    Info: Total CPU time (on all processors): 00:00:18
 
 
 +------------------------------------------+
