@@ -4,7 +4,7 @@
  * Machine generated for CPU 'nios2_gen2_0' in SOPC Builder design 'platform'
  * SOPC Builder design path: c:/Users/yraul/OneDrive/Documentos/GitHub/Laboratorio1/platform.sopcinfo
  *
- * Generated: Sun Aug 20 18:21:17 CST 2023
+ * Generated: Mon Aug 21 11:22:53 CST 2023
  */
 
 /*
@@ -183,12 +183,66 @@
 
 
 /*
+ * pio_button_start configuration
+ *
+ */
+
+#define ALT_MODULE_CLASS_pio_button_start altera_avalon_pio
+#define PIO_BUTTON_START_BASE 0x2030
+#define PIO_BUTTON_START_BIT_CLEARING_EDGE_REGISTER 0
+#define PIO_BUTTON_START_BIT_MODIFYING_OUTPUT_REGISTER 0
+#define PIO_BUTTON_START_CAPTURE 0
+#define PIO_BUTTON_START_DATA_WIDTH 1
+#define PIO_BUTTON_START_DO_TEST_BENCH_WIRING 0
+#define PIO_BUTTON_START_DRIVEN_SIM_VALUE 0
+#define PIO_BUTTON_START_EDGE_TYPE "NONE"
+#define PIO_BUTTON_START_FREQ 50000000
+#define PIO_BUTTON_START_HAS_IN 1
+#define PIO_BUTTON_START_HAS_OUT 0
+#define PIO_BUTTON_START_HAS_TRI 0
+#define PIO_BUTTON_START_IRQ 1
+#define PIO_BUTTON_START_IRQ_INTERRUPT_CONTROLLER_ID 0
+#define PIO_BUTTON_START_IRQ_TYPE "LEVEL"
+#define PIO_BUTTON_START_NAME "/dev/pio_button_start"
+#define PIO_BUTTON_START_RESET_VALUE 0
+#define PIO_BUTTON_START_SPAN 16
+#define PIO_BUTTON_START_TYPE "altera_avalon_pio"
+
+
+/*
+ * pio_button_stop configuration
+ *
+ */
+
+#define ALT_MODULE_CLASS_pio_button_stop altera_avalon_pio
+#define PIO_BUTTON_STOP_BASE 0x2020
+#define PIO_BUTTON_STOP_BIT_CLEARING_EDGE_REGISTER 0
+#define PIO_BUTTON_STOP_BIT_MODIFYING_OUTPUT_REGISTER 0
+#define PIO_BUTTON_STOP_CAPTURE 0
+#define PIO_BUTTON_STOP_DATA_WIDTH 1
+#define PIO_BUTTON_STOP_DO_TEST_BENCH_WIRING 0
+#define PIO_BUTTON_STOP_DRIVEN_SIM_VALUE 0
+#define PIO_BUTTON_STOP_EDGE_TYPE "NONE"
+#define PIO_BUTTON_STOP_FREQ 50000000
+#define PIO_BUTTON_STOP_HAS_IN 1
+#define PIO_BUTTON_STOP_HAS_OUT 0
+#define PIO_BUTTON_STOP_HAS_TRI 0
+#define PIO_BUTTON_STOP_IRQ 2
+#define PIO_BUTTON_STOP_IRQ_INTERRUPT_CONTROLLER_ID 0
+#define PIO_BUTTON_STOP_IRQ_TYPE "LEVEL"
+#define PIO_BUTTON_STOP_NAME "/dev/pio_button_stop"
+#define PIO_BUTTON_STOP_RESET_VALUE 0
+#define PIO_BUTTON_STOP_SPAN 16
+#define PIO_BUTTON_STOP_TYPE "altera_avalon_pio"
+
+
+/*
  * pio_leds_0 configuration
  *
  */
 
 #define ALT_MODULE_CLASS_pio_leds_0 altera_avalon_pio
-#define PIO_LEDS_0_BASE 0x2050
+#define PIO_LEDS_0_BASE 0x2070
 #define PIO_LEDS_0_BIT_CLEARING_EDGE_REGISTER 0
 #define PIO_LEDS_0_BIT_MODIFYING_OUTPUT_REGISTER 0
 #define PIO_LEDS_0_CAPTURE 0
@@ -215,7 +269,7 @@
  */
 
 #define ALT_MODULE_CLASS_pio_min_num_0 altera_avalon_pio
-#define PIO_MIN_NUM_0_BASE 0x2020
+#define PIO_MIN_NUM_0_BASE 0x2040
 #define PIO_MIN_NUM_0_BIT_CLEARING_EDGE_REGISTER 0
 #define PIO_MIN_NUM_0_BIT_MODIFYING_OUTPUT_REGISTER 0
 #define PIO_MIN_NUM_0_CAPTURE 0
@@ -242,7 +296,7 @@
  */
 
 #define ALT_MODULE_CLASS_pio_ms_num_0 altera_avalon_pio
-#define PIO_MS_NUM_0_BASE 0x2030
+#define PIO_MS_NUM_0_BASE 0x2050
 #define PIO_MS_NUM_0_BIT_CLEARING_EDGE_REGISTER 0
 #define PIO_MS_NUM_0_BIT_MODIFYING_OUTPUT_REGISTER 0
 #define PIO_MS_NUM_0_CAPTURE 0
@@ -269,7 +323,7 @@
  */
 
 #define ALT_MODULE_CLASS_pio_switch_0 altera_avalon_pio
-#define PIO_SWITCH_0_BASE 0x2040
+#define PIO_SWITCH_0_BASE 0x2060
 #define PIO_SWITCH_0_BIT_CLEARING_EDGE_REGISTER 0
 #define PIO_SWITCH_0_BIT_MODIFYING_OUTPUT_REGISTER 0
 #define PIO_SWITCH_0_CAPTURE 0
@@ -361,15 +415,15 @@
 #define TIMER_0_FREQ 50000000
 #define TIMER_0_IRQ 0
 #define TIMER_0_IRQ_INTERRUPT_CONTROLLER_ID 0
-#define TIMER_0_LOAD_VALUE 49999
+#define TIMER_0_LOAD_VALUE 499999
 #define TIMER_0_MULT 0.001
 #define TIMER_0_NAME "/dev/timer_0"
-#define TIMER_0_PERIOD 1
+#define TIMER_0_PERIOD 10
 #define TIMER_0_PERIOD_UNITS "ms"
 #define TIMER_0_RESET_OUTPUT 0
 #define TIMER_0_SNAPSHOT 0
 #define TIMER_0_SPAN 32
-#define TIMER_0_TICKS_PER_SEC 1000
+#define TIMER_0_TICKS_PER_SEC 100
 #define TIMER_0_TIMEOUT_PULSE_OUTPUT 0
 #define TIMER_0_TIMER_DEVICE_TYPE 1
 #define TIMER_0_TYPE "altera_avalon_timer"

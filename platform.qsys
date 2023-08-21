@@ -35,6 +35,38 @@
          type = "boolean";
       }
    }
+   element pio_button_start
+   {
+      datum _sortIndex
+      {
+         value = "9";
+         type = "int";
+      }
+   }
+   element pio_button_start.s1
+   {
+      datum baseAddress
+      {
+         value = "8240";
+         type = "String";
+      }
+   }
+   element pio_button_stop
+   {
+      datum _sortIndex
+      {
+         value = "10";
+         type = "int";
+      }
+   }
+   element pio_button_stop.s1
+   {
+      datum baseAddress
+      {
+         value = "8224";
+         type = "String";
+      }
+   }
    element pio_leds_0
    {
       datum _sortIndex
@@ -52,7 +84,7 @@
    {
       datum baseAddress
       {
-         value = "8272";
+         value = "8304";
          type = "String";
       }
    }
@@ -68,7 +100,7 @@
    {
       datum baseAddress
       {
-         value = "8224";
+         value = "8256";
          type = "String";
       }
    }
@@ -84,7 +116,7 @@
    {
       datum baseAddress
       {
-         value = "8240";
+         value = "8272";
          type = "String";
       }
    }
@@ -105,7 +137,7 @@
    {
       datum baseAddress
       {
-         value = "8256";
+         value = "8288";
          type = "String";
       }
    }
@@ -118,7 +150,7 @@
       }
       datum sopceditor_expanded
       {
-         value = "0";
+         value = "1";
          type = "boolean";
       }
    }
@@ -195,6 +227,16 @@
  <instanceScript></instanceScript>
  <interface name="clk" internal="clk_0.clk_in" type="clock" dir="end" />
  <interface
+   name="pio_button_start_external_connection"
+   internal="pio_button_start.external_connection"
+   type="conduit"
+   dir="end" />
+ <interface
+   name="pio_button_stop_external_connection"
+   internal="pio_button_stop.external_connection"
+   type="conduit"
+   dir="end" />
+ <interface
    name="pio_leds_0_external_connection"
    internal="pio_leds_0.external_connection"
    type="conduit"
@@ -245,7 +287,7 @@
   <parameter name="dataAddrWidth" value="14" />
   <parameter name="dataMasterHighPerformanceAddrWidth" value="1" />
   <parameter name="dataMasterHighPerformanceMapParam" value="" />
-  <parameter name="dataSlaveMapParam"><![CDATA[<address-map><slave name='ram_0.s1' start='0x1000' end='0x2000' type='altera_avalon_onchip_memory2.s1' /><slave name='timer_0.s1' start='0x2000' end='0x2020' type='altera_avalon_timer.s1' /><slave name='pio_min_num_0.s1' start='0x2020' end='0x2030' type='altera_avalon_pio.s1' /><slave name='pio_ms_num_0.s1' start='0x2030' end='0x2040' type='altera_avalon_pio.s1' /><slave name='pio_switch_0.s1' start='0x2040' end='0x2050' type='altera_avalon_pio.s1' /><slave name='pio_leds_0.s1' start='0x2050' end='0x2060' type='altera_avalon_pio.s1' /></address-map>]]></parameter>
+  <parameter name="dataSlaveMapParam"><![CDATA[<address-map><slave name='ram_0.s1' start='0x1000' end='0x2000' type='altera_avalon_onchip_memory2.s1' /><slave name='timer_0.s1' start='0x2000' end='0x2020' type='altera_avalon_timer.s1' /><slave name='pio_button_stop.s1' start='0x2020' end='0x2030' type='altera_avalon_pio.s1' /><slave name='pio_button_start.s1' start='0x2030' end='0x2040' type='altera_avalon_pio.s1' /><slave name='pio_min_num_0.s1' start='0x2040' end='0x2050' type='altera_avalon_pio.s1' /><slave name='pio_ms_num_0.s1' start='0x2050' end='0x2060' type='altera_avalon_pio.s1' /><slave name='pio_switch_0.s1' start='0x2060' end='0x2070' type='altera_avalon_pio.s1' /><slave name='pio_leds_0.s1' start='0x2070' end='0x2080' type='altera_avalon_pio.s1' /></address-map>]]></parameter>
   <parameter name="data_master_high_performance_paddr_base" value="0" />
   <parameter name="data_master_high_performance_paddr_size" value="0" />
   <parameter name="data_master_paddr_base" value="0" />
@@ -291,7 +333,7 @@
   <parameter name="instruction_master_high_performance_paddr_size" value="0" />
   <parameter name="instruction_master_paddr_base" value="0" />
   <parameter name="instruction_master_paddr_size" value="0" />
-  <parameter name="internalIrqMaskSystemInfo" value="1" />
+  <parameter name="internalIrqMaskSystemInfo" value="7" />
   <parameter name="io_regionbase" value="0" />
   <parameter name="io_regionsize" value="0" />
   <parameter name="master_addr_map" value="false" />
@@ -402,6 +444,42 @@
   <parameter name="tmr_enabled" value="false" />
   <parameter name="tracefilename" value="" />
   <parameter name="userDefinedSettings" value="" />
+ </module>
+ <module
+   name="pio_button_start"
+   kind="altera_avalon_pio"
+   version="22.1"
+   enabled="1">
+  <parameter name="bitClearingEdgeCapReg" value="false" />
+  <parameter name="bitModifyingOutReg" value="false" />
+  <parameter name="captureEdge" value="false" />
+  <parameter name="clockRate" value="50000000" />
+  <parameter name="direction" value="Input" />
+  <parameter name="edgeType" value="RISING" />
+  <parameter name="generateIRQ" value="true" />
+  <parameter name="irqType" value="LEVEL" />
+  <parameter name="resetValue" value="0" />
+  <parameter name="simDoTestBenchWiring" value="false" />
+  <parameter name="simDrivenValue" value="0" />
+  <parameter name="width" value="1" />
+ </module>
+ <module
+   name="pio_button_stop"
+   kind="altera_avalon_pio"
+   version="22.1"
+   enabled="1">
+  <parameter name="bitClearingEdgeCapReg" value="false" />
+  <parameter name="bitModifyingOutReg" value="false" />
+  <parameter name="captureEdge" value="false" />
+  <parameter name="clockRate" value="50000000" />
+  <parameter name="direction" value="Input" />
+  <parameter name="edgeType" value="RISING" />
+  <parameter name="generateIRQ" value="true" />
+  <parameter name="irqType" value="LEVEL" />
+  <parameter name="resetValue" value="0" />
+  <parameter name="simDoTestBenchWiring" value="false" />
+  <parameter name="simDrivenValue" value="0" />
+  <parameter name="width" value="1" />
  </module>
  <module name="pio_leds_0" kind="altera_avalon_pio" version="22.1" enabled="1">
   <parameter name="bitClearingEdgeCapReg" value="false" />
@@ -539,7 +617,7 @@
   <parameter name="alwaysRun" value="true" />
   <parameter name="counterSize" value="32" />
   <parameter name="fixedPeriod" value="true" />
-  <parameter name="period" value="1" />
+  <parameter name="period" value="10" />
   <parameter name="periodUnits" value="MSEC" />
   <parameter name="resetOutput" value="false" />
   <parameter name="snapshot" value="false" />
@@ -571,7 +649,7 @@
    start="nios2_gen2_0.data_master"
    end="pio_leds_0.s1">
   <parameter name="arbitrationPriority" value="1" />
-  <parameter name="baseAddress" value="0x2050" />
+  <parameter name="baseAddress" value="0x2070" />
   <parameter name="defaultConnection" value="false" />
  </connection>
  <connection
@@ -580,7 +658,7 @@
    start="nios2_gen2_0.data_master"
    end="pio_switch_0.s1">
   <parameter name="arbitrationPriority" value="1" />
-  <parameter name="baseAddress" value="0x2040" />
+  <parameter name="baseAddress" value="0x2060" />
   <parameter name="defaultConnection" value="false" />
  </connection>
  <connection
@@ -589,7 +667,7 @@
    start="nios2_gen2_0.data_master"
    end="pio_ms_num_0.s1">
   <parameter name="arbitrationPriority" value="1" />
-  <parameter name="baseAddress" value="0x2030" />
+  <parameter name="baseAddress" value="0x2050" />
   <parameter name="defaultConnection" value="false" />
  </connection>
  <connection
@@ -597,6 +675,24 @@
    version="22.1"
    start="nios2_gen2_0.data_master"
    end="pio_min_num_0.s1">
+  <parameter name="arbitrationPriority" value="1" />
+  <parameter name="baseAddress" value="0x2040" />
+  <parameter name="defaultConnection" value="false" />
+ </connection>
+ <connection
+   kind="avalon"
+   version="22.1"
+   start="nios2_gen2_0.data_master"
+   end="pio_button_start.s1">
+  <parameter name="arbitrationPriority" value="1" />
+  <parameter name="baseAddress" value="0x2030" />
+  <parameter name="defaultConnection" value="false" />
+ </connection>
+ <connection
+   kind="avalon"
+   version="22.1"
+   start="nios2_gen2_0.data_master"
+   end="pio_button_stop.s1">
   <parameter name="arbitrationPriority" value="1" />
   <parameter name="baseAddress" value="0x2020" />
   <parameter name="defaultConnection" value="false" />
@@ -616,6 +712,16 @@
  <connection kind="clock" version="22.1" start="clk_0.clk" end="pio_switch_0.clk" />
  <connection kind="clock" version="22.1" start="clk_0.clk" end="pio_ms_num_0.clk" />
  <connection kind="clock" version="22.1" start="clk_0.clk" end="pio_min_num_0.clk" />
+ <connection
+   kind="clock"
+   version="22.1"
+   start="clk_0.clk"
+   end="pio_button_start.clk" />
+ <connection
+   kind="clock"
+   version="22.1"
+   start="clk_0.clk"
+   end="pio_button_stop.clk" />
  <connection kind="clock" version="22.1" start="clk_0.clk" end="ram_0.clk1" />
  <connection kind="clock" version="22.1" start="clk_0.clk" end="rom_0.clk1" />
  <connection
@@ -624,6 +730,20 @@
    start="nios2_gen2_0.irq"
    end="timer_0.irq">
   <parameter name="irqNumber" value="0" />
+ </connection>
+ <connection
+   kind="interrupt"
+   version="22.1"
+   start="nios2_gen2_0.irq"
+   end="pio_button_start.irq">
+  <parameter name="irqNumber" value="1" />
+ </connection>
+ <connection
+   kind="interrupt"
+   version="22.1"
+   start="nios2_gen2_0.irq"
+   end="pio_button_stop.irq">
+  <parameter name="irqNumber" value="2" />
  </connection>
  <connection
    kind="reset"
@@ -655,6 +775,16 @@
    version="22.1"
    start="clk_0.clk_reset"
    end="pio_min_num_0.reset" />
+ <connection
+   kind="reset"
+   version="22.1"
+   start="clk_0.clk_reset"
+   end="pio_button_start.reset" />
+ <connection
+   kind="reset"
+   version="22.1"
+   start="clk_0.clk_reset"
+   end="pio_button_stop.reset" />
  <connection
    kind="reset"
    version="22.1"

@@ -8,12 +8,27 @@ module tallernios
 	output logic[6:0] display3,
 	output logic[6:0] display4,
 	output logic[6:0] display5,
-	output logic[6:0] display6
+	output logic[6:0] display6,
+	output logic btn_start,
+	output logic btn_stop
 );
 
 	logic[7:0] seg_num;
 	logic[7:0] ms_num;
 	logic[7:0] min_num;
+	logic[7:0] display_ms;
+//	logic db_btn_start;
+//	logic db_btn_stop;
+	
+//	button_debouncer(
+//		.button(btn_start),
+//		.debounced_button(db_btn_start)
+//	);
+//	
+//	button_debouncer(
+//		.button(btn_start),
+//		.debounced_button(db_btn_stop)
+//	);
 	
 
 	platform plat
@@ -23,18 +38,22 @@ module tallernios
 		.pio_ms_num_0_external_connection_export(ms_num),
 		.pio_min_num_0_external_connection_export(min_num),
 		.pio_switch_0_external_connection_export(switch),
+		//.pio_button_stop_external_connection_export(!db_btn_start),
+		//.pio_button_start_external_connection_export(!db_btn_stop),
+		.pio_button_stop_external_connection_export(btn_start),
+		.pio_button_start_external_connection_export(btn_stop),
 		.reset_reset_n(rst_n)
 	);
 	
 
 	two_seven_segment_displays(
-    .decimal_number(seg_num),
+    .decimal_number(ms_num),
     .segment_anode1(display1),
 	 .segment_anode2(display2)
 	);
 	
 	two_seven_segment_displays(
-    .decimal_number(ms_num),
+    .decimal_number(seg_num),
     .segment_anode1(display3),
 	 .segment_anode2(display4)
 	);
