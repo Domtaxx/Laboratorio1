@@ -1,10 +1,10 @@
-Analysis & Synthesis Status : Successful - Mon Aug 21 11:19:09 2023
+Analysis & Synthesis Status : Successful - Mon Aug 21 13:02:26 2023
 Quartus Prime Version : 22.1std.2 Build 922 07/20/2023 SC Lite Edition
 Revision Name : Cronometro
 Top-level Entity Name : tallernios
 Family : Cyclone V
 Logic utilization (in ALMs) : N/A
-Total registers : 449
+Total registers : 457
 Total pins : 48
 Total virtual pins : 0
 Total block memory bits : 67,584

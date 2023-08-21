@@ -180,6 +180,14 @@
 					"strict" : false
 				},
 				{
+					"name" : "btn_stop",
+					"strict" : false
+				},
+				{
+					"name" : "btn_start",
+					"strict" : false
+				},
+				{
 					"name" : "switch[1]",
 					"strict" : false
 				},

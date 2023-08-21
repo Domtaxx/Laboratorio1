@@ -43,6 +43,22 @@
          type = "int";
       }
    }
+   element pio_button_start.external_connection
+   {
+      datum _tags
+      {
+         value = "";
+         type = "String";
+      }
+   }
+   element pio_button_start.irq
+   {
+      datum _tags
+      {
+         value = "";
+         type = "String";
+      }
+   }
    element pio_button_start.s1
    {
       datum baseAddress
@@ -57,6 +73,22 @@
       {
          value = "10";
          type = "int";
+      }
+   }
+   element pio_button_stop.external_connection
+   {
+      datum _tags
+      {
+         value = "";
+         type = "String";
+      }
+   }
+   element pio_button_stop.reset
+   {
+      datum _tags
+      {
+         value = "";
+         type = "String";
       }
    }
    element pio_button_stop.s1
@@ -78,6 +110,14 @@
       {
          value = "1";
          type = "boolean";
+      }
+   }
+   element pio_leds_0.reset
+   {
+      datum _tags
+      {
+         value = "";
+         type = "String";
       }
    }
    element pio_leds_0.s1
@@ -452,12 +492,12 @@
    enabled="1">
   <parameter name="bitClearingEdgeCapReg" value="false" />
   <parameter name="bitModifyingOutReg" value="false" />
-  <parameter name="captureEdge" value="false" />
+  <parameter name="captureEdge" value="true" />
   <parameter name="clockRate" value="50000000" />
   <parameter name="direction" value="Input" />
-  <parameter name="edgeType" value="RISING" />
+  <parameter name="edgeType" value="FALLING" />
   <parameter name="generateIRQ" value="true" />
-  <parameter name="irqType" value="LEVEL" />
+  <parameter name="irqType" value="EDGE" />
   <parameter name="resetValue" value="0" />
   <parameter name="simDoTestBenchWiring" value="false" />
   <parameter name="simDrivenValue" value="0" />
@@ -470,12 +510,12 @@
    enabled="1">
   <parameter name="bitClearingEdgeCapReg" value="false" />
   <parameter name="bitModifyingOutReg" value="false" />
-  <parameter name="captureEdge" value="false" />
+  <parameter name="captureEdge" value="true" />
   <parameter name="clockRate" value="50000000" />
   <parameter name="direction" value="Input" />
-  <parameter name="edgeType" value="RISING" />
+  <parameter name="edgeType" value="FALLING" />
   <parameter name="generateIRQ" value="true" />
-  <parameter name="irqType" value="LEVEL" />
+  <parameter name="irqType" value="EDGE" />
   <parameter name="resetValue" value="0" />
   <parameter name="simDoTestBenchWiring" value="false" />
   <parameter name="simDrivenValue" value="0" />

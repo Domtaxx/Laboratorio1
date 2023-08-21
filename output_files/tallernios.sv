@@ -3,32 +3,20 @@ module tallernios
 	input logic clk,
 					rst_n,
 	input logic[1:0] switch,
+	input logic btn_start,
+	input logic btn_stop,
 	output logic[6:0] display1,
 	output logic[6:0] display2,
 	output logic[6:0] display3,
 	output logic[6:0] display4,
 	output logic[6:0] display5,
-	output logic[6:0] display6,
-	output logic btn_start,
-	output logic btn_stop
+	output logic[6:0] display6
 );
 
 	logic[7:0] seg_num;
 	logic[7:0] ms_num;
 	logic[7:0] min_num;
 	logic[7:0] display_ms;
-//	logic db_btn_start;
-//	logic db_btn_stop;
-	
-//	button_debouncer(
-//		.button(btn_start),
-//		.debounced_button(db_btn_start)
-//	);
-//	
-//	button_debouncer(
-//		.button(btn_start),
-//		.debounced_button(db_btn_stop)
-//	);
 	
 
 	platform plat
@@ -38,8 +26,6 @@ module tallernios
 		.pio_ms_num_0_external_connection_export(ms_num),
 		.pio_min_num_0_external_connection_export(min_num),
 		.pio_switch_0_external_connection_export(switch),
-		//.pio_button_stop_external_connection_export(!db_btn_start),
-		//.pio_button_start_external_connection_export(!db_btn_stop),
 		.pio_button_stop_external_connection_export(btn_start),
 		.pio_button_start_external_connection_export(btn_stop),
 		.reset_reset_n(rst_n)
