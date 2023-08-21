@@ -213,7 +213,7 @@ module platform_mm_interconnect_0_router
     end
 
     // ( 0x2020 .. 0x2030 )
-    if ( {address[RG:PAD2],{PAD2{1'b0}}} == 14'h2020   ) begin
+    if ( {address[RG:PAD2],{PAD2{1'b0}}} == 14'h2020  && read_transaction  ) begin
             src_channel = 8'b10000000;
             src_data[PKT_DEST_ID_H:PKT_DEST_ID_L] = 1;
     end

@@ -9,9 +9,9 @@ Program Header:
     LOAD off    0x00001000 vaddr 0x00000000 paddr 0x00000000 align 2**12
          filesz 0x00000020 memsz 0x00000020 flags r-x
     LOAD off    0x00001020 vaddr 0x00000020 paddr 0x00000020 align 2**12
-         filesz 0x000004fc memsz 0x000004fc flags r-x
-    LOAD off    0x00002000 vaddr 0x00001000 paddr 0x0000051c align 2**12
-         filesz 0x00000004 memsz 0x0000012c flags rw-
+         filesz 0x000004cc memsz 0x000004cc flags r-x
+    LOAD off    0x00002000 vaddr 0x00001000 paddr 0x000004ec align 2**12
+         filesz 0x00000004 memsz 0x00000128 flags rw-
 
 Sections:
 Idx Name          Size      VMA       LMA       File off  Algn
@@ -19,63 +19,63 @@ Idx Name          Size      VMA       LMA       File off  Algn
                   CONTENTS, ALLOC, LOAD, READONLY, CODE
   1 .exceptions   00000160  00000020  00000020  00001020  2**2
                   CONTENTS, ALLOC, LOAD, READONLY, CODE
-  2 .text         0000039c  00000180  00000180  00001180  2**2
+  2 .text         0000036c  00000180  00000180  00001180  2**2
                   CONTENTS, ALLOC, LOAD, READONLY, CODE
-  3 .rodata       00000000  00001000  00000520  00002004  2**0
+  3 .rodata       00000000  00001000  000004f0  00002004  2**0
                   CONTENTS, ALLOC, LOAD, DATA
-  4 .rwdata       00000004  00001000  0000051c  00002000  2**2
+  4 .rwdata       00000004  00001000  000004ec  00002000  2**2
                   CONTENTS, ALLOC, LOAD, DATA, SMALL_DATA
-  5 .bss          00000128  00001004  00000520  00002004  2**2
+  5 .bss          00000124  00001004  000004f0  00002004  2**2
                   ALLOC, SMALL_DATA
-  6 .rom_0        00000000  00000520  00000520  00002004  2**0
+  6 .rom_0        00000000  000004f0  000004f0  00002004  2**0
                   CONTENTS
-  7 .ram_0        00000000  0000112c  0000112c  00002004  2**0
+  7 .ram_0        00000000  00001128  00001128  00002004  2**0
                   CONTENTS
   8 .comment      0000002d  00000000  00000000  00002004  2**0
                   CONTENTS, READONLY
   9 .debug_aranges 00000230  00000000  00000000  00002038  2**3
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 10 .debug_info   000014aa  00000000  00000000  00002268  2**0
+ 10 .debug_info   00001415  00000000  00000000  00002268  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 11 .debug_abbrev 00000c9a  00000000  00000000  00003712  2**0
+ 11 .debug_abbrev 00000c33  00000000  00000000  0000367d  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 12 .debug_line   00000a86  00000000  00000000  000043ac  2**0
+ 12 .debug_line   00000a88  00000000  00000000  000042b0  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 13 .debug_frame  00000258  00000000  00000000  00004e34  2**2
+ 13 .debug_frame  00000248  00000000  00000000  00004d38  2**2
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 14 .debug_str    000009b6  00000000  00000000  0000508c  2**0
+ 14 .debug_str    00000963  00000000  00000000  00004f80  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 15 .debug_alt_sim_info 00000010  00000000  00000000  00005a44  2**2
+ 15 .debug_alt_sim_info 00000010  00000000  00000000  000058e4  2**2
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 16 .debug_ranges 00000070  00000000  00000000  00005a58  2**3
+ 16 .debug_ranges 00000070  00000000  00000000  000058f8  2**3
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 17 .debug_loclists 000003df  00000000  00000000  00005ac8  2**0
+ 17 .debug_loclists 000003df  00000000  00000000  00005968  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 18 .debug_rnglists 000000a8  00000000  00000000  00005ea7  2**0
+ 18 .debug_rnglists 000000b3  00000000  00000000  00005d47  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 19 .debug_line_str 000004db  00000000  00000000  00005f4f  2**0
+ 19 .debug_line_str 000004db  00000000  00000000  00005dfa  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 20 .thread_model 00000003  00000000  00000000  00007552  2**0
+ 20 .thread_model 00000003  00000000  00000000  000073a6  2**0
                   CONTENTS, READONLY
- 21 .cpu          0000000c  00000000  00000000  00007555  2**0
+ 21 .cpu          0000000c  00000000  00000000  000073a9  2**0
                   CONTENTS, READONLY
- 22 .qsys         00000001  00000000  00000000  00007561  2**0
+ 22 .qsys         00000001  00000000  00000000  000073b5  2**0
                   CONTENTS, READONLY
- 23 .simulation_enabled 00000001  00000000  00000000  00007562  2**0
+ 23 .simulation_enabled 00000001  00000000  00000000  000073b6  2**0
                   CONTENTS, READONLY
- 24 .stderr_dev   00000004  00000000  00000000  00007563  2**0
+ 24 .stderr_dev   00000004  00000000  00000000  000073b7  2**0
                   CONTENTS, READONLY
- 25 .stdin_dev    00000004  00000000  00000000  00007567  2**0
+ 25 .stdin_dev    00000004  00000000  00000000  000073bb  2**0
                   CONTENTS, READONLY
- 26 .stdout_dev   00000004  00000000  00000000  0000756b  2**0
+ 26 .stdout_dev   00000004  00000000  00000000  000073bf  2**0
                   CONTENTS, READONLY
- 27 .sopc_system_name 00000008  00000000  00000000  0000756f  2**0
+ 27 .sopc_system_name 00000008  00000000  00000000  000073c3  2**0
                   CONTENTS, READONLY
- 28 .quartus_project_dir 00000036  00000000  00000000  00007577  2**0
+ 28 .quartus_project_dir 00000036  00000000  00000000  000073cb  2**0
                   CONTENTS, READONLY
- 29 .jdi          000001f2  00000000  00000000  000075ad  2**0
+ 29 .jdi          000001f2  00000000  00000000  00007401  2**0
                   CONTENTS, READONLY
- 30 .sopcinfo     00055efb  00000000  00000000  0000779f  2**0
+ 30 .sopcinfo     00054dbf  00000000  00000000  000075f3  2**0
                   CONTENTS, READONLY
 SYMBOL TABLE:
 00000000 l    d  .entry	00000000 .entry
@@ -84,8 +84,8 @@ SYMBOL TABLE:
 00001000 l    d  .rodata	00000000 .rodata
 00001000 l    d  .rwdata	00000000 .rwdata
 00001004 l    d  .bss	00000000 .bss
-00000520 l    d  .rom_0	00000000 .rom_0
-0000112c l    d  .ram_0	00000000 .ram_0
+000004f0 l    d  .rom_0	00000000 .rom_0
+00001128 l    d  .ram_0	00000000 .ram_0
 00000000 l    d  .comment	00000000 .comment
 00000000 l    d  .debug_aranges	00000000 .debug_aranges
 00000000 l    d  .debug_info	00000000 .debug_info
@@ -103,12 +103,11 @@ SYMBOL TABLE:
 00000000 l    df *ABS*	00000000 alt_irq_handler.c
 00000000 l    df *ABS*	00000000 alt_instruction_exception_entry.c
 00000000 l    df *ABS*	00000000 hello_world_small.c
-000001bc l     F .text	0000000c handle_interrupts
-000001c8 l     F .text	000000a4 timer_isr
-00001010 l     O .bss	00000004 msCount
-00001014 l     O .bss	00000004 segCount
-0000100c l     O .bss	00000004 minCount
-0000026c l     F .text	0000000c handle_interrupts_stop
+000001bc l     F .text	0000000c start_interrupt
+000001c8 l     F .text	000000a8 timer_isr
+0000100c l     O .bss	00000004 msCount
+00001010 l     O .bss	00000004 segCount
+00001008 l     O .bss	00000004 minCount
 00000000 l    df *ABS*	00000000 alt_iic.c
 00000000 l    df *ABS*	00000000 alt_iic_isr_register.c
 00000000 l    df *ABS*	00000000 alt_irq_vars.c
@@ -119,57 +118,56 @@ SYMBOL TABLE:
 00000000 l    df *ABS*	00000000 alt_icache_flush_all.c
 00000000 l    df *ABS*	00000000 altera_nios2_gen2_irq.c
 00000000 l    df *ABS*	00000000 memcpy.c
-00001028 g     O .bss	00000004 alt_instruction_exception_handler
-00000470 g     F .text	0000002c alt_main
-0000102c g     O .bss	00000100 alt_irq
-0000051c g       *ABS*	00000000 __flash_rwdata_start
-000004ec g     F .text	00000008 altera_nios2_gen2_irq_init
+00001024 g     O .bss	00000004 alt_instruction_exception_handler
+00000440 g     F .text	0000002c alt_main
+00001028 g     O .bss	00000100 alt_irq
+000004ec g       *ABS*	00000000 __flash_rwdata_start
+000004bc g     F .text	00000008 altera_nios2_gen2_irq_init
 00000000 g     F .entry	0000000c __reset
-00001008 g     O .bss	00000004 edge_capture
 00000020 g       *ABS*	00000000 __flash_exceptions_start
-00001020 g     O .bss	00000004 alt_argv
+0000101c g     O .bss	00000004 alt_argv
 00009000 g       *ABS*	00000000 _gp
-000004f4 g     F .text	00000028 memcpy
-000004c8 g     F .text	00000024 alt_exception_cause_generated_bad_addr
-00001004 g     O .bss	00000004 edge_capture_stop
-0000112c g       *ABS*	00000000 __bss_end
-00000384 g     F .text	00000068 alt_iic_isr_register
+000004c4 g     F .text	00000028 memcpy
+00000498 g     F .text	00000024 alt_exception_cause_generated_bad_addr
+00001128 g       *ABS*	00000000 __bss_end
+00000354 g     F .text	00000068 alt_iic_isr_register
 00001000 g       *ABS*	00000000 __alt_mem_ram_0
-0000036c g     F .text	00000018 alt_ic_irq_enabled
-00001018 g     O .bss	00000004 alt_irq_active
+0000033c g     F .text	00000018 alt_ic_irq_enabled
+00001014 g     O .bss	00000004 alt_irq_active
 000000fc g     F .exceptions	00000060 alt_irq_handler
-000004c0 g     F .text	00000004 alt_dcache_flush_all
+00000490 g     F .text	00000004 alt_dcache_flush_all
 00001004 g       *ABS*	00000000 __ram_rwdata_end
 00001000 g       *ABS*	00000000 __ram_rodata_end
-0000112c g       *ABS*	00000000 end
+00001128 g       *ABS*	00000000 end
 0000015c g     F .exceptions	00000024 alt_instruction_exception_entry
 00002000 g       *ABS*	00000000 __alt_stack_pointer
 00000180 g     F .text	0000003c _start
-000004bc g     F .text	00000004 alt_sys_init
+0000048c g     F .text	00000004 alt_sys_init
 00001000 g       *ABS*	00000000 __ram_rwdata_start
 00001000 g       *ABS*	00000000 __ram_rodata_start
-0000112c g       *ABS*	00000000 __alt_stack_base
+00001128 g       *ABS*	00000000 __alt_stack_base
 00001004 g       *ABS*	00000000 __bss_start
-00000278 g     F .text	00000080 main
-0000101c g     O .bss	00000004 alt_envp
-0000051c g       *ABS*	00000000 __flash_rodata_start
-0000049c g     F .text	00000020 alt_irq_init
-00001024 g     O .bss	00000004 alt_argc
+00000270 g     F .text	00000058 main
+00001018 g     O .bss	00000004 alt_envp
+000004ec g       *ABS*	00000000 __flash_rodata_start
+0000046c g     F .text	00000020 alt_irq_init
+00001020 g     O .bss	00000004 alt_argc
 00000020 g       .exceptions	00000000 alt_irq_entry
 00000020 g       *ABS*	00000000 __ram_exceptions_start
-000002f8 g     F .text	00000004 alt_ic_isr_register
+000002c8 g     F .text	00000004 alt_ic_isr_register
 00001004 g       *ABS*	00000000 _edata
-0000112c g       *ABS*	00000000 _end
+00001128 g       *ABS*	00000000 _end
 00000180 g       *ABS*	00000000 __ram_exceptions_end
-00000334 g     F .text	00000038 alt_ic_irq_disable
+00000304 g     F .text	00000038 alt_ic_irq_disable
 00002000 g       *ABS*	00000000 __alt_data_end
 00000020 g     F .exceptions	00000000 alt_exception
 00000000 g       *ABS*	00000000 __alt_mem_rom_0
+00001004 g     O .bss	00000004 start
 0000000c g       .entry	00000000 _exit
-000004c4 g     F .text	00000004 alt_icache_flush_all
+00000494 g     F .text	00000004 alt_icache_flush_all
 00001000 g     O .rwdata	00000004 alt_priority_mask
-000002fc g     F .text	00000038 alt_ic_irq_enable
-000003ec g     F .text	00000084 alt_load
+000002cc g     F .text	00000038 alt_ic_irq_enable
+000003bc g     F .text	00000084 alt_load
 
 
 
@@ -384,7 +382,7 @@ static ALT_INLINE alt_u32 ALT_ALWAYS_INLINE alt_irq_pending (void)
 #ifdef ALT_ENHANCED_INTERRUPT_API_PRESENT
         alt_irq[i].handler(alt_irq[i].context); 
  10c:	04000034 	movhi	r16,0
- 110:	84040b04 	addi	r16,r16,4140
+ 110:	84040a04 	addi	r16,r16,4136
     i = 0;
  114:	0005883a 	mov	r2,zero
     mask = 1;
@@ -430,7 +428,7 @@ static ALT_INLINE alt_u32 ALT_ALWAYS_INLINE alt_irq_pending (void)
 #endif /* NIOS2_HAS_EXTRA_EXCEPTION_INFO */
 
   if(alt_instruction_exception_handler) {
- 15c:	d0a00a17 	ldw	r2,-32728(gp)
+ 15c:	d0a00917 	ldw	r2,-32732(gp)
 {
  160:	200b883a 	mov	r5,r4
   if(alt_instruction_exception_handler) {
@@ -489,7 +487,7 @@ Disassembly of section .text:
     movhi r3, %hi(__bss_end)
  198:	00c00034 	movhi	r3,0
     ori r3, r3, %lo(__bss_end)
- 19c:	18c44b14 	ori	r3,r3,4396
+ 19c:	18c44a14 	ori	r3,r3,4392
 
     beq r2, r3, 1f
  1a0:	10c00326 	beq	r2,r3,1b0 <_start+0x30>
@@ -507,14 +505,14 @@ Disassembly of section .text:
 #endif
 
     call alt_load
- 1b0:	00003ec0 	call	3ec <alt_load>
+ 1b0:	00003bc0 	call	3bc <alt_load>
 
     /* Log that alt_main is about to be called. */
     ALT_LOG_PUTS(alt_log_msg_alt_main)
 
     /* Call the C entry point. It should never return. */
     call alt_main
- 1b4:	00004700 	call	470 <alt_main>
+ 1b4:	00004400 	call	440 <alt_main>
 
 000001b8 <alt_after_alt_main>:
 
@@ -523,13 +521,13 @@ alt_after_alt_main:
     br alt_after_alt_main
  1b8:	003fff06 	br	1b8 <alt_after_alt_main>
 
-000001bc <handle_interrupts>:
-    volatile int* edge_capture_ptr = (volatile int*) context;
+000001bc <start_interrupt>:
+    volatile int* start_ptr = (volatile int*) context;
 
     //Read the edge capture register on the PIO and store the value
-    //The value will be stored in the edge_capture variable and accessible
+    //The value will be stored in the start variable and accessible
     //from other parts of the code.
-    *edge_capture_ptr = 1;
+    *start_ptr = 1;
  1bc:	00800044 	movi	r2,1
  1c0:	20800015 	stw	r2,0(r4)
 
@@ -540,498 +538,471 @@ alt_after_alt_main:
  1c4:	f800283a 	ret
 
 000001c8 <timer_isr>:
-	if(edge_capture == 1 && edge_capture_stop == 0)
- 1c8:	d0a00217 	ldw	r2,-32760(gp)
- 1cc:	10800058 	cmpnei	r2,r2,1
- 1d0:	10001f1e 	bne	r2,zero,250 <timer_isr+0x88>
- 1d4:	d0a00117 	ldw	r2,-32764(gp)
- 1d8:	10001d1e 	bne	r2,zero,250 <timer_isr+0x88>
-	msCount++;
- 1dc:	d0a00417 	ldw	r2,-32752(gp)
- 1e0:	10800044 	addi	r2,r2,1
- 1e4:	d0a00415 	stw	r2,-32752(gp)
-		if (msCount >= 99)
- 1e8:	108018f0 	cmpltui	r2,r2,99
- 1ec:	1000041e 	bne	r2,zero,200 <timer_isr+0x38>
-			segCount++;
- 1f0:	d0a00517 	ldw	r2,-32748(gp)
-			msCount = 0;
- 1f4:	d0200415 	stw	zero,-32752(gp)
-			segCount++;
- 1f8:	10800044 	addi	r2,r2,1
- 1fc:	d0a00515 	stw	r2,-32748(gp)
-		if (segCount >= 60)
- 200:	d0a00517 	ldw	r2,-32748(gp)
- 204:	10800f30 	cmpltui	r2,r2,60
- 208:	1000041e 	bne	r2,zero,21c <timer_isr+0x54>
-			minCount++;
- 20c:	d0a00317 	ldw	r2,-32756(gp)
-			segCount = 0;
- 210:	d0200515 	stw	zero,-32748(gp)
-			minCount++;
- 214:	10800044 	addi	r2,r2,1
- 218:	d0a00315 	stw	r2,-32756(gp)
-		if(minCount >= 100)
- 21c:	d0a00317 	ldw	r2,-32756(gp)
- 220:	10801930 	cmpltui	r2,r2,100
- 224:	1000011e 	bne	r2,zero,22c <timer_isr+0x64>
-			minCount = 0;
- 228:	d0200315 	stw	zero,-32756(gp)
+	stop = IORD_ALTERA_AVALON_PIO_DATA(PIO_BUTTON_STOP_BASE);
+ 1c8:	00c80837 	ldwio	r3,8224(zero)
+	if(start == 1 && stop == 0)
+ 1cc:	d0a00117 	ldw	r2,-32764(gp)
+ 1d0:	10800058 	cmpnei	r2,r2,1
+ 1d4:	1000141e 	bne	r2,zero,228 <timer_isr+0x60>
+ 1d8:	1800131e 	bne	r3,zero,228 <timer_isr+0x60>
 	mode = IORD_ALTERA_AVALON_PIO_DATA(PIO_SWITCH_0_BASE);
- 22c:	00881837 	ldwio	r2,8288(zero)
+ 1dc:	00881837 	ldwio	r2,8288(zero)
 	if(mode == 0)
- 230:	1000031e 	bne	r2,zero,240 <timer_isr+0x78>
+ 1e0:	1000031e 	bne	r2,zero,1f0 <timer_isr+0x28>
 		IOWR_ALTERA_AVALON_PIO_DATA(PIO_MS_NUM_0_BASE, msCount);
- 234:	d0a00417 	ldw	r2,-32752(gp)
- 238:	00881435 	stwio	r2,8272(zero)
- 23c:	00000406 	br	250 <timer_isr+0x88>
+ 1e4:	d0a00317 	ldw	r2,-32756(gp)
+ 1e8:	00881435 	stwio	r2,8272(zero)
+ 1ec:	00000406 	br	200 <timer_isr+0x38>
 	else if(mode == 1)
- 240:	10800058 	cmpnei	r2,r2,1
- 244:	1000041e 	bne	r2,zero,258 <timer_isr+0x90>
+ 1f0:	10800058 	cmpnei	r2,r2,1
+ 1f4:	10000e1e 	bne	r2,zero,230 <timer_isr+0x68>
 		IOWR_ALTERA_AVALON_PIO_DATA(PIO_LEDS_0_BASE, segCount);
- 248:	d0a00517 	ldw	r2,-32748(gp)
- 24c:	00881c35 	stwio	r2,8304(zero)
+ 1f8:	d0a00417 	ldw	r2,-32752(gp)
+ 1fc:	00881c35 	stwio	r2,8304(zero)
+	if (msCount >= 99)
+ 200:	d0a00317 	ldw	r2,-32756(gp)
+		segCount++;
+ 204:	d0e00417 	ldw	r3,-32752(gp)
+	if (msCount >= 99)
+ 208:	108018f0 	cmpltui	r2,r2,99
+ 20c:	10000d1e 	bne	r2,zero,244 <timer_isr+0x7c>
+		segCount++;
+ 210:	18c00044 	addi	r3,r3,1
+		msCount = 0;
+ 214:	d0200315 	stw	zero,-32756(gp)
+		segCount++;
+ 218:	d0e00415 	stw	r3,-32752(gp)
+	msCount++;
+ 21c:	d0a00317 	ldw	r2,-32756(gp)
+ 220:	10800044 	addi	r2,r2,1
+ 224:	d0a00315 	stw	r2,-32756(gp)
 	IOWR_ALTERA_AVALON_TIMER_STATUS(TIMER_0_BASE, 0);
- 250:	00080035 	stwio	zero,8192(zero)
+ 228:	00080035 	stwio	zero,8192(zero)
 }
- 254:	f800283a 	ret
+ 22c:	f800283a 	ret
 		IOWR_ALTERA_AVALON_PIO_DATA(PIO_MIN_NUM_0_BASE, minCount);
- 258:	d0a00317 	ldw	r2,-32756(gp)
- 25c:	00881035 	stwio	r2,8256(zero)
+ 230:	d0a00217 	ldw	r2,-32760(gp)
+ 234:	00881035 	stwio	r2,8256(zero)
 		IOWR_ALTERA_AVALON_PIO_DATA(PIO_LEDS_0_BASE, segCount);
- 260:	d0a00517 	ldw	r2,-32748(gp)
- 264:	00881c35 	stwio	r2,8304(zero)
- 268:	003ff206 	br	234 <timer_isr+0x6c>
+ 238:	d0a00417 	ldw	r2,-32752(gp)
+ 23c:	00881c35 	stwio	r2,8304(zero)
+ 240:	003fe806 	br	1e4 <timer_isr+0x1c>
+	else if (segCount >= 60)
+ 244:	18c00f30 	cmpltui	r3,r3,60
+		minCount++;
+ 248:	d0a00217 	ldw	r2,-32760(gp)
+	else if (segCount >= 60)
+ 24c:	1800041e 	bne	r3,zero,260 <timer_isr+0x98>
+		minCount++;
+ 250:	10800044 	addi	r2,r2,1
+		segCount = 0;
+ 254:	d0200415 	stw	zero,-32752(gp)
+		minCount++;
+ 258:	d0a00215 	stw	r2,-32760(gp)
+ 25c:	003fef06 	br	21c <timer_isr+0x54>
+	else if(minCount >= 99)
+ 260:	108018f0 	cmpltui	r2,r2,99
+ 264:	103fed1e 	bne	r2,zero,21c <timer_isr+0x54>
+		minCount = 0;
+ 268:	d0200215 	stw	zero,-32760(gp)
+ 26c:	003feb06 	br	21c <timer_isr+0x54>
 
-0000026c <handle_interrupts_stop>:
+00000270 <main>:
 
-/* This is the ISR which will be called when the system signals an interrupt. */
-static void handle_interrupts_stop(void* context)
- 26c:	00800044 	movi	r2,1
- 270:	20800015 	stw	r2,0(r4)
- 274:	f800283a 	ret
-
-00000278 <main>:
-//{
-//	stop = 1;
-//}
 
 int main()
 {
- 278:	defffd04 	addi	sp,sp,-12
+ 270:	defffe04 	addi	sp,sp,-8
   alt_ic_isr_register(
- 27c:	01800034 	movhi	r6,0
- 280:	d8000015 	stw	zero,0(sp)
- 284:	000f883a 	mov	r7,zero
- 288:	31807204 	addi	r6,r6,456
- 28c:	000b883a 	mov	r5,zero
- 290:	0009883a 	mov	r4,zero
+ 274:	01800034 	movhi	r6,0
+ 278:	d8000015 	stw	zero,0(sp)
+ 27c:	000f883a 	mov	r7,zero
+ 280:	31807204 	addi	r6,r6,456
+ 284:	000b883a 	mov	r5,zero
+ 288:	0009883a 	mov	r4,zero
 {
- 294:	dfc00215 	stw	ra,8(sp)
- 298:	dc000115 	stw	r16,4(sp)
+ 28c:	dfc00115 	stw	ra,4(sp)
   alt_ic_isr_register(
- 29c:	00002f80 	call	2f8 <alt_ic_isr_register>
-		  TIMER_0_IRQ_INTERRUPT_CONTROLLER_ID,
+ 290:	00002c80 	call	2c8 <alt_ic_isr_register>
 		  TIMER_0_IRQ,
 		  timer_isr,
 		  0,
 		  0);
+
   IOWR_ALTERA_AVALON_TIMER_CONTROL(
- 2a0:	008000c4 	movi	r2,3
- 2a4:	00880135 	stwio	r2,8196(zero)
-  //Recast the edge_capture point to match the
+ 294:	008000c4 	movi	r2,3
+ 298:	00880135 	stwio	r2,8196(zero)
+  //Recast the start point to match the
   //alt_irq_register() function prototypo
-  void* edge_capture_ptr_stop = (void*)&edge_capture_stop;
-
-  //Enable a single interrupt input by writing a one to the corresponding interruptmask bit locations
-  IOWR_ALTERA_AVALON_PIO_IRQ_MASK(PIO_BUTTON_STOP_BASE,0x1);
- 2a8:	04000044 	movi	r16,1
- 2ac:	04080a35 	stwio	r16,8232(zero)
-
-  //Reset the edge capture register
-  IOWR_ALTERA_AVALON_PIO_EDGE_CAP(PIO_BUTTON_STOP_BASE,0);
- 2b0:	00080b35 	stwio	zero,8236(zero)
-
-  //Register the interrupt handler in the system
-  //The ID and PIO_IRQ number is available from the system.h file.
-  alt_ic_isr_register(PIO_BUTTON_STOP_IRQ_INTERRUPT_CONTROLLER_ID,
- 2b4:	01800034 	movhi	r6,0
- 2b8:	d8000015 	stw	zero,0(sp)
- 2bc:	d1e00104 	addi	r7,gp,-32764
- 2c0:	31809b04 	addi	r6,r6,620
- 2c4:	01400084 	movi	r5,2
- 2c8:	0009883a 	mov	r4,zero
- 2cc:	00002f80 	call	2f8 <alt_ic_isr_register>
-  //Recast the edge_capture point to match the
-  //alt_irq_register() function prototypo
-  void* edge_capture_ptr = (void*)&edge_capture;
+  void* start_ptr = (void*)&start;
 
   //Enable a single interrupt input by writing a one to the corresponding interruptmask bit locations
   IOWR_ALTERA_AVALON_PIO_IRQ_MASK(PIO_BUTTON_START_BASE,0x1);
- 2d0:	04080e35 	stwio	r16,8248(zero)
+ 29c:	00800044 	movi	r2,1
+ 2a0:	00880e35 	stwio	r2,8248(zero)
 
   //Reset the edge capture register
   IOWR_ALTERA_AVALON_PIO_EDGE_CAP(PIO_BUTTON_START_BASE,0);
- 2d4:	00080f35 	stwio	zero,8252(zero)
+ 2a4:	00080f35 	stwio	zero,8252(zero)
 
   //Register the interrupt handler in the system
   //The ID and PIO_IRQ number is available from the system.h file.
   alt_ic_isr_register(PIO_BUTTON_START_IRQ_INTERRUPT_CONTROLLER_ID,
- 2d8:	01800034 	movhi	r6,0
- 2dc:	d8000015 	stw	zero,0(sp)
- 2e0:	d1e00204 	addi	r7,gp,-32760
- 2e4:	31806f04 	addi	r6,r6,444
- 2e8:	01400044 	movi	r5,1
- 2ec:	0009883a 	mov	r4,zero
- 2f0:	00002f80 	call	2f8 <alt_ic_isr_register>
-			  //0,
-			  //0);
-	//IOWR_ALTERA_AVALON_PIO_IRQ_MASK(PIO_BUTTON_STOP_BASE, 0x1);
+ 2a8:	01800034 	movhi	r6,0
+ 2ac:	d8000015 	stw	zero,0(sp)
+ 2b0:	d1e00104 	addi	r7,gp,-32764
+ 2b4:	31806f04 	addi	r6,r6,444
+ 2b8:	01400044 	movi	r5,1
+ 2bc:	0009883a 	mov	r4,zero
+ 2c0:	00002c80 	call	2c8 <alt_ic_isr_register>
+		  PIO_BUTTON_START_IRQ, start_interrupt, start_ptr, 0x0);
+
+
 
 
   while (1);
- 2f4:	003fff06 	br	2f4 <main+0x7c>
+ 2c4:	003fff06 	br	2c4 <main+0x54>
 
-000002f8 <alt_ic_isr_register>:
+000002c8 <alt_ic_isr_register>:
   * @return                 0 if successful, else error (-1)
   */
 int alt_ic_isr_register(alt_u32 ic_id, alt_u32 irq, alt_isr_func isr, 
   void *isr_context, void *flags)
 {
     return alt_iic_isr_register(ic_id, irq, isr, isr_context, flags);
- 2f8:	00003841 	jmpi	384 <alt_iic_isr_register>
+ 2c8:	00003541 	jmpi	354 <alt_iic_isr_register>
 
-000002fc <alt_ic_irq_enable>:
+000002cc <alt_ic_irq_enable>:
   NIOS2_READ_STATUS (context);
- 2fc:	0007303a 	rdctl	r3,status
+ 2cc:	0007303a 	rdctl	r3,status
   NIOS2_WRITE_STATUS (context & ~NIOS2_STATUS_PIE_MSK);
- 300:	00bfff84 	movi	r2,-2
- 304:	1884703a 	and	r2,r3,r2
- 308:	1001703a 	wrctl	status,r2
+ 2d0:	00bfff84 	movi	r2,-2
+ 2d4:	1884703a 	and	r2,r3,r2
+ 2d8:	1001703a 	wrctl	status,r2
   alt_irq_context  status;
   extern volatile alt_u32 alt_irq_active;
 
   status = alt_irq_disable_all ();
 
   alt_irq_active |= (1 << id);
- 30c:	00800044 	movi	r2,1
- 310:	d1200617 	ldw	r4,-32744(gp)
- 314:	114a983a 	sll	r5,r2,r5
- 318:	290ab03a 	or	r5,r5,r4
- 31c:	d1600615 	stw	r5,-32744(gp)
+ 2dc:	00800044 	movi	r2,1
+ 2e0:	d1200517 	ldw	r4,-32748(gp)
+ 2e4:	114a983a 	sll	r5,r2,r5
+ 2e8:	290ab03a 	or	r5,r5,r4
+ 2ec:	d1600515 	stw	r5,-32748(gp)
   NIOS2_WRITE_IENABLE (alt_irq_active);
- 320:	d0a00617 	ldw	r2,-32744(gp)
- 324:	100170fa 	wrctl	ienable,r2
+ 2f0:	d0a00517 	ldw	r2,-32748(gp)
+ 2f4:	100170fa 	wrctl	ienable,r2
   NIOS2_WRITE_STATUS (context);
- 328:	1801703a 	wrctl	status,r3
+ 2f8:	1801703a 	wrctl	status,r3
   * @return                 0 if successful, else error (-1)
   */
 int alt_ic_irq_enable (alt_u32 ic_id, alt_u32 irq)
 {
     return alt_irq_enable(irq);
 }
- 32c:	0005883a 	mov	r2,zero
- 330:	f800283a 	ret
+ 2fc:	0005883a 	mov	r2,zero
+ 300:	f800283a 	ret
 
-00000334 <alt_ic_irq_disable>:
+00000304 <alt_ic_irq_disable>:
   NIOS2_READ_STATUS (context);
- 334:	0007303a 	rdctl	r3,status
+ 304:	0007303a 	rdctl	r3,status
   NIOS2_WRITE_STATUS (context & ~NIOS2_STATUS_PIE_MSK);
- 338:	00bfff84 	movi	r2,-2
- 33c:	1884703a 	and	r2,r3,r2
- 340:	1001703a 	wrctl	status,r2
+ 308:	00bfff84 	movi	r2,-2
+ 30c:	1884703a 	and	r2,r3,r2
+ 310:	1001703a 	wrctl	status,r2
   alt_irq_active &= ~(1 << id);
- 344:	00bfff84 	movi	r2,-2
- 348:	d1200617 	ldw	r4,-32744(gp)
- 34c:	114a183a 	rol	r5,r2,r5
- 350:	290a703a 	and	r5,r5,r4
- 354:	d1600615 	stw	r5,-32744(gp)
+ 314:	00bfff84 	movi	r2,-2
+ 318:	d1200517 	ldw	r4,-32748(gp)
+ 31c:	114a183a 	rol	r5,r2,r5
+ 320:	290a703a 	and	r5,r5,r4
+ 324:	d1600515 	stw	r5,-32748(gp)
   NIOS2_WRITE_IENABLE (alt_irq_active);
- 358:	d0a00617 	ldw	r2,-32744(gp)
- 35c:	100170fa 	wrctl	ienable,r2
+ 328:	d0a00517 	ldw	r2,-32748(gp)
+ 32c:	100170fa 	wrctl	ienable,r2
   NIOS2_WRITE_STATUS (context);
- 360:	1801703a 	wrctl	status,r3
+ 330:	1801703a 	wrctl	status,r3
   * @return                 0 if successful, else error (-1)
   */
 int alt_ic_irq_disable(alt_u32 ic_id, alt_u32 irq)
 {
     return alt_irq_disable(irq);
 }
- 364:	0005883a 	mov	r2,zero
- 368:	f800283a 	ret
+ 334:	0005883a 	mov	r2,zero
+ 338:	f800283a 	ret
 
-0000036c <alt_ic_irq_enabled>:
+0000033c <alt_ic_irq_enabled>:
   */
 alt_u32 alt_ic_irq_enabled(alt_u32 ic_id, alt_u32 irq)
 {
     alt_u32 irq_enabled;
 
     NIOS2_READ_IENABLE(irq_enabled);
- 36c:	000730fa 	rdctl	r3,ienable
+ 33c:	000730fa 	rdctl	r3,ienable
 
     return (irq_enabled & (1 << irq)) ? 1: 0;
- 370:	00800044 	movi	r2,1
- 374:	1144983a 	sll	r2,r2,r5
- 378:	10c4703a 	and	r2,r2,r3
+ 340:	00800044 	movi	r2,1
+ 344:	1144983a 	sll	r2,r2,r5
+ 348:	10c4703a 	and	r2,r2,r3
 }
- 37c:	1004c03a 	cmpne	r2,r2,zero
- 380:	f800283a 	ret
+ 34c:	1004c03a 	cmpne	r2,r2,zero
+ 350:	f800283a 	ret
 
-00000384 <alt_iic_isr_register>:
+00000354 <alt_iic_isr_register>:
 {
   int rc = -EINVAL;  
   int id = irq;             /* IRQ interpreted as the interrupt ID. */
   alt_irq_context status;
 
   if (id < ALT_NIRQ)
- 384:	28800808 	cmpgei	r2,r5,32
- 388:	1000161e 	bne	r2,zero,3e4 <alt_iic_isr_register+0x60>
+ 354:	28800808 	cmpgei	r2,r5,32
+ 358:	1000161e 	bne	r2,zero,3b4 <alt_iic_isr_register+0x60>
 {
- 38c:	defffe04 	addi	sp,sp,-8
- 390:	dfc00115 	stw	ra,4(sp)
- 394:	dc000015 	stw	r16,0(sp)
+ 35c:	defffe04 	addi	sp,sp,-8
+ 360:	dfc00115 	stw	ra,4(sp)
+ 364:	dc000015 	stw	r16,0(sp)
   NIOS2_READ_STATUS (context);
- 398:	0021303a 	rdctl	r16,status
+ 368:	0021303a 	rdctl	r16,status
   NIOS2_WRITE_STATUS (context & ~NIOS2_STATUS_PIE_MSK);
- 39c:	00bfff84 	movi	r2,-2
- 3a0:	8084703a 	and	r2,r16,r2
- 3a4:	1001703a 	wrctl	status,r2
+ 36c:	00bfff84 	movi	r2,-2
+ 370:	8084703a 	and	r2,r16,r2
+ 374:	1001703a 	wrctl	status,r2
      * state.
      */
 
     status = alt_irq_disable_all();
 
     alt_irq[id].handler = isr;
- 3a8:	280690fa 	slli	r3,r5,3
- 3ac:	00800034 	movhi	r2,0
- 3b0:	10840b04 	addi	r2,r2,4140
- 3b4:	10c5883a 	add	r2,r2,r3
- 3b8:	11800015 	stw	r6,0(r2)
+ 378:	280690fa 	slli	r3,r5,3
+ 37c:	00800034 	movhi	r2,0
+ 380:	10840a04 	addi	r2,r2,4136
+ 384:	10c5883a 	add	r2,r2,r3
+ 388:	11800015 	stw	r6,0(r2)
     alt_irq[id].context = isr_context;
- 3bc:	11c00115 	stw	r7,4(r2)
+ 38c:	11c00115 	stw	r7,4(r2)
 
     rc = (isr) ? alt_ic_irq_enable(ic_id, id) : alt_ic_irq_disable(ic_id, id);
- 3c0:	30000626 	beq	r6,zero,3dc <alt_iic_isr_register+0x58>
- 3c4:	00002fc0 	call	2fc <alt_ic_irq_enable>
+ 390:	30000626 	beq	r6,zero,3ac <alt_iic_isr_register+0x58>
+ 394:	00002cc0 	call	2cc <alt_ic_irq_enable>
   NIOS2_WRITE_STATUS (context);
- 3c8:	8001703a 	wrctl	status,r16
+ 398:	8001703a 	wrctl	status,r16
 
     alt_irq_enable_all(status);
   }
 
   return rc; 
 }
- 3cc:	dfc00117 	ldw	ra,4(sp)
- 3d0:	dc000017 	ldw	r16,0(sp)
- 3d4:	dec00204 	addi	sp,sp,8
- 3d8:	f800283a 	ret
+ 39c:	dfc00117 	ldw	ra,4(sp)
+ 3a0:	dc000017 	ldw	r16,0(sp)
+ 3a4:	dec00204 	addi	sp,sp,8
+ 3a8:	f800283a 	ret
     rc = (isr) ? alt_ic_irq_enable(ic_id, id) : alt_ic_irq_disable(ic_id, id);
- 3dc:	00003340 	call	334 <alt_ic_irq_disable>
- 3e0:	003ff906 	br	3c8 <alt_iic_isr_register+0x44>
+ 3ac:	00003040 	call	304 <alt_ic_irq_disable>
+ 3b0:	003ff906 	br	398 <alt_iic_isr_register+0x44>
   int rc = -EINVAL;  
- 3e4:	00bffa84 	movi	r2,-22
+ 3b4:	00bffa84 	movi	r2,-22
 }
- 3e8:	f800283a 	ret
+ 3b8:	f800283a 	ret
 
-000003ec <alt_load>:
+000003bc <alt_load>:
  * there is no bootloader, so this application is responsible for loading to
  * RAM any sections that are required.
  */  
 
 void alt_load (void)
 {
- 3ec:	deffff04 	addi	sp,sp,-4
+ 3bc:	deffff04 	addi	sp,sp,-4
 
 static void ALT_INLINE alt_load_section (alt_u32* from, 
                                          alt_u32* to, 
                                          alt_u32* end)
 {
   if (to != from)
- 3f0:	01000034 	movhi	r4,0
- 3f4:	01400034 	movhi	r5,0
- 3f8:	dfc00015 	stw	ra,0(sp)
- 3fc:	21040004 	addi	r4,r4,4096
- 400:	29414704 	addi	r5,r5,1308
- 404:	21400426 	beq	r4,r5,418 <alt_load+0x2c>
+ 3c0:	01000034 	movhi	r4,0
+ 3c4:	01400034 	movhi	r5,0
+ 3c8:	dfc00015 	stw	ra,0(sp)
+ 3cc:	21040004 	addi	r4,r4,4096
+ 3d0:	29413b04 	addi	r5,r5,1260
+ 3d4:	21400426 	beq	r4,r5,3e8 <alt_load+0x2c>
   {
     while( to != end )
     {
       *to++ = *from++;
- 408:	01800034 	movhi	r6,0
- 40c:	31840104 	addi	r6,r6,4100
- 410:	310dc83a 	sub	r6,r6,r4
- 414:	00004f40 	call	4f4 <memcpy>
+ 3d8:	01800034 	movhi	r6,0
+ 3dc:	31840104 	addi	r6,r6,4100
+ 3e0:	310dc83a 	sub	r6,r6,r4
+ 3e4:	00004c40 	call	4c4 <memcpy>
   if (to != from)
- 418:	01000034 	movhi	r4,0
- 41c:	01400034 	movhi	r5,0
- 420:	21000804 	addi	r4,r4,32
- 424:	29400804 	addi	r5,r5,32
- 428:	21400426 	beq	r4,r5,43c <alt_load+0x50>
+ 3e8:	01000034 	movhi	r4,0
+ 3ec:	01400034 	movhi	r5,0
+ 3f0:	21000804 	addi	r4,r4,32
+ 3f4:	29400804 	addi	r5,r5,32
+ 3f8:	21400426 	beq	r4,r5,40c <alt_load+0x50>
       *to++ = *from++;
- 42c:	01800034 	movhi	r6,0
- 430:	31806004 	addi	r6,r6,384
- 434:	310dc83a 	sub	r6,r6,r4
- 438:	00004f40 	call	4f4 <memcpy>
+ 3fc:	01800034 	movhi	r6,0
+ 400:	31806004 	addi	r6,r6,384
+ 404:	310dc83a 	sub	r6,r6,r4
+ 408:	00004c40 	call	4c4 <memcpy>
   if (to != from)
- 43c:	01000034 	movhi	r4,0
- 440:	01400034 	movhi	r5,0
- 444:	21040004 	addi	r4,r4,4096
- 448:	29414704 	addi	r5,r5,1308
- 44c:	21400426 	beq	r4,r5,460 <alt_load+0x74>
+ 40c:	01000034 	movhi	r4,0
+ 410:	01400034 	movhi	r5,0
+ 414:	21040004 	addi	r4,r4,4096
+ 418:	29413b04 	addi	r5,r5,1260
+ 41c:	21400426 	beq	r4,r5,430 <alt_load+0x74>
       *to++ = *from++;
- 450:	01800034 	movhi	r6,0
- 454:	31840004 	addi	r6,r6,4096
- 458:	310dc83a 	sub	r6,r6,r4
- 45c:	00004f40 	call	4f4 <memcpy>
+ 420:	01800034 	movhi	r6,0
+ 424:	31840004 	addi	r6,r6,4096
+ 428:	310dc83a 	sub	r6,r6,r4
+ 42c:	00004c40 	call	4c4 <memcpy>
   
   /*
    * Now ensure that the caches are in synch.
    */
   
   alt_dcache_flush_all();
- 460:	00004c00 	call	4c0 <alt_dcache_flush_all>
+ 430:	00004900 	call	490 <alt_dcache_flush_all>
   alt_icache_flush_all();
 }
- 464:	dfc00017 	ldw	ra,0(sp)
- 468:	dec00104 	addi	sp,sp,4
+ 434:	dfc00017 	ldw	ra,0(sp)
+ 438:	dec00104 	addi	sp,sp,4
   alt_icache_flush_all();
- 46c:	00004c41 	jmpi	4c4 <alt_icache_flush_all>
+ 43c:	00004941 	jmpi	494 <alt_icache_flush_all>
 
-00000470 <alt_main>:
+00000440 <alt_main>:
  * devices/filesystems/components in the system; and call the entry point for
  * the users application, i.e. main().
  */
 
 void alt_main (void)
 {
- 470:	deffff04 	addi	sp,sp,-4
+ 440:	deffff04 	addi	sp,sp,-4
 #endif
 
   /* ALT LOG - please see HAL/sys/alt_log_printf.h for details */
   ALT_LOG_PRINT_BOOT("[alt_main.c] Entering alt_main, calling alt_irq_init.\r\n");
   /* Initialize the interrupt controller. */
   alt_irq_init (NULL);
- 474:	0009883a 	mov	r4,zero
+ 444:	0009883a 	mov	r4,zero
 {
- 478:	dfc00015 	stw	ra,0(sp)
+ 448:	dfc00015 	stw	ra,0(sp)
   alt_irq_init (NULL);
- 47c:	000049c0 	call	49c <alt_irq_init>
+ 44c:	000046c0 	call	46c <alt_irq_init>
   ALT_LOG_PRINT_BOOT("[alt_main.c] Done OS Init, calling alt_sem_create.\r\n");
   ALT_SEM_CREATE (&alt_fd_list_lock, 1);
 
   /* Initialize the device drivers/software components. */
   ALT_LOG_PRINT_BOOT("[alt_main.c] Calling alt_sys_init.\r\n");
   alt_sys_init();
- 480:	00004bc0 	call	4bc <alt_sys_init>
+ 450:	000048c0 	call	48c <alt_sys_init>
    */
 
   ALT_LOG_PRINT_BOOT("[alt_main.c] Calling main.\r\n");
 
 #ifdef ALT_NO_EXIT
   main (alt_argc, alt_argv, alt_envp);
- 484:	d1a00717 	ldw	r6,-32740(gp)
- 488:	d1600817 	ldw	r5,-32736(gp)
- 48c:	d1200917 	ldw	r4,-32732(gp)
+ 454:	d1a00617 	ldw	r6,-32744(gp)
+ 458:	d1600717 	ldw	r5,-32740(gp)
+ 45c:	d1200817 	ldw	r4,-32736(gp)
   close(STDOUT_FILENO);
   exit (result);
 #endif
 
   ALT_LOG_PRINT_BOOT("[alt_main.c] After main - we should not be here?.\r\n");
 }
- 490:	dfc00017 	ldw	ra,0(sp)
- 494:	dec00104 	addi	sp,sp,4
+ 460:	dfc00017 	ldw	ra,0(sp)
+ 464:	dec00104 	addi	sp,sp,4
   main (alt_argc, alt_argv, alt_envp);
- 498:	00002781 	jmpi	278 <main>
+ 468:	00002701 	jmpi	270 <main>
 
-0000049c <alt_irq_init>:
+0000046c <alt_irq_init>:
  * The "base" parameter is ignored and only
  * present for backwards-compatibility.
  */
 
 void alt_irq_init ( const void* base )
 {
- 49c:	deffff04 	addi	sp,sp,-4
- 4a0:	dfc00015 	stw	ra,0(sp)
+ 46c:	deffff04 	addi	sp,sp,-4
+ 470:	dfc00015 	stw	ra,0(sp)
     ALTERA_NIOS2_GEN2_IRQ_INIT ( NIOS2_GEN2_0, nios2_gen2_0);
- 4a4:	00004ec0 	call	4ec <altera_nios2_gen2_irq_init>
+ 474:	00004bc0 	call	4bc <altera_nios2_gen2_irq_init>
     NIOS2_WRITE_STATUS(NIOS2_STATUS_PIE_MSK
- 4a8:	00800044 	movi	r2,1
- 4ac:	1001703a 	wrctl	status,r2
+ 478:	00800044 	movi	r2,1
+ 47c:	1001703a 	wrctl	status,r2
     alt_irq_cpu_enable_interrupts();
 }
- 4b0:	dfc00017 	ldw	ra,0(sp)
- 4b4:	dec00104 	addi	sp,sp,4
- 4b8:	f800283a 	ret
+ 480:	dfc00017 	ldw	ra,0(sp)
+ 484:	dec00104 	addi	sp,sp,4
+ 488:	f800283a 	ret
 
-000004bc <alt_sys_init>:
+0000048c <alt_sys_init>:
  */
 
 void alt_sys_init( void )
 {
     ALTERA_AVALON_TIMER_INIT ( TIMER_0, timer_0);
 }
- 4bc:	f800283a 	ret
+ 48c:	f800283a 	ret
 
-000004c0 <alt_dcache_flush_all>:
+00000490 <alt_dcache_flush_all>:
   for (i = (char*) 0; i < (char*) NIOS2_DCACHE_SIZE; i+= NIOS2_DCACHE_LINE_SIZE)
   { 
     __asm__ volatile ("flushd (%0)" :: "r" (i));
   }
 #endif /* NIOS2_DCACHE_SIZE > 0 */
 }
- 4c0:	f800283a 	ret
+ 490:	f800283a 	ret
 
-000004c4 <alt_icache_flush_all>:
+00000494 <alt_icache_flush_all>:
 void alt_icache_flush_all (void)
 {
 #if NIOS2_ICACHE_SIZE > 0
   alt_icache_flush (0, NIOS2_ICACHE_SIZE);
 #endif
 }
- 4c4:	f800283a 	ret
+ 494:	f800283a 	ret
 
-000004c8 <alt_exception_cause_generated_bad_addr>:
+00000498 <alt_exception_cause_generated_bad_addr>:
  *         0: BADADDR is not valid
  */
 int 
 alt_exception_cause_generated_bad_addr(alt_exception_cause cause)
 {
   switch (cause) {
- 4c8:	213ffe84 	addi	r4,r4,-6
- 4cc:	20800428 	cmpgeui	r2,r4,16
- 4d0:	1000041e 	bne	r2,zero,4e4 <alt_exception_cause_generated_bad_addr+0x1c>
- 4d4:	00a2c8d4 	movui	r2,35619
- 4d8:	1104d83a 	srl	r2,r2,r4
- 4dc:	1080004c 	andi	r2,r2,1
- 4e0:	f800283a 	ret
- 4e4:	0005883a 	mov	r2,zero
+ 498:	213ffe84 	addi	r4,r4,-6
+ 49c:	20800428 	cmpgeui	r2,r4,16
+ 4a0:	1000041e 	bne	r2,zero,4b4 <alt_exception_cause_generated_bad_addr+0x1c>
+ 4a4:	00a2c8d4 	movui	r2,35619
+ 4a8:	1104d83a 	srl	r2,r2,r4
+ 4ac:	1080004c 	andi	r2,r2,1
+ 4b0:	f800283a 	ret
+ 4b4:	0005883a 	mov	r2,zero
     return 0;
 
   default:
     return 0;
   }
 }
- 4e8:	f800283a 	ret
+ 4b8:	f800283a 	ret
 
-000004ec <altera_nios2_gen2_irq_init>:
+000004bc <altera_nios2_gen2_irq_init>:
  * To initialize the internal interrupt controller, just clear the IENABLE
  * register so that all possible IRQs are disabled.
  */
 void altera_nios2_gen2_irq_init(void) 
 {
     NIOS2_WRITE_IENABLE(0);
- 4ec:	000170fa 	wrctl	ienable,zero
+ 4bc:	000170fa 	wrctl	ienable,zero
 }
- 4f0:	f800283a 	ret
+ 4c0:	f800283a 	ret
 
-000004f4 <memcpy>:
- 4f4:	2005883a 	mov	r2,r4
- 4f8:	0007883a 	mov	r3,zero
- 4fc:	30c0011e 	bne	r6,r3,504 <memcpy+0x10>
- 500:	f800283a 	ret
- 504:	28cf883a 	add	r7,r5,r3
- 508:	39c00003 	ldbu	r7,0(r7)
- 50c:	10c9883a 	add	r4,r2,r3
- 510:	18c00044 	addi	r3,r3,1
- 514:	21c00005 	stb	r7,0(r4)
- 518:	003ff806 	br	4fc <memcpy+0x8>
+000004c4 <memcpy>:
+ 4c4:	2005883a 	mov	r2,r4
+ 4c8:	0007883a 	mov	r3,zero
+ 4cc:	30c0011e 	bne	r6,r3,4d4 <memcpy+0x10>
+ 4d0:	f800283a 	ret
+ 4d4:	28cf883a 	add	r7,r5,r3
+ 4d8:	39c00003 	ldbu	r7,0(r7)
+ 4dc:	10c9883a 	add	r4,r2,r3
+ 4e0:	18c00044 	addi	r3,r3,1
+ 4e4:	21c00005 	stb	r7,0(r4)
+ 4e8:	003ff806 	br	4cc <memcpy+0x8>

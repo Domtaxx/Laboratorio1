@@ -15,18 +15,18 @@ preplace inst platform.ram_0 -pg 1 -lvl 3 -y 650
 preplace inst platform.pio_leds_0 -pg 1 -lvl 3 -y 450
 preplace inst platform.nios2_gen2_0.cpu -pg 1
 preplace inst platform.clk_0 -pg 1 -lvl 1 -y 510
+preplace netloc FAN_OUT<net_container>platform</net_container>(SLAVE)pio_button_stop.s1,(MASTER)nios2_gen2_0.data_master,(SLAVE)pio_button_start.s1,(SLAVE)pio_ms_num_0.s1,(SLAVE)pio_min_num_0.s1,(SLAVE)pio_switch_0.s1,(SLAVE)ram_0.s1,(SLAVE)pio_leds_0.s1,(SLAVE)timer_0.s1) 1 2 1 830
 preplace netloc EXPORT<net_container>platform</net_container>(SLAVE)platform.pio_switch_0_external_connection,(SLAVE)pio_switch_0.external_connection) 1 0 3 NJ 760 NJ 760 NJ
 preplace netloc EXPORT<net_container>platform</net_container>(SLAVE)platform.pio_min_num_0_external_connection,(SLAVE)pio_min_num_0.external_connection) 1 0 3 NJ 860 NJ 860 NJ
 preplace netloc EXPORT<net_container>platform</net_container>(SLAVE)clk_0.clk_in,(SLAVE)platform.clk) 1 0 1 NJ
-preplace netloc FAN_OUT<net_container>platform</net_container>(SLAVE)pio_button_stop.irq,(MASTER)nios2_gen2_0.irq,(SLAVE)pio_button_start.irq,(SLAVE)timer_0.irq) 1 2 1 890
-preplace netloc FAN_OUT<net_container>platform</net_container>(MASTER)clk_0.clk_reset,(SLAVE)pio_ms_num_0.reset,(SLAVE)nios2_gen2_0.reset,(SLAVE)pio_min_num_0.reset,(SLAVE)pio_button_start.reset,(SLAVE)pio_switch_0.reset,(SLAVE)ram_0.reset1,(SLAVE)pio_leds_0.reset,(SLAVE)pio_button_stop.reset,(SLAVE)rom_0.reset1,(SLAVE)timer_0.reset) 1 1 2 450 880 850
-preplace netloc EXPORT<net_container>platform</net_container>(SLAVE)pio_ms_num_0.external_connection,(SLAVE)platform.pio_ms_num_0_external_connection) 1 0 3 NJ 500 NJ 580 NJ
+preplace netloc FAN_OUT<net_container>platform</net_container>(MASTER)nios2_gen2_0.irq,(SLAVE)pio_button_start.irq,(SLAVE)pio_button_stop.irq,(SLAVE)timer_0.irq) 1 2 1 890
+preplace netloc EXPORT<net_container>platform</net_container>(SLAVE)platform.pio_ms_num_0_external_connection,(SLAVE)pio_ms_num_0.external_connection) 1 0 3 NJ 580 NJ 580 NJ
 preplace netloc EXPORT<net_container>platform</net_container>(SLAVE)platform.pio_button_start_external_connection,(SLAVE)pio_button_start.external_connection) 1 0 3 NJ 60 NJ 60 NJ
-preplace netloc EXPORT<net_container>platform</net_container>(SLAVE)platform.pio_leds_0_external_connection,(SLAVE)pio_leds_0.external_connection) 1 0 3 NJ 480 NJ 480 NJ
+preplace netloc FAN_OUT<net_container>platform</net_container>(SLAVE)timer_0.reset,(SLAVE)pio_button_stop.reset,(SLAVE)ram_0.reset1,(SLAVE)pio_ms_num_0.reset,(SLAVE)pio_button_start.reset,(SLAVE)pio_switch_0.reset,(SLAVE)rom_0.reset1,(SLAVE)pio_min_num_0.reset,(MASTER)clk_0.clk_reset,(SLAVE)nios2_gen2_0.reset,(SLAVE)pio_leds_0.reset) 1 1 2 430 880 850
 preplace netloc EXPORT<net_container>platform</net_container>(SLAVE)clk_0.clk_in_reset,(SLAVE)platform.reset) 1 0 1 NJ
+preplace netloc FAN_OUT<net_container>platform</net_container>(SLAVE)pio_leds_0.clk,(SLAVE)pio_switch_0.clk,(SLAVE)pio_ms_num_0.clk,(SLAVE)rom_0.clk1,(SLAVE)nios2_gen2_0.clk,(SLAVE)pio_button_stop.clk,(SLAVE)ram_0.clk1,(MASTER)clk_0.clk,(SLAVE)timer_0.clk,(SLAVE)pio_button_start.clk,(SLAVE)pio_min_num_0.clk) 1 1 2 410 780 810
 preplace netloc POINT_TO_POINT<net_container>platform</net_container>(MASTER)nios2_gen2_0.instruction_master,(SLAVE)rom_0.s1) 1 2 1 N
-preplace netloc FAN_OUT<net_container>platform</net_container>(SLAVE)nios2_gen2_0.clk,(SLAVE)pio_ms_num_0.clk,(SLAVE)pio_leds_0.clk,(MASTER)clk_0.clk,(SLAVE)timer_0.clk,(SLAVE)pio_switch_0.clk,(SLAVE)pio_min_num_0.clk,(SLAVE)pio_button_stop.clk,(SLAVE)rom_0.clk1,(SLAVE)pio_button_start.clk,(SLAVE)ram_0.clk1) 1 1 2 430 780 810
+preplace netloc EXPORT<net_container>platform</net_container>(SLAVE)pio_leds_0.external_connection,(SLAVE)platform.pio_leds_0_external_connection) 1 0 3 NJ 480 NJ 480 NJ
 preplace netloc EXPORT<net_container>platform</net_container>(SLAVE)platform.pio_button_stop_external_connection,(SLAVE)pio_button_stop.external_connection) 1 0 3 NJ 270 NJ 270 NJ
-preplace netloc FAN_OUT<net_container>platform</net_container>(MASTER)nios2_gen2_0.data_master,(SLAVE)timer_0.s1,(SLAVE)ram_0.s1,(SLAVE)pio_button_stop.s1,(SLAVE)pio_switch_0.s1,(SLAVE)pio_leds_0.s1,(SLAVE)pio_ms_num_0.s1,(SLAVE)pio_button_start.s1,(SLAVE)pio_min_num_0.s1) 1 2 1 830
 levelinfo -pg 1 0 200 1100
 levelinfo -hier platform 210 240 570 940 1090

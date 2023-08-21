@@ -55,11 +55,8 @@ module platform (
 	wire   [1:0] mm_interconnect_0_pio_button_start_s1_address;    // mm_interconnect_0:pio_button_start_s1_address -> pio_button_start:address
 	wire         mm_interconnect_0_pio_button_start_s1_write;      // mm_interconnect_0:pio_button_start_s1_write -> pio_button_start:write_n
 	wire  [31:0] mm_interconnect_0_pio_button_start_s1_writedata;  // mm_interconnect_0:pio_button_start_s1_writedata -> pio_button_start:writedata
-	wire         mm_interconnect_0_pio_button_stop_s1_chipselect;  // mm_interconnect_0:pio_button_stop_s1_chipselect -> pio_button_stop:chipselect
 	wire  [31:0] mm_interconnect_0_pio_button_stop_s1_readdata;    // pio_button_stop:readdata -> mm_interconnect_0:pio_button_stop_s1_readdata
 	wire   [1:0] mm_interconnect_0_pio_button_stop_s1_address;     // mm_interconnect_0:pio_button_stop_s1_address -> pio_button_stop:address
-	wire         mm_interconnect_0_pio_button_stop_s1_write;       // mm_interconnect_0:pio_button_stop_s1_write -> pio_button_stop:write_n
-	wire  [31:0] mm_interconnect_0_pio_button_stop_s1_writedata;   // mm_interconnect_0:pio_button_stop_s1_writedata -> pio_button_stop:writedata
 	wire  [31:0] nios2_gen2_0_instruction_master_readdata;         // mm_interconnect_1:nios2_gen2_0_instruction_master_readdata -> nios2_gen2_0:i_readdata
 	wire         nios2_gen2_0_instruction_master_waitrequest;      // mm_interconnect_1:nios2_gen2_0_instruction_master_waitrequest -> nios2_gen2_0:i_waitrequest
 	wire  [11:0] nios2_gen2_0_instruction_master_address;          // nios2_gen2_0:i_address -> mm_interconnect_1:nios2_gen2_0_instruction_master_address
@@ -74,7 +71,6 @@ module platform (
 	wire         mm_interconnect_1_rom_0_s1_clken;                 // mm_interconnect_1:rom_0_s1_clken -> rom_0:clken
 	wire         irq_mapper_receiver0_irq;                         // timer_0:irq -> irq_mapper:receiver0_irq
 	wire         irq_mapper_receiver1_irq;                         // pio_button_start:irq -> irq_mapper:receiver1_irq
-	wire         irq_mapper_receiver2_irq;                         // pio_button_stop:irq -> irq_mapper:receiver2_irq
 	wire  [31:0] nios2_gen2_0_irq_irq;                             // irq_mapper:sender_irq -> nios2_gen2_0:irq
 	wire         rst_controller_reset_out_reset;                   // rst_controller:reset_out -> [irq_mapper:reset, mm_interconnect_0:nios2_gen2_0_reset_reset_bridge_in_reset_reset, mm_interconnect_1:nios2_gen2_0_reset_reset_bridge_in_reset_reset, nios2_gen2_0:reset_n, pio_button_start:reset_n, pio_button_stop:reset_n, pio_leds_0:reset_n, pio_min_num_0:reset_n, pio_ms_num_0:reset_n, pio_switch_0:reset_n, ram_0:reset, rom_0:reset, rst_translator:in_reset, timer_0:reset_n]
 	wire         rst_controller_reset_out_reset_req;               // rst_controller:reset_req -> [ram_0:reset_req, rom_0:reset_req, rst_translator:reset_req_in]
@@ -109,16 +105,12 @@ module platform (
 		.irq        (irq_mapper_receiver1_irq)                          //                 irq.irq
 	);
 
-	platform_pio_button_start pio_button_stop (
-		.clk        (clk_clk),                                         //                 clk.clk
-		.reset_n    (~rst_controller_reset_out_reset),                 //               reset.reset_n
-		.address    (mm_interconnect_0_pio_button_stop_s1_address),    //                  s1.address
-		.write_n    (~mm_interconnect_0_pio_button_stop_s1_write),     //                    .write_n
-		.writedata  (mm_interconnect_0_pio_button_stop_s1_writedata),  //                    .writedata
-		.chipselect (mm_interconnect_0_pio_button_stop_s1_chipselect), //                    .chipselect
-		.readdata   (mm_interconnect_0_pio_button_stop_s1_readdata),   //                    .readdata
-		.in_port    (pio_button_stop_external_connection_export),      // external_connection.export
-		.irq        (irq_mapper_receiver2_irq)                         //                 irq.irq
+	platform_pio_button_stop pio_button_stop (
+		.clk      (clk_clk),                                       //                 clk.clk
+		.reset_n  (~rst_controller_reset_out_reset),               //               reset.reset_n
+		.address  (mm_interconnect_0_pio_button_stop_s1_address),  //                  s1.address
+		.readdata (mm_interconnect_0_pio_button_stop_s1_readdata), //                    .readdata
+		.in_port  (pio_button_stop_external_connection_export)     // external_connection.export
 	);
 
 	platform_pio_leds_0 pio_leds_0 (
@@ -218,10 +210,7 @@ module platform (
 		.pio_button_start_s1_writedata                  (mm_interconnect_0_pio_button_start_s1_writedata),  //                                         .writedata
 		.pio_button_start_s1_chipselect                 (mm_interconnect_0_pio_button_start_s1_chipselect), //                                         .chipselect
 		.pio_button_stop_s1_address                     (mm_interconnect_0_pio_button_stop_s1_address),     //                       pio_button_stop_s1.address
-		.pio_button_stop_s1_write                       (mm_interconnect_0_pio_button_stop_s1_write),       //                                         .write
 		.pio_button_stop_s1_readdata                    (mm_interconnect_0_pio_button_stop_s1_readdata),    //                                         .readdata
-		.pio_button_stop_s1_writedata                   (mm_interconnect_0_pio_button_stop_s1_writedata),   //                                         .writedata
-		.pio_button_stop_s1_chipselect                  (mm_interconnect_0_pio_button_stop_s1_chipselect),  //                                         .chipselect
 		.pio_leds_0_s1_address                          (mm_interconnect_0_pio_leds_0_s1_address),          //                            pio_leds_0_s1.address
 		.pio_leds_0_s1_write                            (mm_interconnect_0_pio_leds_0_s1_write),            //                                         .write
 		.pio_leds_0_s1_readdata                         (mm_interconnect_0_pio_leds_0_s1_readdata),         //                                         .readdata
@@ -275,7 +264,6 @@ module platform (
 		.reset         (rst_controller_reset_out_reset), // clk_reset.reset
 		.receiver0_irq (irq_mapper_receiver0_irq),       // receiver0.irq
 		.receiver1_irq (irq_mapper_receiver1_irq),       // receiver1.irq
-		.receiver2_irq (irq_mapper_receiver2_irq),       // receiver2.irq
 		.sender_irq    (nios2_gen2_0_irq_irq)            //    sender.irq
 	);
 

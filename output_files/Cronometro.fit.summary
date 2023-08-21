@@ -1,12 +1,12 @@
-Fitter Status : Successful - Mon Aug 21 13:33:22 2023
+Fitter Status : Successful - Mon Aug 21 14:36:34 2023
 Quartus Prime Version : 22.1std.2 Build 922 07/20/2023 SC Lite Edition
 Revision Name : Cronometro
 Top-level Entity Name : tallernios
 Family : Cyclone V
 Device : 5CSEMA5F31C6
 Timing Models : Final
-Logic utilization (in ALMs) : 415 / 32,070 ( 1 % )
-Total registers : 553
+Logic utilization (in ALMs) : 407 / 32,070 ( 1 % )
+Total registers : 536
 Total pins : 48 / 457 ( 11 % )
 Total virtual pins : 0
 Total block memory bits : 67,584 / 4,065,280 ( 2 % )
