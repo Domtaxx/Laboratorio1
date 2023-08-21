@@ -35,47 +35,47 @@ Idx Name          Size      VMA       LMA       File off  Algn
                   CONTENTS, READONLY
   9 .debug_aranges 00000230  00000000  00000000  00002038  2**3
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 10 .debug_info   00001415  00000000  00000000  00002268  2**0
+ 10 .debug_info   00001413  00000000  00000000  00002268  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 11 .debug_abbrev 00000c33  00000000  00000000  0000367d  2**0
+ 11 .debug_abbrev 00000c34  00000000  00000000  0000367b  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 12 .debug_line   00000a88  00000000  00000000  000042b0  2**0
+ 12 .debug_line   00000a86  00000000  00000000  000042af  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
  13 .debug_frame  00000248  00000000  00000000  00004d38  2**2
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 14 .debug_str    00000963  00000000  00000000  00004f80  2**0
+ 14 .debug_str    00000969  00000000  00000000  00004f80  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 15 .debug_alt_sim_info 00000010  00000000  00000000  000058e4  2**2
+ 15 .debug_alt_sim_info 00000010  00000000  00000000  000058ec  2**2
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 16 .debug_ranges 00000070  00000000  00000000  000058f8  2**3
+ 16 .debug_ranges 00000070  00000000  00000000  00005900  2**3
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 17 .debug_loclists 000003df  00000000  00000000  00005968  2**0
+ 17 .debug_loclists 000003df  00000000  00000000  00005970  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 18 .debug_rnglists 000000b3  00000000  00000000  00005d47  2**0
+ 18 .debug_rnglists 000000b3  00000000  00000000  00005d4f  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 19 .debug_line_str 000004db  00000000  00000000  00005dfa  2**0
+ 19 .debug_line_str 000004db  00000000  00000000  00005e02  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 20 .thread_model 00000003  00000000  00000000  000073a6  2**0
+ 20 .thread_model 00000003  00000000  00000000  000073b2  2**0
                   CONTENTS, READONLY
- 21 .cpu          0000000c  00000000  00000000  000073a9  2**0
+ 21 .cpu          0000000c  00000000  00000000  000073b5  2**0
                   CONTENTS, READONLY
- 22 .qsys         00000001  00000000  00000000  000073b5  2**0
+ 22 .qsys         00000001  00000000  00000000  000073c1  2**0
                   CONTENTS, READONLY
- 23 .simulation_enabled 00000001  00000000  00000000  000073b6  2**0
+ 23 .simulation_enabled 00000001  00000000  00000000  000073c2  2**0
                   CONTENTS, READONLY
- 24 .stderr_dev   00000004  00000000  00000000  000073b7  2**0
+ 24 .stderr_dev   00000004  00000000  00000000  000073c3  2**0
                   CONTENTS, READONLY
- 25 .stdin_dev    00000004  00000000  00000000  000073bb  2**0
+ 25 .stdin_dev    00000004  00000000  00000000  000073c7  2**0
                   CONTENTS, READONLY
- 26 .stdout_dev   00000004  00000000  00000000  000073bf  2**0
+ 26 .stdout_dev   00000004  00000000  00000000  000073cb  2**0
                   CONTENTS, READONLY
- 27 .sopc_system_name 00000008  00000000  00000000  000073c3  2**0
+ 27 .sopc_system_name 00000008  00000000  00000000  000073cf  2**0
                   CONTENTS, READONLY
- 28 .quartus_project_dir 00000036  00000000  00000000  000073cb  2**0
+ 28 .quartus_project_dir 00000036  00000000  00000000  000073d7  2**0
                   CONTENTS, READONLY
- 29 .jdi          000001f2  00000000  00000000  00007401  2**0
+ 29 .jdi          000001f2  00000000  00000000  0000740d  2**0
                   CONTENTS, READONLY
- 30 .sopcinfo     00054dbf  00000000  00000000  000075f3  2**0
+ 30 .sopcinfo     00054dbf  00000000  00000000  000075ff  2**0
                   CONTENTS, READONLY
 SYMBOL TABLE:
 00000000 l    d  .entry	00000000 .entry
@@ -104,7 +104,7 @@ SYMBOL TABLE:
 00000000 l    df *ABS*	00000000 alt_instruction_exception_entry.c
 00000000 l    df *ABS*	00000000 hello_world_small.c
 000001bc l     F .text	0000000c start_interrupt
-000001c8 l     F .text	000000a8 timer_isr
+000001c8 l     F .text	000000a8 timer_interrupt
 0000100c l     O .bss	00000004 msCount
 00001010 l     O .bss	00000004 segCount
 00001008 l     O .bss	00000004 minCount
@@ -522,40 +522,36 @@ alt_after_alt_main:
  1b8:	003fff06 	br	1b8 <alt_after_alt_main>
 
 000001bc <start_interrupt>:
-    volatile int* start_ptr = (volatile int*) context;
 
-    //Read the edge capture register on the PIO and store the value
-    //The value will be stored in the start variable and accessible
-    //from other parts of the code.
+
+static void start_interrupt(void* context)
+{
+    volatile int* start_ptr = (volatile int*) context;
     *start_ptr = 1;
  1bc:	00800044 	movi	r2,1
  1c0:	20800015 	stw	r2,0(r4)
-
-    //Write to edge capture register to reset it
-    //IOWR_ALTERA_AVALON_PIO_EDGE_CAP(PIO_BUTTON_START_BASE,0);
-
 }
  1c4:	f800283a 	ret
 
-000001c8 <timer_isr>:
+000001c8 <timer_interrupt>:
 	stop = IORD_ALTERA_AVALON_PIO_DATA(PIO_BUTTON_STOP_BASE);
  1c8:	00c80837 	ldwio	r3,8224(zero)
 	if(start == 1 && stop == 0)
  1cc:	d0a00117 	ldw	r2,-32764(gp)
  1d0:	10800058 	cmpnei	r2,r2,1
- 1d4:	1000141e 	bne	r2,zero,228 <timer_isr+0x60>
- 1d8:	1800131e 	bne	r3,zero,228 <timer_isr+0x60>
+ 1d4:	1000141e 	bne	r2,zero,228 <timer_interrupt+0x60>
+ 1d8:	1800131e 	bne	r3,zero,228 <timer_interrupt+0x60>
 	mode = IORD_ALTERA_AVALON_PIO_DATA(PIO_SWITCH_0_BASE);
  1dc:	00881837 	ldwio	r2,8288(zero)
 	if(mode == 0)
- 1e0:	1000031e 	bne	r2,zero,1f0 <timer_isr+0x28>
+ 1e0:	1000031e 	bne	r2,zero,1f0 <timer_interrupt+0x28>
 		IOWR_ALTERA_AVALON_PIO_DATA(PIO_MS_NUM_0_BASE, msCount);
  1e4:	d0a00317 	ldw	r2,-32756(gp)
  1e8:	00881435 	stwio	r2,8272(zero)
- 1ec:	00000406 	br	200 <timer_isr+0x38>
+ 1ec:	00000406 	br	200 <timer_interrupt+0x38>
 	else if(mode == 1)
  1f0:	10800058 	cmpnei	r2,r2,1
- 1f4:	10000e1e 	bne	r2,zero,230 <timer_isr+0x68>
+ 1f4:	10000e1e 	bne	r2,zero,230 <timer_interrupt+0x68>
 		IOWR_ALTERA_AVALON_PIO_DATA(PIO_LEDS_0_BASE, segCount);
  1f8:	d0a00417 	ldw	r2,-32752(gp)
  1fc:	00881c35 	stwio	r2,8304(zero)
@@ -565,7 +561,7 @@ alt_after_alt_main:
  204:	d0e00417 	ldw	r3,-32752(gp)
 	if (msCount >= 99)
  208:	108018f0 	cmpltui	r2,r2,99
- 20c:	10000d1e 	bne	r2,zero,244 <timer_isr+0x7c>
+ 20c:	10000d1e 	bne	r2,zero,244 <timer_interrupt+0x7c>
 		segCount++;
  210:	18c00044 	addi	r3,r3,1
 		msCount = 0;
@@ -586,26 +582,26 @@ alt_after_alt_main:
 		IOWR_ALTERA_AVALON_PIO_DATA(PIO_LEDS_0_BASE, segCount);
  238:	d0a00417 	ldw	r2,-32752(gp)
  23c:	00881c35 	stwio	r2,8304(zero)
- 240:	003fe806 	br	1e4 <timer_isr+0x1c>
+ 240:	003fe806 	br	1e4 <timer_interrupt+0x1c>
 	else if (segCount >= 60)
  244:	18c00f30 	cmpltui	r3,r3,60
 		minCount++;
  248:	d0a00217 	ldw	r2,-32760(gp)
 	else if (segCount >= 60)
- 24c:	1800041e 	bne	r3,zero,260 <timer_isr+0x98>
+ 24c:	1800041e 	bne	r3,zero,260 <timer_interrupt+0x98>
 		minCount++;
  250:	10800044 	addi	r2,r2,1
 		segCount = 0;
  254:	d0200415 	stw	zero,-32752(gp)
 		minCount++;
  258:	d0a00215 	stw	r2,-32760(gp)
- 25c:	003fef06 	br	21c <timer_isr+0x54>
+ 25c:	003fef06 	br	21c <timer_interrupt+0x54>
 	else if(minCount >= 99)
  260:	108018f0 	cmpltui	r2,r2,99
- 264:	103fed1e 	bne	r2,zero,21c <timer_isr+0x54>
+ 264:	103fed1e 	bne	r2,zero,21c <timer_interrupt+0x54>
 		minCount = 0;
  268:	d0200215 	stw	zero,-32760(gp)
- 26c:	003feb06 	br	21c <timer_isr+0x54>
+ 26c:	003feb06 	br	21c <timer_interrupt+0x54>
 
 00000270 <main>:
 
@@ -613,6 +609,7 @@ alt_after_alt_main:
 int main()
 {
  270:	defffe04 	addi	sp,sp,-8
+ //Timer Interrupt
   alt_ic_isr_register(
  274:	01800034 	movhi	r6,0
  278:	d8000015 	stw	zero,0(sp)
@@ -625,28 +622,23 @@ int main()
   alt_ic_isr_register(
  290:	00002c80 	call	2c8 <alt_ic_isr_register>
 		  TIMER_0_IRQ,
-		  timer_isr,
+		  timer_interrupt,
 		  0,
 		  0);
 
   IOWR_ALTERA_AVALON_TIMER_CONTROL(
  294:	008000c4 	movi	r2,3
  298:	00880135 	stwio	r2,8196(zero)
-  //Recast the start point to match the
-  //alt_irq_register() function prototypo
-  void* start_ptr = (void*)&start;
+				  | ALTERA_AVALON_TIMER_CONTROL_CONT_MSK);
 
-  //Enable a single interrupt input by writing a one to the corresponding interruptmask bit locations
+
+  //Start Interrupt
+  void* start_ptr = (void*)&start;
   IOWR_ALTERA_AVALON_PIO_IRQ_MASK(PIO_BUTTON_START_BASE,0x1);
  29c:	00800044 	movi	r2,1
  2a0:	00880e35 	stwio	r2,8248(zero)
-
-  //Reset the edge capture register
   IOWR_ALTERA_AVALON_PIO_EDGE_CAP(PIO_BUTTON_START_BASE,0);
  2a4:	00080f35 	stwio	zero,8252(zero)
-
-  //Register the interrupt handler in the system
-  //The ID and PIO_IRQ number is available from the system.h file.
   alt_ic_isr_register(PIO_BUTTON_START_IRQ_INTERRUPT_CONTROLLER_ID,
  2a8:	01800034 	movhi	r6,0
  2ac:	d8000015 	stw	zero,0(sp)
@@ -656,8 +648,6 @@ int main()
  2bc:	0009883a 	mov	r4,zero
  2c0:	00002c80 	call	2c8 <alt_ic_isr_register>
 		  PIO_BUTTON_START_IRQ, start_interrupt, start_ptr, 0x0);
-
-
 
 
   while (1);

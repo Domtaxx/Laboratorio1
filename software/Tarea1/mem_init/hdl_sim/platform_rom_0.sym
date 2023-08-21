@@ -11,7 +11,7 @@
 00000180 T _start
 000001b8 t alt_after_alt_main
 000001bc t start_interrupt
-000001c8 t timer_isr
+000001c8 t timer_interrupt
 00000270 T main
 000002c8 T alt_ic_isr_register
 000002cc T alt_ic_irq_enable
