@@ -2,12 +2,12 @@
 <sch:Settings xmlns:sch="http://www.altera.com/embeddedsw/bsp/schema">
         <BspType>hal</BspType>
         <BspVersion>default</BspVersion>
-        <BspGeneratedTimeStamp>20/08/2023 03:24:32 PM</BspGeneratedTimeStamp>
-        <BspGeneratedUnixTimeStamp>1692566672132</BspGeneratedUnixTimeStamp>
+        <BspGeneratedTimeStamp>20/08/2023 06:21:17 PM</BspGeneratedTimeStamp>
+        <BspGeneratedUnixTimeStamp>1692577277142</BspGeneratedUnixTimeStamp>
         <BspGeneratedLocation>C:\Users\yraul\OneDrive\Documentos\GitHub\Laboratorio1\software\Tarea1_bsp</BspGeneratedLocation>
         <BspSettingsFile>.\settings.bsp</BspSettingsFile>
         <SopcDesignFile>C:\Users\yraul\OneDrive\Documentos\GitHub\Laboratorio1\platform.sopcinfo</SopcDesignFile>
-        <SystemFileHash>8b40bca65989ced64043a83bad26e7b6da563493a59a6e59d63062e66987ef1a</SystemFileHash>
+        <SystemFileHash>45b8254c965e17d577a6c6d0f23ccf8e191a15d13b4c557ab7ad41dec07d8043</SystemFileHash>
         <JdiFile>default</JdiFile>
         <Cpu>nios2_gen2_0</Cpu>
         <SchemaVersion>1.9</SchemaVersion>
@@ -894,14 +894,26 @@
                 <attributes>timer</attributes>
         </MemoryMap>
         <MemoryMap>
-                <slaveDescriptor>pio_switch_0</slaveDescriptor>
+                <slaveDescriptor>pio_min_num_0</slaveDescriptor>
                 <addressRange>0x00002020 - 0x0000202F</addressRange>
                 <addressSpan>16</addressSpan>
                 <attributes/>
         </MemoryMap>
         <MemoryMap>
-                <slaveDescriptor>pio_leds_0</slaveDescriptor>
+                <slaveDescriptor>pio_ms_num_0</slaveDescriptor>
                 <addressRange>0x00002030 - 0x0000203F</addressRange>
+                <addressSpan>16</addressSpan>
+                <attributes/>
+        </MemoryMap>
+        <MemoryMap>
+                <slaveDescriptor>pio_switch_0</slaveDescriptor>
+                <addressRange>0x00002040 - 0x0000204F</addressRange>
+                <addressSpan>16</addressSpan>
+                <attributes/>
+        </MemoryMap>
+        <MemoryMap>
+                <slaveDescriptor>pio_leds_0</slaveDescriptor>
+                <addressRange>0x00002050 - 0x0000205F</addressRange>
                 <addressSpan>16</addressSpan>
                 <attributes/>
         </MemoryMap>

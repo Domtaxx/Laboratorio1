@@ -31,23 +31,23 @@ static void count()
 		}
 }
 
-static int selectMode()
+static void selectMode()
 {
 	mode = IORD_ALTERA_AVALON_PIO_DATA(PIO_SWITCH_0_BASE);
 	if(mode == 0)
 	{
 		miliCount = counter%100;
-		return miliCount;
+		IOWR_ALTERA_AVALON_PIO_DATA(PIO_LEDS_0_BASE, miliCount);
 	}
 	else if(mode == 1)
 	{
 		//modo seg
-		return segCount;
+		IOWR_ALTERA_AVALON_PIO_DATA(PIO_MS_NUM_0_BASE, segCount);
 	}
 	else
 	{
 		//Modo min, seg, mili
-		return minCount;
+		IOWR_ALTERA_AVALON_PIO_DATA(PIO_MIN_NUM_0_BASE, minCount);
 	}
 }
 
@@ -56,9 +56,8 @@ static void timer_isr(void *context)
 	(void) context;
 
 	count();
-	displayCount = selectMode();
+	selectMode();
 
-	IOWR_ALTERA_AVALON_PIO_DATA(PIO_LEDS_0_BASE, displayCount);
 	IOWR_ALTERA_AVALON_TIMER_STATUS(TIMER_0_BASE, 0);
 }
 

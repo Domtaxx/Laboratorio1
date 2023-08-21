@@ -120,7 +120,7 @@ LOAD c:/intelfpga_lite/22.1std/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/
                 0x0000000000000180                PROVIDE (__ram_exceptions_end = ABSOLUTE (.))
                 0x0000000000000020                PROVIDE (__flash_exceptions_start = LOADADDR (.exceptions))
 
-.text           0x0000000000000180      0x4e4
+.text           0x0000000000000180      0x4e8
                 [!provide]                        PROVIDE (stext = ABSOLUTE (.))
  *(.interp)
  *(.hash)
@@ -167,50 +167,50 @@ LOAD c:/intelfpga_lite/22.1std/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/
  *(.text .stub .text.* .gnu.linkonce.t.*)
  .text          0x0000000000000180       0x3c c:/Users/yraul/OneDrive/Documentos/GitHub/Laboratorio1/software/Tarea1_bsp//obj/HAL/src/crt0.o
                 0x0000000000000180                _start
- .text          0x00000000000001bc       0xa0 obj/default/hello_world_small.o
- .text.startup  0x000000000000025c       0x30 obj/default/hello_world_small.o
-                0x000000000000025c                main
- .text          0x000000000000028c      0x1b4 c:/intelfpga_lite/22.1std/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/12.2.1/mno-hw-mul\libgcc.a(lib2-divmod.o)
-                0x000000000000028c                __divsi3
-                0x000000000000030c                __modsi3
-                0x0000000000000380                __udivsi3
-                0x00000000000003e4                __umodsi3
- .text          0x0000000000000440       0x8c c:/Users/yraul/OneDrive/Documentos/GitHub/Laboratorio1/software/Tarea1_bsp/\libhal_bsp.a(alt_iic.o)
-                0x0000000000000440                alt_ic_isr_register
-                0x0000000000000444                alt_ic_irq_enable
-                0x000000000000047c                alt_ic_irq_disable
-                0x00000000000004b4                alt_ic_irq_enabled
- .text          0x00000000000004cc       0x68 c:/Users/yraul/OneDrive/Documentos/GitHub/Laboratorio1/software/Tarea1_bsp/\libhal_bsp.a(alt_iic_isr_register.o)
-                0x00000000000004cc                alt_iic_isr_register
- .text          0x0000000000000534        0x0 c:/Users/yraul/OneDrive/Documentos/GitHub/Laboratorio1/software/Tarea1_bsp/\libhal_bsp.a(alt_irq_entry.o)
- .text          0x0000000000000534        0x0 c:/Users/yraul/OneDrive/Documentos/GitHub/Laboratorio1/software/Tarea1_bsp/\libhal_bsp.a(alt_irq_handler.o)
- .text          0x0000000000000534        0x0 c:/Users/yraul/OneDrive/Documentos/GitHub/Laboratorio1/software/Tarea1_bsp/\libhal_bsp.a(alt_irq_vars.o)
- .text          0x0000000000000534       0x84 c:/Users/yraul/OneDrive/Documentos/GitHub/Laboratorio1/software/Tarea1_bsp/\libhal_bsp.a(alt_load.o)
-                0x0000000000000534                alt_load
- .text          0x00000000000005b8       0x2c c:/Users/yraul/OneDrive/Documentos/GitHub/Laboratorio1/software/Tarea1_bsp/\libhal_bsp.a(alt_main.o)
-                0x00000000000005b8                alt_main
- .text          0x00000000000005e4       0x24 c:/Users/yraul/OneDrive/Documentos/GitHub/Laboratorio1/software/Tarea1_bsp/\libhal_bsp.a(alt_sys_init.o)
-                0x00000000000005e4                alt_irq_init
-                0x0000000000000604                alt_sys_init
- .text          0x0000000000000608        0x4 c:/Users/yraul/OneDrive/Documentos/GitHub/Laboratorio1/software/Tarea1_bsp/\libhal_bsp.a(alt_dcache_flush_all.o)
-                0x0000000000000608                alt_dcache_flush_all
- .text          0x000000000000060c        0x0 c:/Users/yraul/OneDrive/Documentos/GitHub/Laboratorio1/software/Tarea1_bsp/\libhal_bsp.a(alt_exception_entry.o)
- .text          0x000000000000060c        0x4 c:/Users/yraul/OneDrive/Documentos/GitHub/Laboratorio1/software/Tarea1_bsp/\libhal_bsp.a(alt_icache_flush_all.o)
-                0x000000000000060c                alt_icache_flush_all
- .text          0x0000000000000610       0x24 c:/Users/yraul/OneDrive/Documentos/GitHub/Laboratorio1/software/Tarea1_bsp/\libhal_bsp.a(alt_instruction_exception_entry.o)
-                0x0000000000000610                alt_exception_cause_generated_bad_addr
- .text          0x0000000000000634        0x8 c:/Users/yraul/OneDrive/Documentos/GitHub/Laboratorio1/software/Tarea1_bsp/\libhal_bsp.a(altera_nios2_gen2_irq.o)
-                0x0000000000000634                altera_nios2_gen2_irq_init
- .text          0x000000000000063c        0x0 c:/intelfpga_lite/22.1std/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/12.2.1/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-memcpy.o)
- .text.memcpy   0x000000000000063c       0x28 c:/intelfpga_lite/22.1std/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/12.2.1/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-memcpy.o)
-                0x000000000000063c                memcpy
+ .text          0x00000000000001bc       0xa4 obj/default/hello_world_small.o
+ .text.startup  0x0000000000000260       0x30 obj/default/hello_world_small.o
+                0x0000000000000260                main
+ .text          0x0000000000000290      0x1b4 c:/intelfpga_lite/22.1std/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/12.2.1/mno-hw-mul\libgcc.a(lib2-divmod.o)
+                0x0000000000000290                __divsi3
+                0x0000000000000310                __modsi3
+                0x0000000000000384                __udivsi3
+                0x00000000000003e8                __umodsi3
+ .text          0x0000000000000444       0x8c c:/Users/yraul/OneDrive/Documentos/GitHub/Laboratorio1/software/Tarea1_bsp/\libhal_bsp.a(alt_iic.o)
+                0x0000000000000444                alt_ic_isr_register
+                0x0000000000000448                alt_ic_irq_enable
+                0x0000000000000480                alt_ic_irq_disable
+                0x00000000000004b8                alt_ic_irq_enabled
+ .text          0x00000000000004d0       0x68 c:/Users/yraul/OneDrive/Documentos/GitHub/Laboratorio1/software/Tarea1_bsp/\libhal_bsp.a(alt_iic_isr_register.o)
+                0x00000000000004d0                alt_iic_isr_register
+ .text          0x0000000000000538        0x0 c:/Users/yraul/OneDrive/Documentos/GitHub/Laboratorio1/software/Tarea1_bsp/\libhal_bsp.a(alt_irq_entry.o)
+ .text          0x0000000000000538        0x0 c:/Users/yraul/OneDrive/Documentos/GitHub/Laboratorio1/software/Tarea1_bsp/\libhal_bsp.a(alt_irq_handler.o)
+ .text          0x0000000000000538        0x0 c:/Users/yraul/OneDrive/Documentos/GitHub/Laboratorio1/software/Tarea1_bsp/\libhal_bsp.a(alt_irq_vars.o)
+ .text          0x0000000000000538       0x84 c:/Users/yraul/OneDrive/Documentos/GitHub/Laboratorio1/software/Tarea1_bsp/\libhal_bsp.a(alt_load.o)
+                0x0000000000000538                alt_load
+ .text          0x00000000000005bc       0x2c c:/Users/yraul/OneDrive/Documentos/GitHub/Laboratorio1/software/Tarea1_bsp/\libhal_bsp.a(alt_main.o)
+                0x00000000000005bc                alt_main
+ .text          0x00000000000005e8       0x24 c:/Users/yraul/OneDrive/Documentos/GitHub/Laboratorio1/software/Tarea1_bsp/\libhal_bsp.a(alt_sys_init.o)
+                0x00000000000005e8                alt_irq_init
+                0x0000000000000608                alt_sys_init
+ .text          0x000000000000060c        0x4 c:/Users/yraul/OneDrive/Documentos/GitHub/Laboratorio1/software/Tarea1_bsp/\libhal_bsp.a(alt_dcache_flush_all.o)
+                0x000000000000060c                alt_dcache_flush_all
+ .text          0x0000000000000610        0x0 c:/Users/yraul/OneDrive/Documentos/GitHub/Laboratorio1/software/Tarea1_bsp/\libhal_bsp.a(alt_exception_entry.o)
+ .text          0x0000000000000610        0x4 c:/Users/yraul/OneDrive/Documentos/GitHub/Laboratorio1/software/Tarea1_bsp/\libhal_bsp.a(alt_icache_flush_all.o)
+                0x0000000000000610                alt_icache_flush_all
+ .text          0x0000000000000614       0x24 c:/Users/yraul/OneDrive/Documentos/GitHub/Laboratorio1/software/Tarea1_bsp/\libhal_bsp.a(alt_instruction_exception_entry.o)
+                0x0000000000000614                alt_exception_cause_generated_bad_addr
+ .text          0x0000000000000638        0x8 c:/Users/yraul/OneDrive/Documentos/GitHub/Laboratorio1/software/Tarea1_bsp/\libhal_bsp.a(altera_nios2_gen2_irq.o)
+                0x0000000000000638                altera_nios2_gen2_irq_init
+ .text          0x0000000000000640        0x0 c:/intelfpga_lite/22.1std/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/12.2.1/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-memcpy.o)
+ .text.memcpy   0x0000000000000640       0x28 c:/intelfpga_lite/22.1std/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/12.2.1/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-memcpy.o)
+                0x0000000000000640                memcpy
  *(.gnu.warning.*)
  *(.fini)
                 [!provide]                        PROVIDE (__etext = ABSOLUTE (.))
                 [!provide]                        PROVIDE (_etext = ABSOLUTE (.))
                 [!provide]                        PROVIDE (etext = ABSOLUTE (.))
  *(.eh_frame_hdr)
-                0x0000000000000664                . = ALIGN (0x4)
+                0x0000000000000668                . = ALIGN (0x4)
                 [!provide]                        PROVIDE (__preinit_array_start = ABSOLUTE (.))
  *(.preinit_array)
                 [!provide]                        PROVIDE (__preinit_array_end = ABSOLUTE (.))
@@ -232,18 +232,18 @@ LOAD c:/intelfpga_lite/22.1std/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/
  *(SORT_BY_NAME(.dtors.*))
                 [!provide]                        PROVIDE (__DTOR_END__ = ABSOLUTE (.))
  *(.jcr)
-                0x0000000000000664                . = ALIGN (0x4)
+                0x0000000000000668                . = ALIGN (0x4)
 
-.rodata         0x0000000000001000        0x0 load address 0x0000000000000664
+.rodata         0x0000000000001000        0x0 load address 0x0000000000000668
                 0x0000000000001000                PROVIDE (__ram_rodata_start = ABSOLUTE (.))
                 0x0000000000001000                . = ALIGN (0x4)
  *(.rodata .rodata.* .gnu.linkonce.r.*)
  *(.rodata1)
                 0x0000000000001000                . = ALIGN (0x4)
                 0x0000000000001000                PROVIDE (__ram_rodata_end = ABSOLUTE (.))
-                0x0000000000000664                PROVIDE (__flash_rodata_start = LOADADDR (.rodata))
+                0x0000000000000668                PROVIDE (__flash_rodata_start = LOADADDR (.rodata))
 
-.rwdata         0x0000000000001000        0x4 load address 0x0000000000000664
+.rwdata         0x0000000000001000        0x4 load address 0x0000000000000668
                 0x0000000000001000                PROVIDE (__ram_rwdata_start = ABSOLUTE (.))
                 0x0000000000001000                . = ALIGN (0x4)
  *(.got.plt)
@@ -278,9 +278,9 @@ LOAD c:/intelfpga_lite/22.1std/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/
                 0x0000000000001004                _edata = ABSOLUTE (.)
                 [!provide]                        PROVIDE (edata = ABSOLUTE (.))
                 0x0000000000001004                PROVIDE (__ram_rwdata_end = ABSOLUTE (.))
-                0x0000000000000664                PROVIDE (__flash_rwdata_start = LOADADDR (.rwdata))
+                0x0000000000000668                PROVIDE (__flash_rwdata_start = LOADADDR (.rwdata))
 
-.bss            0x0000000000001004      0x120 load address 0x0000000000000668
+.bss            0x0000000000001004      0x120 load address 0x000000000000066c
                 0x0000000000001004                __bss_start = ABSOLUTE (.)
                 [!provide]                        PROVIDE (__sbss_start = ABSOLUTE (.))
                 [!provide]                        PROVIDE (___sbss_start = ABSOLUTE (.))
@@ -323,14 +323,14 @@ LOAD c:/intelfpga_lite/22.1std/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/
                 0x0000000000001124                . = ALIGN (0x4)
                 0x0000000000001124                __bss_end = ABSOLUTE (.)
 
-.rom_0          0x0000000000000668        0x0
+.rom_0          0x000000000000066c        0x0
                 [!provide]                        PROVIDE (_alt_partition_rom_0_start = ABSOLUTE (.))
  *(.rom_0 .rom_0. rom_0.*)
-                0x0000000000000668                . = ALIGN (0x4)
+                0x000000000000066c                . = ALIGN (0x4)
                 [!provide]                        PROVIDE (_alt_partition_rom_0_end = ABSOLUTE (.))
                 [!provide]                        PROVIDE (_alt_partition_rom_0_load_addr = LOADADDR (.rom_0))
 
-.ram_0          0x0000000000001124        0x0 load address 0x0000000000000668
+.ram_0          0x0000000000001124        0x0 load address 0x000000000000066c
                 [!provide]                        PROVIDE (_alt_partition_ram_0_start = ABSOLUTE (.))
  *(.ram_0 .ram_0. ram_0.*)
                 0x0000000000001124                . = ALIGN (0x4)
@@ -428,65 +428,65 @@ LOAD c:/intelfpga_lite/22.1std/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/
 .debug_pubnames
  *(.debug_pubnames)
 
-.debug_info     0x0000000000000000     0x16fc
+.debug_info     0x0000000000000000     0x16f5
  *(.debug_info .gnu.linkonce.wi.*)
  .debug_info    0x0000000000000000       0x22 c:/Users/yraul/OneDrive/Documentos/GitHub/Laboratorio1/software/Tarea1_bsp//obj/HAL/src/crt0.o
- .debug_info    0x0000000000000022      0x1a6 obj/default/hello_world_small.o
- .debug_info    0x00000000000001c8      0x347 c:/intelfpga_lite/22.1std/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/12.2.1/mno-hw-mul\libgcc.a(lib2-divmod.o)
- .debug_info    0x000000000000050f      0x3d8 c:/Users/yraul/OneDrive/Documentos/GitHub/Laboratorio1/software/Tarea1_bsp/\libhal_bsp.a(alt_iic.o)
- .debug_info    0x00000000000008e7      0x27f c:/Users/yraul/OneDrive/Documentos/GitHub/Laboratorio1/software/Tarea1_bsp/\libhal_bsp.a(alt_iic_isr_register.o)
- .debug_info    0x0000000000000b66       0x22 c:/Users/yraul/OneDrive/Documentos/GitHub/Laboratorio1/software/Tarea1_bsp/\libhal_bsp.a(alt_irq_entry.o)
- .debug_info    0x0000000000000b88      0x195 c:/Users/yraul/OneDrive/Documentos/GitHub/Laboratorio1/software/Tarea1_bsp/\libhal_bsp.a(alt_irq_handler.o)
- .debug_info    0x0000000000000d1d       0x88 c:/Users/yraul/OneDrive/Documentos/GitHub/Laboratorio1/software/Tarea1_bsp/\libhal_bsp.a(alt_irq_vars.o)
- .debug_info    0x0000000000000da5      0x239 c:/Users/yraul/OneDrive/Documentos/GitHub/Laboratorio1/software/Tarea1_bsp/\libhal_bsp.a(alt_load.o)
- .debug_info    0x0000000000000fde      0x13e c:/Users/yraul/OneDrive/Documentos/GitHub/Laboratorio1/software/Tarea1_bsp/\libhal_bsp.a(alt_main.o)
- .debug_info    0x000000000000111c       0xee c:/Users/yraul/OneDrive/Documentos/GitHub/Laboratorio1/software/Tarea1_bsp/\libhal_bsp.a(alt_sys_init.o)
- .debug_info    0x000000000000120a       0x8d c:/Users/yraul/OneDrive/Documentos/GitHub/Laboratorio1/software/Tarea1_bsp/\libhal_bsp.a(alt_dcache_flush_all.o)
- .debug_info    0x0000000000001297       0x22 c:/Users/yraul/OneDrive/Documentos/GitHub/Laboratorio1/software/Tarea1_bsp/\libhal_bsp.a(alt_exception_entry.o)
- .debug_info    0x00000000000012b9       0x8d c:/Users/yraul/OneDrive/Documentos/GitHub/Laboratorio1/software/Tarea1_bsp/\libhal_bsp.a(alt_icache_flush_all.o)
- .debug_info    0x0000000000001346      0x208 c:/Users/yraul/OneDrive/Documentos/GitHub/Laboratorio1/software/Tarea1_bsp/\libhal_bsp.a(alt_instruction_exception_entry.o)
- .debug_info    0x000000000000154e       0x8d c:/Users/yraul/OneDrive/Documentos/GitHub/Laboratorio1/software/Tarea1_bsp/\libhal_bsp.a(altera_nios2_gen2_irq.o)
- .debug_info    0x00000000000015db      0x121 c:/intelfpga_lite/22.1std/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/12.2.1/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-memcpy.o)
+ .debug_info    0x0000000000000022      0x19f obj/default/hello_world_small.o
+ .debug_info    0x00000000000001c1      0x347 c:/intelfpga_lite/22.1std/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/12.2.1/mno-hw-mul\libgcc.a(lib2-divmod.o)
+ .debug_info    0x0000000000000508      0x3d8 c:/Users/yraul/OneDrive/Documentos/GitHub/Laboratorio1/software/Tarea1_bsp/\libhal_bsp.a(alt_iic.o)
+ .debug_info    0x00000000000008e0      0x27f c:/Users/yraul/OneDrive/Documentos/GitHub/Laboratorio1/software/Tarea1_bsp/\libhal_bsp.a(alt_iic_isr_register.o)
+ .debug_info    0x0000000000000b5f       0x22 c:/Users/yraul/OneDrive/Documentos/GitHub/Laboratorio1/software/Tarea1_bsp/\libhal_bsp.a(alt_irq_entry.o)
+ .debug_info    0x0000000000000b81      0x195 c:/Users/yraul/OneDrive/Documentos/GitHub/Laboratorio1/software/Tarea1_bsp/\libhal_bsp.a(alt_irq_handler.o)
+ .debug_info    0x0000000000000d16       0x88 c:/Users/yraul/OneDrive/Documentos/GitHub/Laboratorio1/software/Tarea1_bsp/\libhal_bsp.a(alt_irq_vars.o)
+ .debug_info    0x0000000000000d9e      0x239 c:/Users/yraul/OneDrive/Documentos/GitHub/Laboratorio1/software/Tarea1_bsp/\libhal_bsp.a(alt_load.o)
+ .debug_info    0x0000000000000fd7      0x13e c:/Users/yraul/OneDrive/Documentos/GitHub/Laboratorio1/software/Tarea1_bsp/\libhal_bsp.a(alt_main.o)
+ .debug_info    0x0000000000001115       0xee c:/Users/yraul/OneDrive/Documentos/GitHub/Laboratorio1/software/Tarea1_bsp/\libhal_bsp.a(alt_sys_init.o)
+ .debug_info    0x0000000000001203       0x8d c:/Users/yraul/OneDrive/Documentos/GitHub/Laboratorio1/software/Tarea1_bsp/\libhal_bsp.a(alt_dcache_flush_all.o)
+ .debug_info    0x0000000000001290       0x22 c:/Users/yraul/OneDrive/Documentos/GitHub/Laboratorio1/software/Tarea1_bsp/\libhal_bsp.a(alt_exception_entry.o)
+ .debug_info    0x00000000000012b2       0x8d c:/Users/yraul/OneDrive/Documentos/GitHub/Laboratorio1/software/Tarea1_bsp/\libhal_bsp.a(alt_icache_flush_all.o)
+ .debug_info    0x000000000000133f      0x208 c:/Users/yraul/OneDrive/Documentos/GitHub/Laboratorio1/software/Tarea1_bsp/\libhal_bsp.a(alt_instruction_exception_entry.o)
+ .debug_info    0x0000000000001547       0x8d c:/Users/yraul/OneDrive/Documentos/GitHub/Laboratorio1/software/Tarea1_bsp/\libhal_bsp.a(altera_nios2_gen2_irq.o)
+ .debug_info    0x00000000000015d4      0x121 c:/intelfpga_lite/22.1std/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/12.2.1/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-memcpy.o)
 
-.debug_abbrev   0x0000000000000000      0xd36
+.debug_abbrev   0x0000000000000000      0xd39
  *(.debug_abbrev)
  .debug_abbrev  0x0000000000000000       0x12 c:/Users/yraul/OneDrive/Documentos/GitHub/Laboratorio1/software/Tarea1_bsp//obj/HAL/src/crt0.o
- .debug_abbrev  0x0000000000000012      0x13a obj/default/hello_world_small.o
- .debug_abbrev  0x000000000000014c      0x10c c:/intelfpga_lite/22.1std/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/12.2.1/mno-hw-mul\libgcc.a(lib2-divmod.o)
- .debug_abbrev  0x0000000000000258      0x1dd c:/Users/yraul/OneDrive/Documentos/GitHub/Laboratorio1/software/Tarea1_bsp/\libhal_bsp.a(alt_iic.o)
- .debug_abbrev  0x0000000000000435      0x1d9 c:/Users/yraul/OneDrive/Documentos/GitHub/Laboratorio1/software/Tarea1_bsp/\libhal_bsp.a(alt_iic_isr_register.o)
- .debug_abbrev  0x000000000000060e       0x12 c:/Users/yraul/OneDrive/Documentos/GitHub/Laboratorio1/software/Tarea1_bsp/\libhal_bsp.a(alt_irq_entry.o)
- .debug_abbrev  0x0000000000000620      0x147 c:/Users/yraul/OneDrive/Documentos/GitHub/Laboratorio1/software/Tarea1_bsp/\libhal_bsp.a(alt_irq_handler.o)
- .debug_abbrev  0x0000000000000767       0x46 c:/Users/yraul/OneDrive/Documentos/GitHub/Laboratorio1/software/Tarea1_bsp/\libhal_bsp.a(alt_irq_vars.o)
- .debug_abbrev  0x00000000000007ad      0x12c c:/Users/yraul/OneDrive/Documentos/GitHub/Laboratorio1/software/Tarea1_bsp/\libhal_bsp.a(alt_load.o)
- .debug_abbrev  0x00000000000008d9       0xeb c:/Users/yraul/OneDrive/Documentos/GitHub/Laboratorio1/software/Tarea1_bsp/\libhal_bsp.a(alt_main.o)
- .debug_abbrev  0x00000000000009c4       0xc3 c:/Users/yraul/OneDrive/Documentos/GitHub/Laboratorio1/software/Tarea1_bsp/\libhal_bsp.a(alt_sys_init.o)
- .debug_abbrev  0x0000000000000a87       0x43 c:/Users/yraul/OneDrive/Documentos/GitHub/Laboratorio1/software/Tarea1_bsp/\libhal_bsp.a(alt_dcache_flush_all.o)
- .debug_abbrev  0x0000000000000aca       0x12 c:/Users/yraul/OneDrive/Documentos/GitHub/Laboratorio1/software/Tarea1_bsp/\libhal_bsp.a(alt_exception_entry.o)
- .debug_abbrev  0x0000000000000adc       0x43 c:/Users/yraul/OneDrive/Documentos/GitHub/Laboratorio1/software/Tarea1_bsp/\libhal_bsp.a(alt_icache_flush_all.o)
- .debug_abbrev  0x0000000000000b1f      0x113 c:/Users/yraul/OneDrive/Documentos/GitHub/Laboratorio1/software/Tarea1_bsp/\libhal_bsp.a(alt_instruction_exception_entry.o)
- .debug_abbrev  0x0000000000000c32       0x43 c:/Users/yraul/OneDrive/Documentos/GitHub/Laboratorio1/software/Tarea1_bsp/\libhal_bsp.a(altera_nios2_gen2_irq.o)
- .debug_abbrev  0x0000000000000c75       0xc1 c:/intelfpga_lite/22.1std/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/12.2.1/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-memcpy.o)
+ .debug_abbrev  0x0000000000000012      0x13d obj/default/hello_world_small.o
+ .debug_abbrev  0x000000000000014f      0x10c c:/intelfpga_lite/22.1std/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/12.2.1/mno-hw-mul\libgcc.a(lib2-divmod.o)
+ .debug_abbrev  0x000000000000025b      0x1dd c:/Users/yraul/OneDrive/Documentos/GitHub/Laboratorio1/software/Tarea1_bsp/\libhal_bsp.a(alt_iic.o)
+ .debug_abbrev  0x0000000000000438      0x1d9 c:/Users/yraul/OneDrive/Documentos/GitHub/Laboratorio1/software/Tarea1_bsp/\libhal_bsp.a(alt_iic_isr_register.o)
+ .debug_abbrev  0x0000000000000611       0x12 c:/Users/yraul/OneDrive/Documentos/GitHub/Laboratorio1/software/Tarea1_bsp/\libhal_bsp.a(alt_irq_entry.o)
+ .debug_abbrev  0x0000000000000623      0x147 c:/Users/yraul/OneDrive/Documentos/GitHub/Laboratorio1/software/Tarea1_bsp/\libhal_bsp.a(alt_irq_handler.o)
+ .debug_abbrev  0x000000000000076a       0x46 c:/Users/yraul/OneDrive/Documentos/GitHub/Laboratorio1/software/Tarea1_bsp/\libhal_bsp.a(alt_irq_vars.o)
+ .debug_abbrev  0x00000000000007b0      0x12c c:/Users/yraul/OneDrive/Documentos/GitHub/Laboratorio1/software/Tarea1_bsp/\libhal_bsp.a(alt_load.o)
+ .debug_abbrev  0x00000000000008dc       0xeb c:/Users/yraul/OneDrive/Documentos/GitHub/Laboratorio1/software/Tarea1_bsp/\libhal_bsp.a(alt_main.o)
+ .debug_abbrev  0x00000000000009c7       0xc3 c:/Users/yraul/OneDrive/Documentos/GitHub/Laboratorio1/software/Tarea1_bsp/\libhal_bsp.a(alt_sys_init.o)
+ .debug_abbrev  0x0000000000000a8a       0x43 c:/Users/yraul/OneDrive/Documentos/GitHub/Laboratorio1/software/Tarea1_bsp/\libhal_bsp.a(alt_dcache_flush_all.o)
+ .debug_abbrev  0x0000000000000acd       0x12 c:/Users/yraul/OneDrive/Documentos/GitHub/Laboratorio1/software/Tarea1_bsp/\libhal_bsp.a(alt_exception_entry.o)
+ .debug_abbrev  0x0000000000000adf       0x43 c:/Users/yraul/OneDrive/Documentos/GitHub/Laboratorio1/software/Tarea1_bsp/\libhal_bsp.a(alt_icache_flush_all.o)
+ .debug_abbrev  0x0000000000000b22      0x113 c:/Users/yraul/OneDrive/Documentos/GitHub/Laboratorio1/software/Tarea1_bsp/\libhal_bsp.a(alt_instruction_exception_entry.o)
+ .debug_abbrev  0x0000000000000c35       0x43 c:/Users/yraul/OneDrive/Documentos/GitHub/Laboratorio1/software/Tarea1_bsp/\libhal_bsp.a(altera_nios2_gen2_irq.o)
+ .debug_abbrev  0x0000000000000c78       0xc1 c:/intelfpga_lite/22.1std/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/12.2.1/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-memcpy.o)
 
-.debug_line     0x0000000000000000      0xd55
+.debug_line     0x0000000000000000      0xd4d
  *(.debug_line)
  .debug_line    0x0000000000000000       0x66 c:/Users/yraul/OneDrive/Documentos/GitHub/Laboratorio1/software/Tarea1_bsp//obj/HAL/src/crt0.o
- .debug_line    0x0000000000000066      0x13a obj/default/hello_world_small.o
- .debug_line    0x00000000000001a0      0x2e3 c:/intelfpga_lite/22.1std/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/12.2.1/mno-hw-mul\libgcc.a(lib2-divmod.o)
- .debug_line    0x0000000000000483      0x152 c:/Users/yraul/OneDrive/Documentos/GitHub/Laboratorio1/software/Tarea1_bsp/\libhal_bsp.a(alt_iic.o)
- .debug_line    0x00000000000005d5      0x115 c:/Users/yraul/OneDrive/Documentos/GitHub/Laboratorio1/software/Tarea1_bsp/\libhal_bsp.a(alt_iic_isr_register.o)
- .debug_line    0x00000000000006ea       0x6b c:/Users/yraul/OneDrive/Documentos/GitHub/Laboratorio1/software/Tarea1_bsp/\libhal_bsp.a(alt_irq_entry.o)
- .debug_line    0x0000000000000755       0xf9 c:/Users/yraul/OneDrive/Documentos/GitHub/Laboratorio1/software/Tarea1_bsp/\libhal_bsp.a(alt_irq_handler.o)
- .debug_line    0x000000000000084e       0x43 c:/Users/yraul/OneDrive/Documentos/GitHub/Laboratorio1/software/Tarea1_bsp/\libhal_bsp.a(alt_irq_vars.o)
- .debug_line    0x0000000000000891       0xd2 c:/Users/yraul/OneDrive/Documentos/GitHub/Laboratorio1/software/Tarea1_bsp/\libhal_bsp.a(alt_load.o)
- .debug_line    0x0000000000000963       0xa2 c:/Users/yraul/OneDrive/Documentos/GitHub/Laboratorio1/software/Tarea1_bsp/\libhal_bsp.a(alt_main.o)
- .debug_line    0x0000000000000a05       0x89 c:/Users/yraul/OneDrive/Documentos/GitHub/Laboratorio1/software/Tarea1_bsp/\libhal_bsp.a(alt_sys_init.o)
- .debug_line    0x0000000000000a8e       0x4e c:/Users/yraul/OneDrive/Documentos/GitHub/Laboratorio1/software/Tarea1_bsp/\libhal_bsp.a(alt_dcache_flush_all.o)
- .debug_line    0x0000000000000adc       0x9d c:/Users/yraul/OneDrive/Documentos/GitHub/Laboratorio1/software/Tarea1_bsp/\libhal_bsp.a(alt_exception_entry.o)
- .debug_line    0x0000000000000b79       0x4c c:/Users/yraul/OneDrive/Documentos/GitHub/Laboratorio1/software/Tarea1_bsp/\libhal_bsp.a(alt_icache_flush_all.o)
- .debug_line    0x0000000000000bc5       0xb0 c:/Users/yraul/OneDrive/Documentos/GitHub/Laboratorio1/software/Tarea1_bsp/\libhal_bsp.a(alt_instruction_exception_entry.o)
- .debug_line    0x0000000000000c75       0x54 c:/Users/yraul/OneDrive/Documentos/GitHub/Laboratorio1/software/Tarea1_bsp/\libhal_bsp.a(altera_nios2_gen2_irq.o)
- .debug_line    0x0000000000000cc9       0x8c c:/intelfpga_lite/22.1std/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/12.2.1/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-memcpy.o)
+ .debug_line    0x0000000000000066      0x132 obj/default/hello_world_small.o
+ .debug_line    0x0000000000000198      0x2e3 c:/intelfpga_lite/22.1std/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/12.2.1/mno-hw-mul\libgcc.a(lib2-divmod.o)
+ .debug_line    0x000000000000047b      0x152 c:/Users/yraul/OneDrive/Documentos/GitHub/Laboratorio1/software/Tarea1_bsp/\libhal_bsp.a(alt_iic.o)
+ .debug_line    0x00000000000005cd      0x115 c:/Users/yraul/OneDrive/Documentos/GitHub/Laboratorio1/software/Tarea1_bsp/\libhal_bsp.a(alt_iic_isr_register.o)
+ .debug_line    0x00000000000006e2       0x6b c:/Users/yraul/OneDrive/Documentos/GitHub/Laboratorio1/software/Tarea1_bsp/\libhal_bsp.a(alt_irq_entry.o)
+ .debug_line    0x000000000000074d       0xf9 c:/Users/yraul/OneDrive/Documentos/GitHub/Laboratorio1/software/Tarea1_bsp/\libhal_bsp.a(alt_irq_handler.o)
+ .debug_line    0x0000000000000846       0x43 c:/Users/yraul/OneDrive/Documentos/GitHub/Laboratorio1/software/Tarea1_bsp/\libhal_bsp.a(alt_irq_vars.o)
+ .debug_line    0x0000000000000889       0xd2 c:/Users/yraul/OneDrive/Documentos/GitHub/Laboratorio1/software/Tarea1_bsp/\libhal_bsp.a(alt_load.o)
+ .debug_line    0x000000000000095b       0xa2 c:/Users/yraul/OneDrive/Documentos/GitHub/Laboratorio1/software/Tarea1_bsp/\libhal_bsp.a(alt_main.o)
+ .debug_line    0x00000000000009fd       0x89 c:/Users/yraul/OneDrive/Documentos/GitHub/Laboratorio1/software/Tarea1_bsp/\libhal_bsp.a(alt_sys_init.o)
+ .debug_line    0x0000000000000a86       0x4e c:/Users/yraul/OneDrive/Documentos/GitHub/Laboratorio1/software/Tarea1_bsp/\libhal_bsp.a(alt_dcache_flush_all.o)
+ .debug_line    0x0000000000000ad4       0x9d c:/Users/yraul/OneDrive/Documentos/GitHub/Laboratorio1/software/Tarea1_bsp/\libhal_bsp.a(alt_exception_entry.o)
+ .debug_line    0x0000000000000b71       0x4c c:/Users/yraul/OneDrive/Documentos/GitHub/Laboratorio1/software/Tarea1_bsp/\libhal_bsp.a(alt_icache_flush_all.o)
+ .debug_line    0x0000000000000bbd       0xb0 c:/Users/yraul/OneDrive/Documentos/GitHub/Laboratorio1/software/Tarea1_bsp/\libhal_bsp.a(alt_instruction_exception_entry.o)
+ .debug_line    0x0000000000000c6d       0x54 c:/Users/yraul/OneDrive/Documentos/GitHub/Laboratorio1/software/Tarea1_bsp/\libhal_bsp.a(altera_nios2_gen2_irq.o)
+ .debug_line    0x0000000000000cc1       0x8c c:/intelfpga_lite/22.1std/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/12.2.1/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-memcpy.o)
 
 .debug_frame    0x0000000000000000      0x294
  *(.debug_frame)

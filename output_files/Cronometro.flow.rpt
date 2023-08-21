@@ -1,5 +1,5 @@
 Flow report for Cronometro
-Sun Aug 20 15:27:19 2023
+Sun Aug 20 18:24:14 2023
 Quartus Prime Version 22.1std.2 Build 922 07/20/2023 SC Lite Edition
 
 
@@ -41,16 +41,16 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Flow Summary                                                                     ;
 +---------------------------------+------------------------------------------------+
-; Flow Status                     ; Successful - Sun Aug 20 15:27:19 2023          ;
+; Flow Status                     ; Successful - Sun Aug 20 18:24:14 2023          ;
 ; Quartus Prime Version           ; 22.1std.2 Build 922 07/20/2023 SC Lite Edition ;
 ; Revision Name                   ; Cronometro                                     ;
 ; Top-level Entity Name           ; tallernios                                     ;
 ; Family                          ; Cyclone V                                      ;
 ; Device                          ; 5CSEMA5F31C6                                   ;
 ; Timing Models                   ; Final                                          ;
-; Logic utilization (in ALMs)     ; 357 / 32,070 ( 1 % )                           ;
-; Total registers                 ; 465                                            ;
-; Total pins                      ; 18 / 457 ( 4 % )                               ;
+; Logic utilization (in ALMs)     ; 396 / 32,070 ( 1 % )                           ;
+; Total registers                 ; 532                                            ;
+; Total pins                      ; 46 / 457 ( 10 % )                              ;
 ; Total virtual pins              ; 0                                              ;
 ; Total block memory bits         ; 67,584 / 4,065,280 ( 2 % )                     ;
 ; Total DSP Blocks                ; 0 / 87 ( 0 % )                                 ;
@@ -68,7 +68,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 08/20/2023 15:25:13 ;
+; Start date & time ; 08/20/2023 18:22:00 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; Cronometro          ;
 +-------------------+---------------------+
@@ -79,7 +79,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------+----------------------------------------+---------------+-------------+-----------------------------------+
 ; Assignment Name                     ; Value                                  ; Default Value ; Entity Name ; Section Id                        ;
 +-------------------------------------+----------------------------------------+---------------+-------------+-----------------------------------+
-; COMPILER_SIGNATURE_ID               ; 4930995957614.169256671314248          ; --            ; --          ; --                                ;
+; COMPILER_SIGNATURE_ID               ; 4930995957614.169257732009160          ; --            ; --          ; --                                ;
 ; EDA_GENERATE_FUNCTIONAL_NETLIST     ; Off                                    ; --            ; --          ; eda_board_design_timing           ;
 ; EDA_GENERATE_FUNCTIONAL_NETLIST     ; Off                                    ; --            ; --          ; eda_board_design_boundary_scan    ;
 ; EDA_GENERATE_FUNCTIONAL_NETLIST     ; Off                                    ; --            ; --          ; eda_board_design_signal_integrity ;
@@ -105,12 +105,12 @@ https://fpgasoftware.intel.com/eula.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:21     ; 1.0                     ; 4936 MB             ; 00:00:16                           ;
-; Fitter               ; 00:01:34     ; 1.0                     ; 7283 MB             ; 00:01:33                           ;
-; Assembler            ; 00:00:03     ; 1.0                     ; 4890 MB             ; 00:00:03                           ;
-; Timing Analyzer      ; 00:00:03     ; 1.7                     ; 5288 MB             ; 00:00:04                           ;
-; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 4742 MB             ; 00:00:00                           ;
-; Total                ; 00:02:02     ; --                      ; --                  ; 00:01:56                           ;
+; Analysis & Synthesis ; 00:00:23     ; 1.0                     ; 4948 MB             ; 00:00:18                           ;
+; Fitter               ; 00:01:41     ; 1.0                     ; 7306 MB             ; 00:01:49                           ;
+; Assembler            ; 00:00:04     ; 1.0                     ; 4893 MB             ; 00:00:03                           ;
+; Timing Analyzer      ; 00:00:04     ; 1.8                     ; 5290 MB             ; 00:00:04                           ;
+; EDA Netlist Writer   ; 00:00:00     ; 1.0                     ; 4750 MB             ; 00:00:00                           ;
+; Total                ; 00:02:12     ; --                      ; --                  ; 00:02:14                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
